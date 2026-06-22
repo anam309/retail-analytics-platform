@@ -1,0 +1,501 @@
+customer_id,first_name,last_name,email,phone,date_of_birth,address_line1,city,state,country,postal_code,loyalty_tier,customer_segment,email_opt_in,sms_opt_in,registration_date,updated_at
+CUST-00001,Tanya,House,tanya.house70@gmail.com,(267) 736-0260,2007-08-31,4687 James Forge Apt. 980,Brianshire,NJ,US,66410,Bronze,Regular,True,True,2023-10-25,2024-11-26
+CUST-00002,Amanda,Brown,amanda.brown9@hotmail.com,(219) 136-1939,1986-03-04,9985 Harris Stravenue,Johnfurt,DC,US,88540,Bronze,Regular,True,False,2022-04-13,2024-01-13
+CUST-00003,Stephen,Hickman,stephen.hickman54@hotmail.com,(079) 911-8384,1960-10-03,35427 Carr Valley Apt. 841,West Darrell,CT,US,97811,Gold,High Value,True,True,2024-03-16,2024-08-23
+CUST-00004,Joseph,Jacobs,joseph.jacobs98@icloud.com,(348) 740-1640,1953-09-01,427 Hoffman Creek,Lake Rebeccaside,AZ,US,48894,Bronze,New,True,True,2023-03-24,2024-04-04
+CUST-00005,Earl,Anderson,earl.anderson54@icloud.com,(053) 315-8692,2004-05-22,26025 Pham Way,West Erik,UT,US,14669,Silver,Regular,True,False,2021-05-21,2022-10-07
+CUST-00006,Benjamin,Ruiz,benjamin.ruiz29@outlook.com,(754) 330-3654,2001-01-04,8685 Darrell Green Apt. 940,New Ryanmouth,NE,US,79958,Bronze,New,True,True,2020-11-23,2024-12-07
+CUST-00007,Darrell,Lam,darrell.lam52@yahoo.com,(060) 883-5615,1987-09-30,484 Nguyen Square,Angelaborough,MT,US,87654,Gold,Churned,True,True,2020-11-08,2024-10-01
+CUST-00008,Erica,Orr,erica.orr51@icloud.com,(468) 044-3699,1989-06-25,7387 Donna Haven Suite 134,Port James,AK,US,06558,Silver,New,True,False,2022-10-07,2023-04-24
+CUST-00009,Thomas,Atkinson,thomas.atkinson60@yahoo.com,(693) 676-3201,1996-04-14,87083 Stephen Unions,Contrerasside,PA,US,42089,Bronze,Regular,True,False,2020-04-29,2024-10-06
+CUST-00010,Patricia,Salazar,patricia.salazar98@hotmail.com,(868) 727-7434,1995-08-05,347 Jennifer Freeway Suite 558,East Edwardfurt,UT,US,20529,Bronze,Churned,True,True,2023-03-27,2024-06-24
+CUST-00011,Caleb,Russell,caleb.russell61@gmail.com,(603) 669-0967,1953-10-18,6688 Tracy Groves Suite 706,Elizabethfurt,VA,US,22133,Silver,New,True,False,2022-06-09,2024-08-03
+CUST-00012,Samantha,Hooper,samantha.hooper9@gmail.com,(699) 016-2720,1967-10-13,75564 King Common Suite 080,Jeffreyland,WI,US,85927,Silver,Churned,True,False,2022-05-27,2022-07-04
+CUST-00013,Anthony,Wright,anthony.wright20@yahoo.com,(923) 271-9374,1995-08-27,912 Rodriguez Burg,Barbarafurt,MO,US,94219,Bronze,High Value,True,False,2023-10-10,2024-01-06
+CUST-00014,Brittany,Rivas,brittany.rivas90@outlook.com,(491) 905-8651,1981-04-20,67165 Zimmerman Mews Apt. 849,Marshallshire,KY,US,42746,Silver,Regular,True,True,2021-02-02,2024-06-02
+CUST-00015,Mariah,Miller,mariah.miller15@yahoo.com,(379) 965-0752,1980-04-15,5494 Zachary Field Apt. 367,Lake Thomas,VT,US,64833,Platinum,New,False,False,2023-12-18,2024-06-04
+CUST-00016,Andre,Phillips,andre.phillips87@hotmail.com,(349) 578-8568,1971-09-01,4431 Leslie Summit Apt. 337,Jennyhaven,PA,US,37594,Bronze,High Value,False,True,2021-10-26,2024-12-08
+CUST-00017,Marissa,Phillips,marissa.phillips81@yahoo.com,(408) 240-0842,1988-07-22,09477 Peterson Center Suite 711,Vasquezshire,SC,US,90475,Bronze,At Risk,True,True,2021-08-15,2021-10-20
+CUST-00018,Edward,Hart,edward.hart16@icloud.com,(318) 699-9386,1978-04-02,9649 Chelsea Streets Apt. 334,East Johnside,CA,US,21018,Silver,Regular,True,False,2021-05-13,2021-05-16
+CUST-00019,Shannon,Wheeler,shannon.wheeler65@outlook.com,(344) 713-4936,1959-10-14,242 Brian Turnpike,Brookeshire,PW,US,38329,Bronze,Regular,True,True,2021-04-23,2022-12-05
+CUST-00020,Taylor,Torres,taylor.torres47@hotmail.com,(488) 771-9065,1986-09-05,39904 Kathryn Extensions,Stonemouth,PW,US,36959,Silver,Regular,True,True,2021-10-22,2022-05-21
+CUST-00021,Brenda,Walters,brenda.walters35@icloud.com,(175) 655-1256,1991-08-17,680 Miller Glen Suite 168,Lake Mollymouth,MT,US,07605,Gold,Regular,True,True,2022-03-18,2022-09-25
+CUST-00022,Michael,Avila,michael.avila94@icloud.com,(034) 824-7710,2006-12-30,248 Andrea Course,Port Robin,NH,US,15897,Bronze,At Risk,True,False,2022-10-23,2024-03-24
+CUST-00023,Eric,Cantu,eric.cantu58@yahoo.com,(467) 737-8263,2004-03-05,46584 Justin Hills,Grimesmouth,ND,US,63984,Silver,High Value,True,False,2021-04-24,2022-08-01
+CUST-00024,Andrea,Daniels,andrea.daniels64@outlook.com,(533) 963-6057,1992-04-05,2702 Kane Well Suite 187,Lake Douglasberg,CA,US,62038,Bronze,Regular,True,False,2022-01-17,2024-05-09
+CUST-00025,Joseph,Hanson,joseph.hanson77@outlook.com,(158) 657-8091,1966-05-21,16117 Heather Burgs Apt. 504,Nicholasberg,IA,US,70122,Silver,Regular,True,False,2021-10-14,2023-02-09
+CUST-00026,Erin,White,erin.white53@hotmail.com,(969) 379-2374,1978-10-01,4821 Landry Radial,Daniellechester,UT,US,33281,Silver,Regular,True,True,2020-10-14,2022-09-17
+CUST-00027,Kevin,Kidd,kevin.kidd58@gmail.com,(136) 959-4406,1968-07-27,743 Robinson Field,Ericaberg,SC,US,13236,Bronze,Regular,True,False,2023-11-02,2024-11-19
+CUST-00028,Debbie,Parker,debbie.parker75@outlook.com,(952) 145-6232,1996-09-24,842 Sloan Orchard Suite 517,East Karenbury,VI,US,89148,Bronze,Regular,True,True,2021-12-24,2024-03-01
+CUST-00029,Tina,Coffey,tina.coffey43@outlook.com,(516) 048-1754,1985-08-16,37098 Herman Forges Apt. 746,East Brandonton,ME,US,65070,Silver,Regular,True,False,2023-08-14,2023-10-11
+CUST-00030,Jimmy,Medina,jimmy.medina25@outlook.com,(586) 926-1796,2005-02-13,53773 Garcia Spur Suite 850,Hillville,PR,US,60101,Bronze,Regular,True,False,2021-09-30,2022-01-16
+CUST-00031,Jason,Fowler,jason.fowler28@hotmail.com,(053) 293-1839,1965-05-08,2904 Vanessa Plains,Laurenville,TN,US,03880,Bronze,High Value,True,True,2024-05-13,2024-06-12
+CUST-00032,Michael,Kramer,michael.kramer13@yahoo.com,(024) 026-8117,1978-02-16,917 Sonia Cape Suite 700,Boonechester,TX,US,14651,Bronze,Regular,True,True,2022-08-24,2023-10-19
+CUST-00033,Renee,Jones,renee.jones17@outlook.com,(921) 249-9856,2008-03-06,8961 Melissa Run Apt. 673,Morganmouth,MO,US,55025,Bronze,New,True,True,2020-05-12,2023-09-29
+CUST-00034,Larry,Edwards,larry.edwards82@hotmail.com,(271) 111-6152,1984-01-27,165 Parrish Stravenue Apt. 494,Dalehaven,IL,US,20781,Bronze,New,True,True,2021-02-22,2023-09-04
+CUST-00035,Jeffrey,Rodriguez,jeffrey.rodriguez44@yahoo.com,(514) 936-8998,1954-12-01,24455 Howard Divide Suite 120,Lake Alyssafurt,MT,US,59961,Platinum,Regular,True,False,2023-10-20,2024-03-17
+CUST-00036,Mitchell,Griffith,mitchell.griffith9@hotmail.com,(991) 022-9014,1977-11-04,9764 Kari Crescent Suite 614,Roseport,AZ,US,29404,Bronze,High Value,True,False,2023-06-29,2024-02-01
+CUST-00037,Carol,Smith,carol.smith73@outlook.com,(324) 451-0762,1960-07-30,851 Hensley Canyon,Smithland,VI,US,41534,Bronze,Regular,True,False,2021-05-09,2023-06-14
+CUST-00038,Ashley,Mckinney,ashley.mckinney77@icloud.com,(160) 529-7516,1999-12-02,9681 Harrell Summit,Jeffreyburgh,CA,US,67411,Bronze,Regular,True,True,2021-11-16,2023-11-08
+CUST-00039,Alyssa,Lee,alyssa.lee76@hotmail.com,(523) 124-3292,1995-04-14,77997 Lin Road,Edwardland,NJ,US,58462,Bronze,High Value,True,True,2023-06-28,2024-06-10
+CUST-00040,Laura,Vargas,laura.vargas98@yahoo.com,(147) 700-5411,1987-04-19,9807 Marc Mountains Apt. 071,Toniland,NY,US,85190,Silver,Regular,False,False,2021-07-31,2022-03-03
+CUST-00041,John,Kim,john.kim71@gmail.com,(892) 554-6659,1956-05-08,51864 Cummings Shoals Apt. 519,West Kyle,SD,US,92052,Bronze,Regular,True,True,2021-12-22,2023-12-23
+CUST-00042,David,Fletcher,david.fletcher5@yahoo.com,(865) 281-6850,1973-06-01,57332 Chris Vista,New Kellihaven,AZ,US,87261,Bronze,Regular,True,False,2020-05-19,2021-12-08
+CUST-00043,Katie,Anderson,katie.anderson30@outlook.com,(229) 270-6537,1987-01-21,83473 Gregory Ports Suite 746,Burchborough,AS,US,79755,Silver,High Value,True,True,2021-09-10,2022-02-24
+CUST-00044,John,Davidson,john.davidson55@gmail.com,(818) 141-2478,1961-07-30,37506 Randy Landing Apt. 615,North Lucas,CT,US,94178,Silver,High Value,True,True,2023-12-06,2024-08-16
+CUST-00045,Lacey,Taylor,lacey.taylor10@gmail.com,(727) 790-1043,1999-05-25,43410 Robert Underpass Suite 117,Lake Zacharybury,VT,US,19319,Bronze,Regular,True,True,2021-04-16,2022-05-15
+CUST-00046,Aaron,Gomez,aaron.gomez37@hotmail.com,(218) 518-8888,1954-08-04,65405 Michael Street Apt. 952,West Amyburgh,MP,US,90243,Bronze,High Value,True,True,2022-07-26,2023-09-12
+CUST-00047,Heather,Welch,heather.welch65@icloud.com,(170) 430-3054,1981-10-26,0345 Michelle Isle Suite 156,Paulfurt,MA,US,24987,Bronze,New,False,True,2023-08-25,2024-04-26
+CUST-00048,Tyler,Glass,tyler.glass42@icloud.com,(161) 692-8451,1957-11-16,7962 Bell Canyon Suite 964,North Emilyfurt,MN,US,67752,Bronze,New,True,True,2022-05-02,2024-06-20
+CUST-00049,Erin,Cisneros,erin.cisneros74@icloud.com,(970) 213-5569,1955-04-03,755 Hines Ports,New Michael,MD,US,85640,Platinum,Churned,True,False,2020-08-22,2021-11-08
+CUST-00050,Susan,Johnson,susan.johnson6@yahoo.com,(868) 144-7394,1991-08-23,12172 Osborn Valleys Suite 518,Patriciaburgh,VT,US,93504,Bronze,High Value,True,False,2020-11-01,2024-09-11
+CUST-00051,Dana,Leon,dana.leon75@hotmail.com,(132) 370-5895,1979-03-07,114 Key Stravenue,Foxchester,GU,US,75854,Silver,Regular,False,False,2022-04-15,2022-06-27
+CUST-00052,Teresa,Day,teresa.day43@outlook.com,(852) 892-2680,1999-03-14,2253 Meza Path,Meghanview,ID,US,83739,Silver,At Risk,True,True,2022-01-08,2024-11-13
+CUST-00053,Joshua,Weber,joshua.weber37@hotmail.com,(182) 992-2995,1999-10-24,10943 Montgomery Burgs,Smallside,LA,US,84637,Gold,High Value,True,False,2022-10-05,2024-11-25
+CUST-00054,Timothy,Ballard,timothy.ballard42@gmail.com,(471) 027-6773,1972-03-08,5562 Robertson Coves,Johnville,KY,US,59430,Platinum,Regular,True,True,2023-01-29,2023-07-22
+CUST-00055,Colin,Roberts,colin.roberts85@icloud.com,(963) 259-5327,2008-04-02,4701 Wagner Garden Apt. 950,West Troyfort,LA,US,70846,Bronze,New,True,True,2021-09-22,2021-10-01
+CUST-00056,Daniel,Anderson,daniel.anderson64@hotmail.com,(565) 060-9835,1983-11-25,8784 David Court,Brooksmouth,OH,US,48421,Silver,Regular,True,True,2021-03-10,2024-01-24
+CUST-00057,James,Hicks,james.hicks57@hotmail.com,(002) 578-7298,1961-02-28,69495 Erickson Hills Suite 055,South Brandytown,PA,US,62706,Bronze,Churned,True,False,2022-04-01,2022-12-23
+CUST-00058,Diana,Stanton,diana.stanton21@outlook.com,(309) 728-9623,1955-03-18,07562 Vaughn Loop,Salaston,VT,US,18599,Silver,High Value,False,True,2022-08-07,2023-11-04
+CUST-00059,Ann,Bolton,ann.bolton15@hotmail.com,(652) 785-8549,1980-02-07,8434 Bush Spurs,Stewartstad,OH,US,95090,Gold,High Value,False,True,2022-02-24,2022-12-05
+CUST-00060,David,Rhodes,david.rhodes38@icloud.com,(652) 404-1574,1994-07-30,84842 Christina Radial,East Brent,MH,US,70105,Silver,Regular,True,True,2021-09-15,2022-06-13
+CUST-00061,Jesse,Garcia,jesse.garcia59@icloud.com,(712) 082-6773,1995-01-18,4019 Amanda Stream Apt. 262,Port Randyfort,HI,US,98674,Bronze,Regular,True,True,2021-06-26,2024-11-12
+CUST-00062,Sara,Mcdowell,sara.mcdowell18@gmail.com,(991) 547-8872,2000-04-12,3152 Wong Stravenue Apt. 054,East Cheryl,SC,US,53649,Bronze,At Risk,True,True,2020-01-16,2024-02-21
+CUST-00063,Zachary,Miller,zachary.miller65@outlook.com,(227) 530-4637,1994-12-06,9904 Schwartz Circle Apt. 742,Parksport,UT,US,15890,Gold,Regular,True,True,2023-01-03,2024-04-11
+CUST-00064,Shelia,Richardson,shelia.richardson85@hotmail.com,(272) 795-6878,1997-08-01,91878 Miller Port,North Mariahaven,ID,US,75566,Gold,Regular,True,False,2020-12-28,2023-02-21
+CUST-00065,Franklin,Bond,franklin.bond98@icloud.com,(397) 187-0728,1976-04-27,740 Scott Alley,New Charles,NE,US,45659,Bronze,Churned,True,True,2021-12-26,2024-02-05
+CUST-00066,Amber,Brown,amber.brown31@icloud.com,(704) 622-6567,2001-04-20,1825 Gregory Plain Suite 823,Port Andrewport,NH,US,88777,Bronze,At Risk,True,False,2024-01-08,2024-09-21
+CUST-00067,Roger,Gray,roger.gray61@hotmail.com,(752) 431-0690,1966-09-16,90790 Joy Locks,Youngborough,WV,US,07899,Bronze,High Value,True,True,2021-01-12,2021-08-03
+CUST-00068,Victoria,Young,victoria.young64@gmail.com,(959) 953-4283,1976-03-21,89268 Williams Key Suite 856,Hernandezfurt,HI,US,99383,Bronze,Churned,True,False,2024-02-13,2024-08-04
+CUST-00069,John,Perez,john.perez57@gmail.com,(270) 866-8826,1966-10-30,1751 Brett Lane,Port Charlesshire,VA,US,88509,Silver,Regular,True,False,2023-11-09,2024-06-29
+CUST-00070,Timothy,Booth,timothy.booth84@yahoo.com,(033) 173-9363,1983-11-02,7854 Ward Parks Suite 175,West Lawrence,AZ,US,74232,Bronze,At Risk,True,True,2021-06-30,2024-07-10
+CUST-00071,Joyce,Smith,joyce.smith51@gmail.com,(996) 423-5369,1999-04-23,547 Murray Street Suite 228,Whiteside,SD,US,08199,Gold,At Risk,True,False,2022-06-27,2023-10-20
+CUST-00072,Mary,Jones,mary.jones41@hotmail.com,(006) 231-2038,1978-07-21,977 Adam Plaza,Smithhaven,VA,US,36511,Gold,New,False,True,2023-09-05,2024-05-20
+CUST-00073,Justin,Shaw,justin.shaw37@yahoo.com,(621) 182-3398,1967-05-10,6156 Cunningham Square Apt. 410,South Nicholasside,NJ,US,07856,Silver,Regular,False,True,2023-02-19,2024-04-27
+CUST-00074,Jacqueline,Miller,jacqueline.miller13@hotmail.com,(591) 803-3974,1956-01-13,489 Harry Vista,Alexisborough,OR,US,19400,Bronze,Regular,False,False,2023-10-20,2024-09-13
+CUST-00075,Jennifer,Sanders,jennifer.sanders8@outlook.com,(293) 968-5621,1981-01-06,16315 Novak Islands Apt. 477,West Angela,MS,US,57104,Bronze,Regular,True,False,2020-05-06,2021-03-17
+CUST-00076,Brenda,James,brenda.james88@yahoo.com,(431) 142-6265,1973-04-24,47541 Christopher Meadows,Hawkinshaven,MT,US,14039,Bronze,New,True,True,2023-06-21,2023-07-05
+CUST-00077,Michael,Davis,michael.davis31@hotmail.com,(560) 466-1839,1982-02-18,24447 Bryan Mews Suite 647,West Johnathanbury,VA,US,82425,Gold,New,True,False,2022-09-08,2023-10-31
+CUST-00078,Christina,Ellis,christina.ellis33@gmail.com,(065) 965-7569,1960-12-16,375 Tamara Island Suite 793,Nicholasfurt,MN,US,15428,Gold,Regular,True,True,2020-08-10,2024-09-13
+CUST-00079,James,Osborn,james.osborn10@hotmail.com,(807) 374-1672,1988-04-22,2661 Ewing Neck,Fergusonchester,ND,US,05319,Gold,Churned,True,True,2020-10-22,2024-02-14
+CUST-00080,Michael,Woodard,michael.woodard89@outlook.com,(113) 529-0965,2006-08-03,01438 Sean Lock Suite 982,Whitneyfort,CT,US,39223,Bronze,Regular,True,True,2022-05-31,2023-06-28
+CUST-00081,Suzanne,Wilson,suzanne.wilson14@yahoo.com,(254) 573-8757,1958-11-04,1401 Melinda Rue Apt. 238,New Ethan,OH,US,56386,Bronze,Regular,True,True,2024-03-24,2024-12-19
+CUST-00082,Jesse,Sullivan,jesse.sullivan3@hotmail.com,(660) 937-9660,1992-03-26,1918 Michael Flat,Wilsonfort,NC,US,84270,Bronze,High Value,True,True,2020-10-29,2022-02-18
+CUST-00083,Paul,Long,paul.long7@icloud.com,(579) 249-9125,1959-12-15,25286 Carlson Ports Suite 627,New Garrett,LA,US,18889,Silver,At Risk,True,True,2020-07-06,2021-05-08
+CUST-00084,Megan,Harvey,megan.harvey30@icloud.com,(072) 368-8767,1976-05-01,2190 Kelly Harbor Apt. 842,Cunninghamfort,OH,US,67453,Gold,Regular,True,False,2023-11-22,2024-01-06
+CUST-00085,Danny,Hampton,danny.hampton97@yahoo.com,(580) 783-6134,2001-08-03,4517 Kimberly Freeway,Port Joan,UT,US,46458,Silver,Churned,True,False,2023-09-13,2024-10-25
+CUST-00086,Chelsey,Patterson,chelsey.patterson57@gmail.com,(330) 958-4982,1971-04-10,9481 Sydney Turnpike Suite 042,East Dustin,MD,US,32948,Silver,High Value,False,False,2022-10-08,2024-06-19
+CUST-00087,Erica,Burns,erica.burns96@hotmail.com,(466) 711-6845,1978-06-25,9017 Horn Underpass Suite 363,Adamsport,MA,US,72238,Bronze,New,True,True,2022-08-06,2023-12-26
+CUST-00088,Ashlee,Washington,ashlee.washington68@icloud.com,(001) 701-2770,2008-01-10,24241 Wright Landing Apt. 064,South Diana,VT,US,12976,Gold,At Risk,True,True,2021-07-18,2021-07-19
+CUST-00089,Thomas,Anderson,thomas.anderson62@outlook.com,(700) 516-2713,1974-07-17,55426 Darlene Springs,North Alyssa,AL,US,80496,Silver,Regular,False,True,2021-01-06,2023-08-09
+CUST-00090,Scott,Bowen,scott.bowen19@yahoo.com,(269) 731-1219,1993-08-16,5234 John Rapid Suite 043,Lake Peter,SD,US,07653,Gold,High Value,True,True,2022-10-28,2024-07-12
+CUST-00091,Laura,Allen,laura.allen72@outlook.com,(379) 180-5526,2000-10-25,8271 Brenda Bridge Suite 300,Hunterhaven,WI,US,54952,Bronze,Regular,True,False,2021-09-25,2023-02-12
+CUST-00092,Richard,Davidson,richard.davidson48@outlook.com,(241) 418-3285,1974-12-18,6303 Sandy Crescent,Salazarton,ME,US,87805,Silver,At Risk,True,False,2022-06-01,2024-05-01
+CUST-00093,Joy,Wilson,joy.wilson30@hotmail.com,(027) 588-4252,1994-09-17,105 Nelson Circles Suite 917,Dixonton,NM,US,74803,Bronze,At Risk,True,True,2023-03-08,2023-06-26
+CUST-00094,Eric,Ayala,eric.ayala29@gmail.com,(138) 000-3075,1974-07-15,08635 Robert Stravenue,Josephland,OK,US,49365,Silver,Regular,True,True,2024-01-08,2024-02-19
+CUST-00095,Emily,Williams,emily.williams15@yahoo.com,(806) 174-4518,1978-08-05,49493 Richardson Park Apt. 832,South Andrewside,MI,US,83855,Bronze,New,True,False,2021-01-01,2024-05-10
+CUST-00096,Natalie,Tapia,natalie.tapia31@icloud.com,(641) 383-6702,1992-08-12,38657 Beverly Parkways,Lake Lori,CA,US,78081,Bronze,Regular,True,True,2020-01-03,2022-11-03
+CUST-00097,Ryan,Brandt,ryan.brandt70@hotmail.com,(456) 557-4313,1960-12-16,12775 Martinez Knolls,South Kyle,KS,US,16218,Silver,High Value,True,True,2021-01-23,2021-06-02
+CUST-00098,Lindsey,Torres,lindsey.torres63@icloud.com,(903) 521-3568,1956-03-01,2067 Cody Cove Apt. 100,East James,MO,US,49291,Bronze,Churned,False,False,2023-03-03,2024-06-04
+CUST-00099,Sharon,Miller,sharon.miller57@hotmail.com,(101) 372-1510,2005-04-19,96670 Vega Extensions,Jasonburgh,KY,US,37182,Platinum,At Risk,False,True,2022-08-20,2023-09-09
+CUST-00100,Edgar,Mendez,edgar.mendez70@outlook.com,(476) 870-1462,1976-07-13,806 Castillo Tunnel,Coopershire,NY,US,42654,Bronze,Regular,True,True,2022-10-10,2023-08-21
+CUST-00101,Hector,Flores,hector.flores59@gmail.com,(407) 859-3213,1989-08-07,039 Kelly Villages Apt. 239,Lindastad,PW,US,78038,Silver,High Value,True,False,2020-12-25,2021-02-04
+CUST-00102,Jackie,Meza,jackie.meza43@yahoo.com,(937) 842-7010,1966-04-08,87059 Lindsay Junctions,Port Megan,MD,US,08307,Platinum,At Risk,True,True,2022-07-14,2022-08-02
+CUST-00103,Brenda,Stark,brenda.stark71@yahoo.com,(851) 569-1545,1960-12-23,675 Jasmine Points,Jeffreyshire,GU,US,23484,Silver,At Risk,True,True,2023-06-25,2024-01-21
+CUST-00104,Jessica,Phillips,jessica.phillips77@gmail.com,(096) 902-9593,1988-08-26,2513 Haas Expressway,Port Jennamouth,NV,US,01994,Bronze,Churned,True,True,2020-10-18,2021-11-29
+CUST-00105,John,Jones,john.jones23@gmail.com,(100) 676-2676,1972-10-15,79327 Lauren Bypass Suite 054,North Matthewfurt,GA,US,96443,Silver,New,False,True,2021-02-25,2021-06-10
+CUST-00106,Shelly,Spence,shelly.spence31@icloud.com,(970) 629-6201,1971-09-07,8844 Young Causeway,Armstrongfort,FL,US,07645,Bronze,Regular,False,True,2021-07-08,2022-10-09
+CUST-00107,Ronald,Phillips,ronald.phillips68@gmail.com,(973) 103-2417,1999-11-18,7741 Lopez Light Suite 270,Scottview,IN,US,35701,Silver,Regular,True,True,2022-12-23,2024-02-12
+CUST-00108,Edward,Horton,edward.horton14@hotmail.com,(586) 938-0686,2006-08-01,374 Ralph Walk Apt. 898,North Stacy,NV,US,23160,Silver,Churned,False,True,2020-06-07,2024-10-07
+CUST-00109,Gary,Lewis,gary.lewis85@icloud.com,(061) 632-9451,1958-04-05,548 Stark Bridge Suite 162,New Brianna,WV,US,13634,Bronze,High Value,False,True,2020-11-12,2024-09-08
+CUST-00110,Anna,Garcia,anna.garcia52@hotmail.com,(856) 467-9970,1962-12-11,99606 Vaughn Causeway Suite 450,Lisaport,ME,US,37246,Silver,Regular,True,False,2021-04-14,2024-05-31
+CUST-00111,Michele,Cohen,michele.cohen11@outlook.com,(324) 754-6913,1977-10-07,785 Zachary Estate Apt. 486,Port Melissa,FM,US,75038,Silver,New,True,True,2024-05-15,2024-05-21
+CUST-00112,James,Whitaker,james.whitaker71@outlook.com,(307) 053-4578,1975-04-22,035 Wheeler Fall,Matthewsstad,MI,US,21933,Bronze,High Value,True,True,2023-10-06,2024-10-18
+CUST-00113,Jonathan,Rivas,jonathan.rivas56@gmail.com,(060) 293-3334,1989-04-23,072 Carolyn Branch,West Charlene,ME,US,93921,Silver,New,True,True,2020-05-28,2024-11-05
+CUST-00114,Dawn,Coleman,dawn.coleman71@yahoo.com,(574) 374-8969,1959-02-06,994 Cohen Orchard Apt. 545,Joseport,ID,US,20152,Bronze,At Risk,True,True,2021-09-10,2023-05-27
+CUST-00115,John,Brown,john.brown52@hotmail.com,(965) 207-4466,1974-10-30,935 Gina Route,Knoxstad,NY,US,39848,Silver,Regular,True,False,2023-11-08,2024-10-27
+CUST-00116,Mary,Walter,mary.walter20@hotmail.com,(172) 482-5135,1965-10-03,5549 Ford Crest Suite 099,South Pamelahaven,DE,US,89721,Bronze,At Risk,False,False,2020-10-24,2022-05-30
+CUST-00117,Kenneth,Brown,kenneth.brown95@outlook.com,(235) 697-2521,1980-04-16,0074 Kathleen Extension,South Kristen,WI,US,12040,Gold,High Value,True,True,2023-11-03,2023-12-27
+CUST-00118,Ryan,Jordan,ryan.jordan43@gmail.com,(760) 083-5058,1963-12-15,335 Anderson Lights,Garyton,ME,US,38620,Bronze,At Risk,True,True,2021-12-05,2023-04-30
+CUST-00119,Abigail,Warren,abigail.warren93@gmail.com,(257) 532-6033,1993-06-20,09821 Dawson Turnpike,South Nancyview,WI,US,70589,Platinum,High Value,True,True,2021-12-13,2023-11-07
+CUST-00120,Brittney,Williams,brittney.williams28@yahoo.com,(001) 676-1847,1992-01-28,046 Elaine Groves,South Maria,CT,US,67555,Silver,Regular,False,True,2020-06-26,2023-09-24
+CUST-00121,David,Wilson,david.wilson48@gmail.com,(393) 483-5642,1955-08-22,75300 Rebecca Village Suite 218,Lake Jenniferview,SD,US,30799,Silver,High Value,True,True,2020-06-23,2022-07-17
+CUST-00122,Tiffany,Baker,tiffany.baker99@icloud.com,(204) 556-1100,2000-05-01,5794 Nathan Junctions,North Richard,NH,US,36130,Silver,High Value,False,True,2020-03-23,2024-03-19
+CUST-00123,Hannah,Mendoza,hannah.mendoza89@outlook.com,(212) 021-6979,1990-10-14,659 Michelle Villages,South Samantha,DE,US,54408,Bronze,Regular,True,True,2021-11-23,2023-04-06
+CUST-00124,Bryan,Pena,bryan.pena45@gmail.com,(899) 358-8916,1989-11-13,5628 Alexander Estate,Christianburgh,CA,US,98992,Bronze,New,True,False,2020-01-21,2022-06-26
+CUST-00125,John,Cordova,john.cordova95@gmail.com,(386) 631-7797,1958-04-25,5170 Richard Camp Apt. 199,Pamelaside,IL,US,86300,Bronze,Regular,True,True,2020-03-23,2023-06-07
+CUST-00126,Stephanie,Cox,stephanie.cox21@outlook.com,(375) 899-7571,1958-10-31,55488 Park Cape,South Donald,VT,US,97823,Bronze,Regular,True,True,2020-03-30,2023-09-04
+CUST-00127,Daniel,Carr,daniel.carr7@yahoo.com,(637) 351-6091,1995-12-10,9827 Alyssa Causeway Suite 978,Lake Beth,VA,US,17328,Bronze,High Value,True,False,2020-11-03,2021-04-09
+CUST-00128,Diane,Obrien,diane.obrien85@hotmail.com,(669) 346-5472,1961-01-26,858 James Road Suite 522,Jenniferstad,OH,US,63464,Bronze,Regular,True,True,2021-06-12,2023-07-08
+CUST-00129,Sherri,Mckinney,sherri.mckinney15@outlook.com,(846) 081-0620,1990-05-03,2442 Hannah Hill,Port Amber,MI,US,59823,Bronze,Regular,True,True,2023-01-12,2023-03-26
+CUST-00130,Miranda,Stevenson,miranda.stevenson86@outlook.com,(863) 840-6665,2006-08-05,43973 Fischer Plains,Port Jenny,ID,US,39059,Bronze,Regular,True,False,2023-11-21,2024-05-21
+CUST-00131,Tonya,Jones,tonya.jones39@yahoo.com,(816) 064-8422,1985-08-04,57202 Carlson Trail Suite 798,Charlesmouth,NC,US,29331,Silver,At Risk,True,False,2024-04-29,2024-12-20
+CUST-00132,Abigail,Hartman,abigail.hartman64@hotmail.com,(886) 153-3555,1969-08-14,015 Allen Row Apt. 056,South Jonathanport,AK,US,68247,Bronze,Regular,True,True,2020-09-18,2024-03-27
+CUST-00133,Nicholas,Lang,nicholas.lang86@outlook.com,(043) 581-1288,1953-11-16,36138 Lucas Cliffs,North Stephen,MA,US,05466,Bronze,At Risk,False,False,2022-01-01,2022-04-06
+CUST-00134,Brian,Bauer,brian.bauer10@outlook.com,(934) 667-6650,1974-11-23,091 Jaclyn Cliffs,Sarahville,LA,US,90400,Silver,High Value,True,False,2022-07-05,2023-04-05
+CUST-00135,Christopher,Hubbard,christopher.hubbard15@hotmail.com,(607) 283-2684,2006-04-13,5088 David Avenue,Medinaland,ME,US,28033,Bronze,Regular,True,True,2021-12-19,2024-03-27
+CUST-00136,Rebecca,Cooper,rebecca.cooper89@outlook.com,(822) 239-4312,1990-05-18,781 Powers Glen,East Jessicafort,MA,US,47311,Bronze,At Risk,True,True,2021-11-08,2022-04-04
+CUST-00137,Diana,Garcia,diana.garcia68@gmail.com,(357) 759-4929,1984-08-25,2053 Jennifer Row Suite 452,Nataliemouth,NV,US,47521,Bronze,Regular,True,False,2022-10-14,2024-07-01
+CUST-00138,Tony,Rodriguez,tony.rodriguez22@gmail.com,(142) 834-1108,1988-03-18,308 Stephens Plains Suite 256,Port Brittany,PR,US,38642,Silver,New,True,True,2022-11-25,2023-03-07
+CUST-00139,Walter,Davis,walter.davis45@outlook.com,(039) 282-7229,2005-08-26,750 Kathleen Fort,West Miketon,TN,US,27603,Silver,At Risk,True,False,2021-08-20,2023-05-18
+CUST-00140,Lacey,Hughes,lacey.hughes19@outlook.com,(005) 184-4989,1963-01-13,9184 Kaufman Fork Suite 557,Eatontown,NY,US,18715,Bronze,High Value,True,True,2024-02-16,2024-07-05
+CUST-00141,Jerry,Robertson,jerry.robertson23@hotmail.com,(222) 591-3651,1979-12-16,3926 John Crossroad Apt. 280,North Gabriel,HI,US,68218,Bronze,High Value,True,True,2021-04-06,2024-11-03
+CUST-00142,Carol,Elliott,carol.elliott73@icloud.com,(413) 797-7236,1986-07-09,842 Nielsen Ranch,East Nicholasberg,CT,US,02671,Bronze,Churned,True,True,2020-01-31,2021-01-28
+CUST-00143,Michele,Gordon,michele.gordon61@hotmail.com,(291) 279-9088,1994-11-08,2980 Boyd Land,Lake Alyssabury,AS,US,63693,Silver,At Risk,True,False,2021-11-20,2024-05-05
+CUST-00144,Patrick,Chapman,patrick.chapman10@outlook.com,(916) 247-3149,2001-09-11,3009 April Lane Apt. 565,East Ronaldshire,KS,US,34750,Bronze,New,True,False,2023-05-02,2024-10-03
+CUST-00145,Rodney,Diaz,rodney.diaz83@gmail.com,(636) 887-2588,1980-01-30,562 Julie Mission Apt. 138,Hartmanside,RI,US,91865,Silver,Regular,True,True,2021-03-28,2023-10-24
+CUST-00146,Brett,Price,brett.price95@gmail.com,(127) 961-1435,1957-11-15,669 Dawson Ranch,Port Lorifort,NV,US,01904,Bronze,At Risk,True,False,2022-11-10,2023-04-16
+CUST-00147,Diane,Lara,diane.lara61@icloud.com,(098) 839-2053,1989-07-01,46566 April Street,North Andreaside,PW,US,76907,Bronze,New,False,True,2021-04-14,2022-07-30
+CUST-00148,Sylvia,Hill,sylvia.hill44@gmail.com,(376) 904-2681,1984-03-13,1848 Benson Lane Suite 357,Mosleytown,NJ,US,15740,Silver,Regular,True,True,2022-09-22,2023-04-24
+CUST-00149,Patrick,Kramer,patrick.kramer57@icloud.com,(356) 588-0434,1958-08-03,82755 Patricia Grove Apt. 373,Lake John,KS,US,27603,Silver,Regular,True,False,2020-12-27,2021-11-27
+CUST-00150,Mary,Huff,mary.huff53@outlook.com,(111) 790-8075,1987-08-11,472 Sanders Terrace Apt. 086,Ayerston,NY,US,46020,Silver,New,True,False,2021-08-07,2022-12-08
+CUST-00151,Gina,Thompson,gina.thompson43@gmail.com,(875) 003-6915,1973-05-12,84347 Diaz Parks Suite 365,Melissaview,NV,US,24079,Silver,Regular,True,True,2024-05-22,2024-09-26
+CUST-00152,Tiffany,Parks,tiffany.parks78@yahoo.com,(438) 663-2270,1963-03-09,88574 Hart Port Apt. 612,East Lisafort,MP,US,83058,Bronze,High Value,False,False,2023-08-29,2023-10-15
+CUST-00153,Julie,Green,julie.green84@hotmail.com,(845) 061-5939,1985-02-23,5587 Preston Light,Stevenberg,VI,US,22465,Bronze,High Value,False,True,2021-08-14,2023-10-14
+CUST-00154,Sarah,Fisher,sarah.fisher83@outlook.com,(611) 253-5544,1986-10-08,7598 Gutierrez Ferry Apt. 234,East Garrettville,CT,US,08862,Gold,High Value,True,True,2022-10-02,2024-11-09
+CUST-00155,Thomas,Brown,thomas.brown88@icloud.com,(811) 492-1643,1967-01-29,2282 Austin Knolls Suite 778,Amyberg,UT,US,71186,Bronze,High Value,True,False,2023-06-19,2023-09-26
+CUST-00156,Carla,Welch,carla.welch40@yahoo.com,(968) 845-7831,1977-10-10,4240 Alexandra Trace Apt. 547,Lake Sandrafort,ME,US,01698,Platinum,Regular,True,False,2022-11-10,2024-06-30
+CUST-00157,Lauren,Harper,lauren.harper18@yahoo.com,(853) 686-6326,1999-01-14,1638 Mitchell Summit,Robertland,HI,US,18408,Bronze,At Risk,False,True,2023-08-01,2023-12-29
+CUST-00158,Dana,Williamson,dana.williamson95@icloud.com,(973) 502-0802,2006-12-14,2703 Edward Park Apt. 564,Boltonmouth,UT,US,04660,Bronze,Regular,True,False,2021-03-22,2022-06-20
+CUST-00159,Megan,Lynn,megan.lynn49@yahoo.com,(618) 723-4601,2007-01-28,7303 Moss Court,South Paul,ME,US,42845,Bronze,At Risk,True,True,2020-04-02,2021-01-02
+CUST-00160,Jessica,Garner,jessica.garner22@hotmail.com,(147) 435-0313,1988-04-13,24916 Albert Canyon Suite 925,East Ericland,TX,US,81588,Bronze,Regular,True,True,2022-06-21,2023-04-29
+CUST-00161,Tara,Malone,tara.malone79@outlook.com,(528) 127-3585,1997-10-11,306 Ramsey Glen Apt. 778,Amyfort,ID,US,74779,Silver,At Risk,True,False,2020-04-08,2021-02-24
+CUST-00162,Michael,Oconnor,michael.oconnor61@yahoo.com,(982) 182-7448,1973-08-30,862 Christine Lakes,West Jennifer,TN,US,71143,Bronze,Churned,True,True,2021-03-28,2024-04-26
+CUST-00163,James,Vega,james.vega37@hotmail.com,(294) 565-1181,1955-11-18,03173 Anthony Row,Barretthaven,RI,US,92423,Silver,Regular,False,False,2023-06-11,2024-05-11
+CUST-00164,Brandon,Walker,brandon.walker78@yahoo.com,(037) 170-5865,1997-02-26,480 Mary Club,New Colton,VA,US,30780,Gold,New,True,False,2023-03-24,2024-03-02
+CUST-00165,Jake,Fox,jake.fox14@icloud.com,(288) 619-5761,1962-08-25,685 Amanda Rapid,Mahoneymouth,OH,US,43054,Gold,Regular,True,False,2021-02-12,2024-05-25
+CUST-00166,Robert,Schultz,robert.schultz66@yahoo.com,(593) 983-6845,2006-05-13,0049 Zachary Hollow Apt. 433,Andrewview,PW,US,73070,Gold,New,True,True,2023-09-18,2024-05-15
+CUST-00167,Ashley,Duncan,ashley.duncan45@gmail.com,(752) 245-9334,1998-01-30,693 Jennifer Turnpike,Thompsonshire,GU,US,13000,Bronze,Regular,True,False,2020-06-03,2023-02-23
+CUST-00168,Kevin,Cross,kevin.cross11@outlook.com,(105) 566-1390,1988-05-03,48058 Mark Square Apt. 206,Mullinsshire,NY,US,12308,Bronze,Regular,False,True,2022-08-04,2023-02-15
+CUST-00169,Keith,Foster,keith.foster43@yahoo.com,(179) 086-4168,1977-05-15,78376 Ann Street,East Charles,WI,US,56870,Bronze,Regular,True,True,2020-08-05,2022-01-07
+CUST-00170,Sandra,Davis,sandra.davis18@hotmail.com,(655) 355-9042,2007-10-17,270 James Landing Apt. 110,New Sara,VI,US,38208,Bronze,New,False,False,2023-01-08,2023-01-17
+CUST-00171,Heather,Rodriguez,heather.rodriguez20@icloud.com,(053) 833-8848,1980-01-15,069 Jonathan Circle,Jamesview,AR,US,61444,Gold,High Value,True,True,2022-01-09,2023-12-21
+CUST-00172,Alan,Price,alan.price31@outlook.com,(510) 463-6815,1980-02-17,38780 John Pines,Matthewfurt,WA,US,21079,Bronze,Regular,True,True,2021-03-21,2021-04-15
+CUST-00173,Gabrielle,Kelly,gabrielle.kelly9@gmail.com,(840) 460-8432,1972-04-09,216 Robert Ports Apt. 649,Shaneberg,IL,US,86021,Gold,Regular,True,True,2021-05-11,2021-11-11
+CUST-00174,Amber,Mcbride,amber.mcbride74@yahoo.com,(482) 629-2518,1982-10-14,52056 Turner Summit,Edwinborough,CT,US,17742,Silver,Regular,False,False,2023-11-17,2024-01-31
+CUST-00175,Kathryn,Salazar,kathryn.salazar74@hotmail.com,(993) 933-0517,1960-11-05,526 Wells Estates Apt. 306,West Stephaniebury,WA,US,88494,Bronze,High Value,True,False,2021-03-14,2024-12-14
+CUST-00176,Katherine,Jones,katherine.jones68@icloud.com,(797) 573-6609,1993-12-01,569 Abigail Mission Suite 038,Terrellton,OH,US,51278,Silver,Churned,True,False,2024-03-02,2024-08-05
+CUST-00177,Crystal,Williams,crystal.williams61@gmail.com,(644) 726-4908,2003-03-05,718 Hector Prairie Apt. 665,Johnsonmouth,OR,US,93907,Silver,Churned,True,False,2021-04-23,2024-08-12
+CUST-00178,Nicole,Davis,nicole.davis9@outlook.com,(211) 175-1868,1987-02-19,8602 Cunningham Shoals,East Misty,HI,US,93830,Bronze,High Value,False,True,2021-06-16,2021-08-21
+CUST-00179,Kyle,Cross,kyle.cross97@outlook.com,(421) 230-9407,1980-11-03,097 Jay Shoals Suite 767,New Carolbury,FM,US,72242,Bronze,Regular,True,True,2024-04-26,2024-07-04
+CUST-00180,Courtney,Wilkins,courtney.wilkins88@hotmail.com,(220) 502-0994,1971-09-07,16224 Tammy Summit,Sarahland,WI,US,39730,Platinum,Regular,True,False,2020-12-06,2022-03-30
+CUST-00181,Priscilla,Wilkins,priscilla.wilkins92@hotmail.com,(814) 721-4586,1982-04-30,019 Timothy Spurs,Ronaldmouth,KS,US,69365,Bronze,Regular,True,True,2023-05-30,2024-04-28
+CUST-00182,Cindy,Ho,cindy.ho41@outlook.com,(787) 729-3430,1959-12-22,139 Gutierrez Isle Suite 830,Lake Juan,WY,US,09392,Silver,Churned,True,False,2022-10-05,2023-06-13
+CUST-00183,William,Nguyen,william.nguyen97@yahoo.com,(556) 990-2355,2004-03-13,0272 Mcclain Plain Suite 760,Annettemouth,OH,US,70740,Bronze,At Risk,False,True,2020-01-11,2020-02-13
+CUST-00184,Barbara,Rivera,barbara.rivera35@gmail.com,(512) 405-6829,1986-10-14,145 Joseph Corners,Wileystad,NV,US,40167,Silver,Regular,True,True,2024-02-13,2024-04-22
+CUST-00185,Kevin,Rodriguez,kevin.rodriguez50@outlook.com,(317) 807-8235,2004-04-09,2182 Jenny Mount Suite 810,Sarahland,MA,US,61695,Platinum,Regular,True,True,2023-07-12,2024-11-01
+CUST-00186,Dakota,Miranda,dakota.miranda67@outlook.com,(094) 353-3448,1971-01-10,142 Joshua Bridge Apt. 385,Josephport,OK,US,32590,Gold,High Value,False,True,2023-05-09,2023-08-20
+CUST-00187,Larry,Mcclain,larry.mcclain24@icloud.com,(020) 701-6016,1975-01-11,545 Jennifer Skyway Apt. 792,Port Leahmouth,CT,US,60215,Bronze,New,True,False,2022-06-06,2023-03-24
+CUST-00188,Deanna,Miranda,deanna.miranda58@icloud.com,(329) 456-2557,1980-04-14,1577 Justin Keys,New Dakota,GU,US,94122,Silver,Regular,True,True,2022-02-11,2024-05-30
+CUST-00189,Mark,Banks,mark.banks94@outlook.com,(876) 963-9382,2007-01-14,53966 Stephens Freeway Apt. 197,New Caitlinmouth,OH,US,13300,Silver,Regular,True,True,2023-07-25,2024-09-28
+CUST-00190,Gregory,Blanchard,gregory.blanchard8@gmail.com,(196) 570-1329,2003-02-25,27846 Gonzalez Springs,Kevinport,PW,US,57481,Silver,Regular,True,True,2020-04-24,2023-09-04
+CUST-00191,Rose,Mooney,rose.mooney21@gmail.com,(986) 240-5800,1992-02-27,40369 Garrett Station Suite 666,Lake Glenn,DC,US,25172,Bronze,High Value,True,False,2022-08-14,2023-12-10
+CUST-00192,Megan,Ward,megan.ward9@yahoo.com,(422) 010-2762,1958-02-16,9692 Hicks Plaza Suite 653,South Cassandra,OK,US,65795,Silver,Regular,True,True,2021-11-16,2024-07-09
+CUST-00193,Joel,Shaw,joel.shaw78@yahoo.com,(895) 009-7519,1979-12-16,84781 John Roads,Lake Cynthiashire,ME,US,80853,Silver,Churned,True,True,2021-11-05,2022-01-04
+CUST-00194,Matthew,Osborne,matthew.osborne74@yahoo.com,(879) 565-4420,1991-09-13,940 Lane Ports Apt. 490,Toddberg,NY,US,10575,Silver,Regular,True,False,2022-02-08,2024-07-26
+CUST-00195,Joshua,Anderson,joshua.anderson15@gmail.com,(401) 929-2752,1967-11-04,2805 Tammy Ranch,Port Tyler,MT,US,50723,Silver,Regular,True,True,2021-04-06,2022-02-24
+CUST-00196,Scott,Walsh,scott.walsh34@outlook.com,(504) 102-7674,1979-09-01,6742 Smith Union,Reyesmouth,NC,US,90006,Silver,Regular,True,True,2020-12-12,2024-10-26
+CUST-00197,Connor,Schmidt,connor.schmidt63@yahoo.com,(694) 544-1496,1978-11-01,938 Byrd Falls,Amytown,MP,US,09407,Bronze,At Risk,True,True,2021-08-03,2021-08-17
+CUST-00198,Connor,Garcia,connor.garcia57@gmail.com,(344) 300-9109,1989-08-02,111 Nicholas Track,North Heather,KS,US,39110,Gold,Churned,True,True,2022-01-02,2023-05-27
+CUST-00199,Sharon,Fowler,sharon.fowler91@gmail.com,(465) 421-4066,1971-10-08,4271 Krause Flats,Whitefort,CT,US,19358,Silver,Regular,True,False,2024-02-24,2024-08-10
+CUST-00200,Ryan,Mendez,ryan.mendez91@yahoo.com,(741) 011-9470,2002-10-13,006 Hernandez Isle,Andrewshaven,VT,US,64815,Silver,Regular,False,False,2020-06-23,2022-08-21
+CUST-00201,Richard,Luna,richard.luna18@yahoo.com,(183) 067-1985,1971-10-24,0158 Miller Mount Suite 328,South Donnaport,UT,US,51632,Silver,New,True,False,2023-08-26,2024-11-09
+CUST-00202,Crystal,Howard,crystal.howard71@yahoo.com,(732) 030-9376,1956-12-08,8700 Brown Turnpike Apt. 613,Bentleyside,FL,US,97632,Silver,New,True,True,2020-05-19,2023-01-21
+CUST-00203,Sandy,Johnson,sandy.johnson93@hotmail.com,(079) 032-0204,1998-08-12,9291 Danny Ranch,North Linda,NE,US,44717,Silver,At Risk,True,False,2020-08-20,2024-03-05
+CUST-00204,Tina,Gregory,tina.gregory41@gmail.com,(982) 530-9251,1960-02-11,2582 Sanchez Prairie,East Craigfurt,WI,US,21178,Bronze,High Value,True,True,2021-06-16,2021-07-06
+CUST-00205,Tony,Smith,tony.smith71@icloud.com,(194) 672-3248,1978-03-31,90927 Courtney Tunnel,Michaeltown,OH,US,31386,Bronze,Churned,True,True,2020-10-21,2021-08-10
+CUST-00206,Valerie,Davila,valerie.davila8@gmail.com,(883) 734-0312,1991-02-28,2200 Mitchell Mews Suite 597,North Joyside,HI,US,21216,Silver,Regular,False,True,2022-10-13,2024-07-10
+CUST-00207,Todd,Wilson,todd.wilson29@outlook.com,(799) 563-5315,1965-12-31,636 Charles Prairie,Brownchester,FL,US,28834,Gold,Regular,True,False,2024-01-09,2024-12-05
+CUST-00208,Spencer,Hughes,spencer.hughes26@icloud.com,(354) 352-0904,1960-12-24,6253 Munoz Turnpike Apt. 983,South Melodyfort,VI,US,28870,Bronze,High Value,True,False,2020-08-11,2023-03-17
+CUST-00209,Mary,Ramirez,mary.ramirez83@yahoo.com,(335) 693-9290,1976-06-13,78068 Mendoza Union,South Tylerland,OH,US,99208,Silver,High Value,False,True,2023-04-13,2023-04-20
+CUST-00210,Jessica,Dodson,jessica.dodson78@outlook.com,(431) 074-2799,1954-10-25,2625 Padilla Alley Apt. 658,West Ronaldview,UT,US,80782,Gold,High Value,True,False,2020-08-05,2022-12-25
+CUST-00211,Laura,French,laura.french6@icloud.com,(508) 501-6579,1955-09-21,81832 Allen Crescent Suite 933,Michaelview,NY,US,89659,Bronze,Regular,True,True,2020-05-12,2022-04-28
+CUST-00212,Brian,Watson,brian.watson4@hotmail.com,(881) 788-4795,1997-06-20,71162 Mullen Club,East Joshuaberg,NM,US,20227,Gold,Regular,True,False,2022-01-12,2024-08-17
+CUST-00213,Abigail,Burton,abigail.burton32@hotmail.com,(827) 567-0431,1954-09-07,569 Rios Turnpike,Toddhaven,MP,US,72389,Bronze,New,False,True,2021-04-26,2022-12-15
+CUST-00214,Kevin,Anderson,kevin.anderson62@hotmail.com,(243) 754-0254,1978-07-20,284 Teresa Villages,East John,AZ,US,42001,Bronze,High Value,True,True,2023-07-20,2024-05-19
+CUST-00215,Scott,Wood,scott.wood94@outlook.com,(055) 257-8284,1960-02-26,7275 Adam Streets,Deborahport,NJ,US,38489,Platinum,New,True,True,2020-12-02,2024-11-15
+CUST-00216,Karen,Mcknight,karen.mcknight41@yahoo.com,(975) 170-2814,1954-11-02,5150 Brandy Forges,Jamesland,ND,US,58888,Bronze,Regular,True,False,2022-12-31,2024-05-08
+CUST-00217,Susan,Daugherty,susan.daugherty38@hotmail.com,(759) 980-5626,1973-10-20,45547 Jason Mills Suite 742,Chandlerchester,DC,US,77463,Gold,Regular,True,True,2021-10-09,2023-09-13
+CUST-00218,Douglas,Turner,douglas.turner42@icloud.com,(851) 961-0646,1963-02-03,923 Marisa Highway Suite 049,Troymouth,IN,US,04018,Silver,Regular,False,True,2024-06-10,2024-11-18
+CUST-00219,Eric,Evans,eric.evans60@hotmail.com,(714) 627-3014,1980-08-03,597 Oneill Road,Mccannville,MN,US,67678,Gold,Regular,False,False,2022-11-17,2024-06-07
+CUST-00220,Andres,Green,andres.green59@yahoo.com,(257) 252-0456,1988-06-19,44818 Katie Falls Apt. 928,Moniqueport,KY,US,90343,Bronze,Regular,False,True,2022-08-13,2024-04-11
+CUST-00221,Michael,Ferguson,michael.ferguson84@hotmail.com,(202) 845-7652,1959-02-08,338 Robert Club,Port Davidtown,NJ,US,46141,Bronze,New,False,False,2021-07-31,2022-08-24
+CUST-00222,Michael,Montoya,michael.montoya34@outlook.com,(985) 240-1322,1991-04-26,32161 Andrew Orchard Suite 031,Port Donnashire,AR,US,61984,Silver,Regular,True,True,2023-12-31,2024-02-12
+CUST-00223,Johnny,Jones,johnny.jones25@outlook.com,(119) 393-2501,1961-06-24,552 William Cliff Apt. 908,Lake James,LA,US,23015,Silver,New,True,True,2023-01-01,2024-10-20
+CUST-00224,Amanda,Beltran,amanda.beltran36@icloud.com,(387) 592-7125,2007-06-12,83615 Steven Pike Apt. 754,North Markville,MS,US,37674,Silver,New,True,False,2020-06-11,2022-07-11
+CUST-00225,Jill,Mcdaniel,jill.mcdaniel44@icloud.com,(386) 463-1752,1954-03-05,167 David Locks Suite 912,West Theresamouth,ID,US,78483,Gold,At Risk,True,True,2023-10-13,2024-10-22
+CUST-00226,Richard,Hall,richard.hall65@gmail.com,(749) 946-5796,2007-10-15,71147 Hall Dale Apt. 101,Gregoryburgh,MS,US,79745,Bronze,New,True,True,2021-11-28,2024-01-03
+CUST-00227,Eric,Howell,eric.howell59@yahoo.com,(187) 734-7784,1983-04-23,61675 Ramos Camp,East Angelaport,FM,US,93045,Silver,Regular,True,True,2020-06-07,2021-03-07
+CUST-00228,Ryan,Edwards,ryan.edwards21@hotmail.com,(197) 889-7782,1981-05-04,7969 Miranda Haven Suite 009,East Marystad,AS,US,97763,Platinum,High Value,True,False,2021-09-30,2023-08-24
+CUST-00229,Kathy,Garrett,kathy.garrett66@icloud.com,(655) 650-3334,1986-01-23,1520 Johnson Shoals,Bradleychester,KY,US,03175,Bronze,High Value,True,False,2021-09-16,2023-12-31
+CUST-00230,Brianna,Odom,brianna.odom43@gmail.com,(659) 171-3578,1998-02-07,94563 Reid Turnpike Apt. 834,Brandonshire,MO,US,30108,Platinum,High Value,True,True,2021-09-12,2023-10-05
+CUST-00231,Susan,Robbins,susan.robbins89@gmail.com,(954) 198-7635,1997-03-26,468 Gonzalez Locks Suite 987,North Courtney,NC,US,24951,Silver,Regular,True,True,2022-08-07,2023-12-25
+CUST-00232,Jason,Hayden,jason.hayden75@icloud.com,(748) 969-0835,1978-11-28,46651 Meghan Grove,Debbieview,TX,US,79305,Bronze,New,True,True,2023-05-03,2023-09-23
+CUST-00233,John,Hernandez,john.hernandez93@icloud.com,(477) 866-0324,1960-12-22,8207 Brian Corner Suite 941,Mosleyland,MO,US,95427,Silver,Regular,True,False,2020-02-15,2024-03-25
+CUST-00234,Joel,Duncan,joel.duncan74@gmail.com,(189) 847-1391,1995-12-31,9636 Drew Extensions Apt. 476,Michelleton,NM,US,70423,Bronze,Regular,True,False,2022-04-01,2023-04-12
+CUST-00235,Stacy,Stewart,stacy.stewart27@hotmail.com,(342) 575-4090,1999-10-03,348 Parker Squares,Rebeccaville,ND,US,31484,Silver,High Value,True,True,2021-11-26,2024-07-22
+CUST-00236,Paul,Browning,paul.browning94@gmail.com,(441) 343-2756,1996-11-19,77656 Madison Square Suite 815,Guzmanside,WA,US,43331,Silver,Regular,True,True,2021-10-07,2023-03-26
+CUST-00237,Anthony,Williams,anthony.williams62@icloud.com,(720) 634-5911,1962-02-25,657 Russo Dale,Glennshire,GU,US,43437,Bronze,Churned,True,True,2022-11-19,2024-07-29
+CUST-00238,James,Perry,james.perry70@outlook.com,(693) 008-9317,1964-05-17,69694 Christopher Land,New David,VT,US,69423,Silver,At Risk,True,True,2020-10-25,2022-08-20
+CUST-00239,Samantha,Chavez,samantha.chavez34@icloud.com,(133) 344-7626,2000-07-27,3626 Anthony Greens,New Shannon,IA,US,48950,Bronze,Churned,True,False,2023-01-11,2024-03-05
+CUST-00240,Deborah,Miller,deborah.miller39@outlook.com,(563) 669-4118,1956-09-14,75990 Jon River Suite 465,New Blake,HI,US,34617,Silver,High Value,True,True,2022-02-08,2022-08-06
+CUST-00241,Trevor,Morgan,trevor.morgan72@outlook.com,(158) 624-1502,1980-12-05,564 Austin Trace Suite 856,West Jillian,NM,US,20327,Bronze,High Value,True,True,2022-02-07,2023-09-17
+CUST-00242,Sandra,Fields,sandra.fields51@outlook.com,(320) 320-7427,1977-06-23,75877 Rodriguez Stravenue Apt. 151,Port Justin,MP,US,22559,Platinum,At Risk,True,False,2021-12-23,2024-03-29
+CUST-00243,Lynn,Elliott,lynn.elliott92@gmail.com,(390) 892-6137,1990-09-14,41659 Mary Drives Apt. 177,Fullerview,PA,US,86747,Bronze,Regular,True,True,2022-12-24,2022-12-28
+CUST-00244,Tara,Douglas,tara.douglas26@icloud.com,(592) 304-5018,2005-10-29,64236 Andrew Fords Apt. 664,North Kenneth,AS,US,57171,Bronze,High Value,True,False,2024-04-10,2024-10-22
+CUST-00245,Sandra,Mckee,sandra.mckee95@icloud.com,(515) 837-7674,1984-06-10,65926 Davis Passage Suite 732,Rosehaven,CO,US,38604,Bronze,New,True,False,2022-09-17,2023-10-13
+CUST-00246,Christian,Solis,christian.solis30@gmail.com,(243) 864-9081,2003-12-04,661 Guerrero Port,Michaelshire,CO,US,66488,Bronze,Regular,True,True,2021-05-08,2021-05-29
+CUST-00247,Joy,Ford,joy.ford18@gmail.com,(601) 645-9779,1997-11-26,32194 Ryan Brook Apt. 610,Lake Thomas,UT,US,53597,Platinum,Churned,False,True,2023-07-14,2024-10-21
+CUST-00248,Tammy,Guzman,tammy.guzman61@hotmail.com,(995) 641-2203,1959-08-18,303 Wong Run,South Megan,PR,US,71094,Silver,At Risk,True,False,2022-03-10,2022-09-22
+CUST-00249,Kevin,Ford,kevin.ford8@gmail.com,(012) 277-7079,1966-10-26,605 Curtis Vista Suite 679,Benjaminfurt,NM,US,67787,Silver,Regular,True,True,2022-02-17,2023-10-29
+CUST-00250,Cheryl,Gregory,cheryl.gregory5@yahoo.com,(730) 806-9581,1968-03-15,1795 Terry Brooks Apt. 437,Samuelhaven,IN,US,77526,Bronze,At Risk,True,False,2023-09-03,2024-11-16
+CUST-00251,Matthew,Guzman,matthew.guzman51@hotmail.com,(724) 665-7293,1969-01-03,722 Eric Overpass,Port Robertfort,ME,US,31266,Bronze,High Value,True,False,2023-10-15,2024-01-15
+CUST-00252,Brandon,Smith,brandon.smith5@gmail.com,(522) 801-5619,1965-12-09,4550 Kemp Walk,Lake Brentmouth,AS,US,60418,Bronze,High Value,True,False,2023-12-17,2024-12-16
+CUST-00253,Katelyn,Villegas,katelyn.villegas59@icloud.com,(918) 081-2135,1962-02-09,787 Eric Lakes Suite 213,Montestown,IA,US,62585,Silver,At Risk,False,True,2023-07-07,2024-01-08
+CUST-00254,William,Miller,william.miller35@yahoo.com,(653) 286-3266,2003-12-19,507 Kayla Stravenue Apt. 155,Holdenburgh,NE,US,08557,Gold,Regular,True,True,2021-09-03,2022-12-24
+CUST-00255,Benjamin,Nielsen,benjamin.nielsen92@yahoo.com,(908) 466-8455,1953-11-27,926 Schneider Plains Suite 563,Christopherside,MA,US,51618,Bronze,Regular,True,True,2020-09-04,2023-10-23
+CUST-00256,Jody,Martinez,jody.martinez25@yahoo.com,(431) 884-8520,1955-01-03,46810 Green Parkways Suite 101,Evanstown,NH,US,44931,Silver,High Value,True,True,2024-06-16,2024-12-27
+CUST-00257,Linda,Zhang,linda.zhang42@gmail.com,(893) 544-9268,1994-01-13,8935 Garcia Station,Pooleland,CO,US,08652,Bronze,New,True,True,2022-07-17,2023-08-02
+CUST-00258,David,Lewis,david.lewis32@gmail.com,(869) 886-4976,2008-04-12,622 Todd Mount Apt. 881,South Thomas,WA,US,21058,Bronze,Regular,True,True,2020-05-08,2024-09-27
+CUST-00259,Mike,Crane,mike.crane39@icloud.com,(611) 594-0821,1973-11-26,4702 Kristen Manor Apt. 443,Port Jodi,AL,US,16534,Silver,New,True,True,2022-09-14,2023-12-17
+CUST-00260,Carlos,Williams,carlos.williams8@gmail.com,(497) 567-9228,1988-06-23,725 Lauren Shores Suite 636,Ambermouth,WA,US,36857,Bronze,Regular,True,True,2022-03-01,2023-12-30
+CUST-00261,Michelle,Mann,michelle.mann91@outlook.com,(481) 813-9890,2006-02-15,8018 Suzanne Harbor,East Maria,MP,US,76464,Silver,High Value,True,False,2022-07-28,2023-08-26
+CUST-00262,Lindsay,Lawson,lindsay.lawson29@yahoo.com,(070) 562-6085,1974-06-26,18242 Jonathan Corners,West Stephanie,TX,US,22677,Platinum,Regular,True,True,2021-10-21,2021-12-28
+CUST-00263,Susan,White,susan.white48@hotmail.com,(461) 526-5461,1956-04-29,937 Avery Grove,West Stevenchester,CA,US,63962,Silver,Churned,True,True,2023-03-17,2023-04-04
+CUST-00264,Cynthia,Mcintyre,cynthia.mcintyre28@yahoo.com,(891) 382-4967,1958-02-01,58238 Ali Point,Williamsmouth,MP,US,81861,Silver,High Value,True,True,2020-01-31,2021-07-03
+CUST-00265,Teresa,Smith,teresa.smith68@outlook.com,(749) 465-3984,1955-12-22,1612 Johns Fords,Nicolemouth,SC,US,34758,Bronze,High Value,False,True,2024-03-12,2024-12-25
+CUST-00266,Jasmine,Nelson,jasmine.nelson65@yahoo.com,(553) 795-0209,1979-09-06,268 Farmer Plain,Port Nancyland,ND,US,04557,Silver,New,True,True,2022-12-23,2024-10-12
+CUST-00267,Lisa,Wallace,lisa.wallace15@yahoo.com,(695) 620-1753,1977-12-04,045 Christopher Ridges,Lindseybury,IN,US,65225,Silver,Regular,True,True,2020-07-21,2024-11-07
+CUST-00268,Benjamin,Vasquez,benjamin.vasquez8@hotmail.com,(930) 361-4987,1962-11-06,999 Cameron Crossroad,East Jordanshire,PR,US,30380,Bronze,Regular,True,True,2023-03-02,2024-10-12
+CUST-00269,Jessica,Hill,jessica.hill87@outlook.com,(089) 487-0605,1977-04-06,1877 Holmes Cape Apt. 046,Stewartfurt,ID,US,44371,Silver,Regular,True,True,2023-10-23,2023-11-27
+CUST-00270,Ashley,Johnson,ashley.johnson75@gmail.com,(613) 325-4110,1979-11-15,543 Thomas Junctions,Port Matthewbury,CA,US,79139,Bronze,Regular,False,True,2023-04-25,2024-05-10
+CUST-00271,Kathryn,Garrett,kathryn.garrett9@hotmail.com,(100) 651-2070,1970-01-20,10804 Morales River Suite 399,South Patrickchester,FM,US,81793,Bronze,Regular,True,True,2022-08-08,2024-02-01
+CUST-00272,Matthew,Pace,matthew.pace94@hotmail.com,(785) 931-1091,1986-01-30,284 Fisher Stream,Lopezberg,AS,US,06277,Bronze,At Risk,True,True,2023-07-09,2023-08-10
+CUST-00273,Larry,Graham,larry.graham49@hotmail.com,(549) 822-7495,1969-06-25,920 William Village,South Mauriceborough,SC,US,26880,Bronze,Churned,True,False,2024-04-24,2024-11-07
+CUST-00274,Matthew,Contreras,matthew.contreras45@gmail.com,(795) 995-9465,1962-05-26,73033 Hanson Garden Suite 563,Lopeztown,MN,US,01797,Bronze,Regular,True,True,2023-02-14,2023-04-05
+CUST-00275,Anthony,Wilson,anthony.wilson29@gmail.com,(395) 003-3423,2002-03-03,8323 Gregory Greens,North Marieberg,MS,US,86336,Silver,Churned,True,True,2021-04-22,2024-03-19
+CUST-00276,Daniel,Boyle,daniel.boyle55@icloud.com,(355) 289-6112,2002-01-09,38655 Rowland Gardens,Port Christinaborough,PR,US,70685,Bronze,Regular,True,False,2021-05-15,2022-06-09
+CUST-00277,Edgar,Wright,edgar.wright25@gmail.com,(428) 973-1791,1962-09-06,857 White Station Suite 877,Adamsfurt,SC,US,77044,Bronze,High Value,True,True,2022-10-30,2024-03-28
+CUST-00278,Jamie,Jacobson,jamie.jacobson3@yahoo.com,(363) 466-9254,1983-10-03,47853 Steven Road,Ronaldmouth,NE,US,54103,Bronze,New,False,True,2022-01-12,2023-02-14
+CUST-00279,Tyler,Nelson,tyler.nelson91@gmail.com,(734) 151-4888,1988-11-15,11150 Matthew Spring Suite 444,Lake Cassandra,DC,US,99117,Bronze,New,True,True,2020-02-10,2023-08-12
+CUST-00280,Amy,Green,amy.green97@gmail.com,(456) 690-7826,1965-12-27,3898 Sharp Mountain,Latoyamouth,PR,US,25122,Bronze,Churned,True,True,2023-06-18,2024-02-13
+CUST-00281,Sheri,Butler,sheri.butler74@outlook.com,(805) 292-4075,1972-02-29,6845 Ashley Bypass Apt. 259,Bairdborough,MO,US,08851,Silver,At Risk,True,False,2021-12-21,2023-08-04
+CUST-00282,Jacob,Rodriguez,jacob.rodriguez19@icloud.com,(741) 218-2097,1954-12-13,64334 Shawn Land,East Markchester,MO,US,21083,Bronze,Regular,False,True,2022-07-24,2024-12-21
+CUST-00283,David,Barnes,david.barnes95@yahoo.com,(632) 346-7299,2005-02-15,743 Vickie Mission,Port Reginaldbury,NC,US,43609,Silver,Regular,True,True,2023-05-05,2024-11-06
+CUST-00284,Natasha,Stevens,natasha.stevens83@hotmail.com,(147) 546-9263,1963-05-08,6291 Hale Cape Apt. 248,Elizabethland,UT,US,95729,Silver,Regular,True,False,2022-08-04,2024-04-30
+CUST-00285,Jeff,Snyder,jeff.snyder49@yahoo.com,(815) 118-5672,1967-05-17,0176 Reese Walks,South Benjamin,KS,US,15532,Silver,Regular,True,False,2024-06-17,2024-11-03
+CUST-00286,Derek,Santiago,derek.santiago91@yahoo.com,(711) 837-2742,1962-11-08,124 Amanda Lock,North Emily,AL,US,89286,Gold,Churned,True,True,2022-02-01,2022-11-18
+CUST-00287,Scott,Thompson,scott.thompson72@icloud.com,(837) 081-6470,1986-05-17,3353 Christopher Manor,North Matthewborough,TX,US,88181,Bronze,Regular,True,True,2023-03-19,2023-04-29
+CUST-00288,Susan,Davis,susan.davis58@outlook.com,(220) 681-5583,1987-10-31,1331 Morris Bridge Suite 506,South Jeffrey,TN,US,36998,Bronze,High Value,True,False,2023-10-03,2024-07-24
+CUST-00289,Miguel,Jones,miguel.jones87@icloud.com,(497) 189-2419,1971-04-24,252 Spence Shores Suite 150,Reyesbury,NY,US,77501,Silver,At Risk,True,True,2020-12-24,2023-10-24
+CUST-00290,Alexander,Smith,alexander.smith93@icloud.com,(143) 639-1025,1980-11-25,63039 Stevenson Isle,West Lonnie,WY,US,05692,Bronze,Regular,True,False,2023-05-31,2024-03-28
+CUST-00291,Tiffany,Wong,tiffany.wong2@yahoo.com,(035) 533-8033,1986-12-01,527 Calvin Overpass Apt. 302,East Christopher,OR,US,72439,Gold,Churned,False,True,2021-04-18,2024-05-16
+CUST-00292,Sarah,Young,sarah.young62@yahoo.com,(742) 336-2934,1969-03-02,347 Stephanie Lake Suite 627,Hendersonchester,WV,US,20932,Silver,High Value,True,False,2020-05-08,2024-02-28
+CUST-00293,Laura,Smith,laura.smith42@outlook.com,(149) 828-2467,1970-04-18,8971 Taylor Mountains Apt. 230,Port Vincentstad,NM,US,53526,Bronze,Regular,True,False,2021-09-18,2024-10-02
+CUST-00294,Shelby,Waller,shelby.waller66@hotmail.com,(749) 160-1692,1964-02-26,5875 Debra Manors Apt. 370,Crystaltown,UT,US,87752,Bronze,At Risk,True,True,2021-09-04,2023-10-27
+CUST-00295,Jose,Gibson,jose.gibson41@yahoo.com,(439) 920-1166,1992-04-22,362 King Hollow,Willischester,WV,US,95875,Bronze,Regular,True,False,2023-01-23,2024-09-29
+CUST-00296,Daniel,Armstrong,daniel.armstrong19@gmail.com,(243) 640-2701,1957-04-25,646 Gregory Ferry Apt. 372,South Ashleyborough,HI,US,26838,Bronze,Churned,True,False,2023-08-02,2023-09-01
+CUST-00297,Ian,Malone,ian.malone20@yahoo.com,(679) 121-4161,1968-09-10,93771 Bruce Terrace Apt. 901,New Latoya,MS,US,79535,Bronze,Regular,True,True,2021-03-01,2023-02-27
+CUST-00298,Suzanne,Adams,suzanne.adams84@outlook.com,(596) 555-5356,1974-04-15,5107 Hardy Dam,New Davidhaven,KY,US,92155,Bronze,At Risk,True,True,2022-03-08,2024-04-19
+CUST-00299,John,Hayes,john.hayes63@hotmail.com,(786) 305-0505,1990-10-04,769 Michael Mountains,Lake Paulborough,VT,US,19265,Bronze,At Risk,False,True,2023-01-31,2024-09-30
+CUST-00300,Nancy,Glover,nancy.glover63@yahoo.com,(027) 148-7271,1979-12-29,32116 Ethan Islands,Mirandabury,VA,US,34268,Gold,Regular,True,False,2023-03-22,2024-05-27
+CUST-00301,Stephanie,Lambert,stephanie.lambert5@gmail.com,(871) 539-9156,2003-07-14,863 Jonathon Highway Apt. 115,Lake Sheri,OK,US,48701,Gold,High Value,True,False,2022-12-28,2023-03-31
+CUST-00302,Lawrence,James,lawrence.james81@yahoo.com,(409) 836-6552,1982-01-22,60875 Lisa Hill,South Erin,FL,US,79336,Bronze,Regular,True,True,2023-04-25,2023-10-16
+CUST-00303,Julie,Sweeney,julie.sweeney8@icloud.com,(095) 481-4973,1980-09-12,52330 Melissa Stream Suite 420,Rogersfort,MI,US,99816,Silver,Churned,True,True,2023-09-21,2024-03-21
+CUST-00304,Charles,Acosta,charles.acosta3@gmail.com,(386) 125-9047,1989-06-23,7423 Linda Flat,West Jessicashire,CT,US,89409,Silver,Regular,False,True,2021-04-08,2024-03-13
+CUST-00305,Michele,Bennett,michele.bennett69@outlook.com,(201) 572-0185,1986-02-09,630 John Overpass,Haileyburgh,SD,US,98175,Bronze,At Risk,True,True,2024-06-01,2024-08-19
+CUST-00306,Heather,Pope,heather.pope23@gmail.com,(764) 750-1111,1980-05-18,99974 Laura Falls,Washingtonchester,ME,US,75398,Gold,Regular,True,True,2022-12-17,2023-03-20
+CUST-00307,Mark,Reeves,mark.reeves33@outlook.com,(826) 068-8871,1982-01-05,12920 Mcbride Crossing,East Baileyburgh,CO,US,74228,Bronze,Regular,True,False,2023-11-16,2024-02-29
+CUST-00308,Karen,Miller,karen.miller73@yahoo.com,(458) 260-3408,2003-03-24,872 Neal Pike Suite 988,Lake Corey,GU,US,06364,Platinum,Regular,True,True,2020-07-23,2021-08-11
+CUST-00309,Jacob,Evans,jacob.evans84@gmail.com,(298) 395-4296,1957-07-24,6267 Shirley Springs Suite 283,Lake Jessicaborough,VT,US,49278,Bronze,Regular,True,False,2023-09-29,2024-06-13
+CUST-00310,Deborah,Dixon,deborah.dixon2@yahoo.com,(256) 609-3141,1982-09-14,51554 Misty Fork Suite 016,South Stephanie,WY,US,16688,Bronze,At Risk,True,False,2020-09-26,2021-06-26
+CUST-00311,Jessica,Parker,jessica.parker13@icloud.com,(718) 594-8491,2002-10-14,6258 Woods Crossroad,Alberthaven,VT,US,20881,Gold,Regular,True,True,2023-09-10,2024-07-20
+CUST-00312,Douglas,Bradley,douglas.bradley73@hotmail.com,(539) 672-7578,1969-03-31,341 Russell Island Apt. 113,East Barbaraland,WA,US,37968,Bronze,Churned,True,False,2021-03-15,2023-04-22
+CUST-00313,Trevor,Baxter,trevor.baxter70@icloud.com,(682) 778-8160,1987-05-15,685 Virginia Shore,New Shaneburgh,TX,US,69119,Silver,Regular,True,False,2024-04-28,2024-12-07
+CUST-00314,Gregory,Richardson,gregory.richardson27@icloud.com,(506) 762-5153,1999-03-21,4744 Aaron Roads,Robinsonport,SD,US,68072,Bronze,At Risk,True,True,2020-08-06,2024-03-25
+CUST-00315,Austin,Ford,austin.ford39@yahoo.com,(705) 097-5451,1953-10-03,5016 Gonzalez Pines,South David,NM,US,01406,Silver,High Value,True,True,2022-10-11,2023-02-14
+CUST-00316,Diane,Perez,diane.perez70@outlook.com,(456) 284-1772,1961-03-01,53134 Dennis Manor Suite 023,Moyerview,DE,US,55694,Bronze,High Value,True,True,2021-10-11,2023-05-09
+CUST-00317,Tyler,Maldonado,tyler.maldonado11@icloud.com,(686) 211-0225,1980-12-21,56906 Roberts Oval,Port Royberg,VA,US,67510,Silver,Regular,False,False,2020-07-28,2021-05-26
+CUST-00318,Juan,Wilson,juan.wilson10@outlook.com,(363) 718-9239,1988-01-24,12604 Sarah Meadow,New Jameston,MS,US,53886,Silver,High Value,True,True,2021-03-08,2023-03-09
+CUST-00319,Isabel,Baird,isabel.baird42@gmail.com,(670) 860-4145,1968-11-26,635 Hunter Alley Apt. 534,Ramirezville,NE,US,24728,Silver,At Risk,True,False,2020-12-30,2022-01-02
+CUST-00320,Travis,Cook,travis.cook71@hotmail.com,(082) 555-9895,1966-07-30,96112 Blake Shoal Apt. 371,New Christineport,VA,US,62655,Bronze,High Value,True,False,2020-07-02,2024-12-13
+CUST-00321,James,Le,james.le80@outlook.com,(368) 485-5716,1957-03-13,802 Horton Curve Suite 090,Lake Lisa,NM,US,90245,Silver,High Value,False,False,2020-03-12,2022-10-02
+CUST-00322,William,Jones,william.jones92@yahoo.com,(868) 669-4320,1962-04-10,087 Turner Forges,Jeanetteside,DE,US,22928,Silver,Regular,False,False,2021-12-19,2022-08-24
+CUST-00323,Amanda,Carter,amanda.carter40@hotmail.com,(424) 033-8105,1988-04-08,1842 Villanueva Hill Suite 005,Lake Tammy,HI,US,34053,Bronze,Regular,False,False,2022-11-16,2024-12-08
+CUST-00324,Amanda,Irwin,amanda.irwin58@icloud.com,(916) 498-3735,1968-04-03,73652 Davis Falls Suite 223,Hardingburgh,SD,US,37469,Silver,Regular,False,False,2023-07-01,2023-07-12
+CUST-00325,Frank,Thompson,frank.thompson12@icloud.com,(931) 216-3761,1993-04-23,091 Cruz Creek,Port Mariaton,DC,US,33051,Silver,Regular,True,False,2021-10-09,2024-04-03
+CUST-00326,Joseph,Mays,joseph.mays50@gmail.com,(018) 513-2797,1998-04-28,7230 Burton Crossing Apt. 018,Curtischester,FL,US,00659,Silver,High Value,True,False,2022-09-11,2024-10-18
+CUST-00327,Andrew,Simmons,andrew.simmons67@yahoo.com,(436) 172-1314,1973-02-14,51092 Roy Isle Apt. 624,Michaelville,KY,US,65938,Silver,Regular,True,False,2020-08-29,2023-07-13
+CUST-00328,Sarah,Cochran,sarah.cochran19@gmail.com,(102) 252-6771,1959-09-12,421 Cooley Falls Suite 557,Olsonchester,PA,US,83941,Bronze,Regular,True,True,2023-03-13,2023-10-18
+CUST-00329,Leah,Valdez,leah.valdez47@outlook.com,(687) 887-8836,1958-01-26,931 Michael Ford Apt. 587,North Brian,MI,US,47799,Gold,High Value,True,True,2021-02-07,2024-05-29
+CUST-00330,Michelle,Fuentes,michelle.fuentes59@gmail.com,(286) 333-0212,1974-03-26,650 Elizabeth Cliffs,Monroeburgh,AK,US,19753,Bronze,New,True,True,2021-04-28,2022-08-31
+CUST-00331,Christian,Jones,christian.jones49@outlook.com,(622) 728-4765,1977-11-21,1200 Wesley Branch,Wallmouth,OH,US,93746,Bronze,Regular,True,True,2022-07-23,2024-07-31
+CUST-00332,Samantha,Shaw,samantha.shaw77@yahoo.com,(624) 186-2369,1956-07-20,89177 Delgado Lodge Suite 205,Leeville,CT,US,10699,Bronze,High Value,True,True,2023-03-10,2023-11-05
+CUST-00333,Kimberly,Rogers,kimberly.rogers23@hotmail.com,(281) 139-0438,1964-07-26,41990 Williams Island,West Alanstad,WV,US,37516,Platinum,Regular,True,True,2021-01-28,2024-11-01
+CUST-00334,Vincent,Edwards,vincent.edwards74@yahoo.com,(521) 568-1820,1985-10-07,9042 Faith Common Apt. 332,New Zachary,VA,US,80289,Bronze,Regular,True,False,2021-10-03,2023-11-13
+CUST-00335,Sarah,Peterson,sarah.peterson73@yahoo.com,(545) 960-6339,1986-11-07,710 Katie Inlet,South Clintonmouth,GA,US,39246,Silver,Regular,True,True,2023-07-13,2023-10-07
+CUST-00336,Joshua,Cox,joshua.cox94@hotmail.com,(274) 747-2197,1955-08-26,6927 Hunt Road Suite 516,Bakerton,RI,US,84893,Gold,Regular,True,True,2020-05-26,2020-08-29
+CUST-00337,Krystal,Lyons,krystal.lyons9@hotmail.com,(214) 629-6136,2001-07-20,7787 Christopher Street,South Kaylaborough,MO,US,43587,Silver,New,True,False,2022-07-09,2022-09-05
+CUST-00338,Matthew,Munoz,matthew.munoz20@hotmail.com,(714) 708-2723,1971-01-31,605 Irwin Forest,East Mirandachester,KY,US,33540,Silver,New,True,True,2020-12-15,2023-07-11
+CUST-00339,Christopher,Jones,christopher.jones52@icloud.com,(476) 834-2016,1972-04-13,35677 Tammy Mews Suite 960,North Jennifer,OR,US,81308,Silver,Churned,True,True,2021-10-27,2022-04-12
+CUST-00340,Elizabeth,Colon,elizabeth.colon47@icloud.com,(502) 727-5164,1982-02-10,2791 Jeffery Field,Hortonburgh,PA,US,49988,Silver,Churned,False,False,2023-04-20,2023-09-01
+CUST-00341,Jason,Lee,jason.lee86@outlook.com,(055) 044-8177,1976-03-30,8685 Sara Mount Suite 528,New Ryan,LA,US,86956,Bronze,High Value,True,True,2023-01-20,2024-05-23
+CUST-00342,Samuel,Campbell,samuel.campbell83@hotmail.com,(111) 109-6179,2004-06-21,789 Elizabeth Walk,Lewismouth,OH,US,50449,Platinum,Regular,True,False,2022-10-15,2023-01-15
+CUST-00343,Melissa,Sampson,melissa.sampson13@outlook.com,(766) 053-8444,1970-05-19,306 Alexis Drives Suite 895,Georgeshire,NE,US,32198,Bronze,High Value,True,True,2021-07-29,2023-06-24
+CUST-00344,Peter,Jensen,peter.jensen29@hotmail.com,(096) 262-6582,1977-07-12,281 Cameron Road,Maryburgh,MD,US,27208,Bronze,Regular,True,True,2021-10-07,2022-01-25
+CUST-00345,Anthony,Smith,anthony.smith20@outlook.com,(209) 819-6027,1988-05-14,33438 Jessica Valley Suite 404,East Courtneyshire,VI,US,14056,Platinum,Regular,True,True,2023-06-18,2023-08-19
+CUST-00346,Sara,Martinez,sara.martinez11@gmail.com,(421) 175-3617,1997-03-22,71366 Schultz Mission Apt. 240,Lake Ashley,PA,US,04623,Gold,High Value,True,False,2020-08-20,2021-02-22
+CUST-00347,Matthew,Reed,matthew.reed27@icloud.com,(980) 284-1390,1982-12-13,51305 Jeffrey Stream,West Joshua,ID,US,12555,Bronze,Regular,True,True,2024-06-21,2024-08-27
+CUST-00348,Andrea,Phillips,andrea.phillips41@gmail.com,(768) 634-2346,1959-02-18,37676 Cabrera Road Apt. 966,New Michael,MH,US,83430,Bronze,At Risk,False,True,2023-05-08,2024-09-13
+CUST-00349,Shannon,Preston,shannon.preston83@gmail.com,(496) 498-5601,1963-05-15,2531 Diane Landing Apt. 510,Haleymouth,IL,US,61498,Silver,Regular,True,False,2024-04-22,2024-09-12
+CUST-00350,Marc,Hall,marc.hall23@icloud.com,(493) 831-8491,1985-01-15,655 James Unions Suite 704,Wilsonmouth,GA,US,79331,Bronze,High Value,True,False,2020-04-18,2021-10-31
+CUST-00351,Patrick,Ray,patrick.ray52@yahoo.com,(907) 426-0880,1972-01-11,71644 Molina Locks,New Kimfort,RI,US,06670,Bronze,High Value,True,True,2021-04-13,2022-09-29
+CUST-00352,Heather,Gibson,heather.gibson26@hotmail.com,(159) 103-0021,2008-02-13,21358 Sarah Ways Apt. 401,West Charlesmouth,UT,US,80815,Silver,Regular,True,False,2023-10-25,2024-10-01
+CUST-00353,Noah,Hale,noah.hale97@gmail.com,(971) 252-9671,1982-03-03,774 Barton Orchard,North Joseph,LA,US,93743,Silver,At Risk,True,False,2024-02-27,2024-03-23
+CUST-00354,Angelica,Salas,angelica.salas26@hotmail.com,(311) 703-0376,1963-10-23,3988 Hodges Inlet,Rioshaven,CT,US,17548,Bronze,High Value,True,True,2022-12-18,2023-05-29
+CUST-00355,Michael,Hester,michael.hester41@icloud.com,(836) 314-6249,1989-02-18,1130 Lopez Burgs,Stanleymouth,MI,US,35310,Bronze,Regular,False,False,2023-11-26,2024-01-12
+CUST-00356,Andrea,Gomez,andrea.gomez59@icloud.com,(686) 850-7451,1956-03-05,634 Richard Ranch Suite 897,Rodriguezton,SD,US,33130,Bronze,High Value,True,True,2020-12-14,2024-10-31
+CUST-00357,Jeffrey,Brown,jeffrey.brown76@gmail.com,(431) 814-3966,1975-01-30,473 Kristi Key,Janiceport,VA,US,00908,Silver,Regular,True,False,2020-02-28,2020-08-12
+CUST-00358,Wesley,Graves,wesley.graves48@yahoo.com,(432) 512-2572,2006-05-25,5024 George Trace Apt. 957,South Morganfort,DE,US,06422,Silver,Regular,False,False,2022-02-21,2024-06-24
+CUST-00359,Ashley,Mooney,ashley.mooney24@hotmail.com,(882) 211-4577,1993-11-20,745 Smith Knoll Suite 589,Rodriguezhaven,VA,US,84360,Silver,High Value,True,True,2023-10-03,2023-10-12
+CUST-00360,Tiffany,Chase,tiffany.chase72@yahoo.com,(257) 039-6531,1964-02-19,148 Archer Wells Apt. 455,Lawrenceview,ME,US,25479,Bronze,New,True,True,2022-12-18,2023-01-17
+CUST-00361,Abigail,Cooper,abigail.cooper7@outlook.com,(679) 541-0727,1990-12-04,824 Roberts Union Suite 070,West Margaret,DE,US,07473,Platinum,Regular,True,False,2022-10-02,2023-11-06
+CUST-00362,Adam,Bell,adam.bell72@icloud.com,(042) 548-8214,1961-04-26,9143 Thomas Knoll,Port Erika,MS,US,55887,Silver,Regular,True,True,2023-10-01,2024-03-31
+CUST-00363,Rebecca,Orozco,rebecca.orozco57@hotmail.com,(942) 965-9234,1960-12-07,4149 Gardner Lane,Davishaven,NV,US,91482,Bronze,High Value,True,False,2024-02-19,2024-05-27
+CUST-00364,Sarah,Marquez,sarah.marquez5@outlook.com,(676) 670-8061,1995-01-17,98529 Brown Vista Suite 260,Aguirrehaven,NH,US,07624,Bronze,Regular,True,True,2022-02-08,2022-05-08
+CUST-00365,Joseph,Andersen,joseph.andersen99@hotmail.com,(914) 975-0198,1994-02-20,382 Taylor Spring,West Courtney,VA,US,01346,Silver,New,False,True,2020-06-24,2024-02-14
+CUST-00366,Cindy,Gonzalez,cindy.gonzalez47@icloud.com,(291) 813-3170,1999-04-10,0146 Mcgrath Viaduct Apt. 849,Villarrealville,NE,US,19669,Gold,New,True,True,2020-04-20,2023-04-16
+CUST-00367,Jack,Cardenas,jack.cardenas55@gmail.com,(288) 377-4419,1980-08-02,6176 Hernandez Haven Suite 196,New Kevinmouth,AZ,US,46995,Silver,High Value,True,True,2022-12-15,2024-12-03
+CUST-00368,Taylor,Sharp,taylor.sharp5@hotmail.com,(258) 835-8681,1963-01-26,9572 Glover Shoals,Sandraland,PW,US,85060,Bronze,At Risk,False,True,2021-03-30,2023-01-22
+CUST-00369,Sydney,Obrien,sydney.obrien16@yahoo.com,(884) 259-9599,1999-02-12,02311 Villa Mountains,Kathleenbury,CT,US,23307,Bronze,High Value,True,True,2020-10-23,2023-11-11
+CUST-00370,Patrick,Mcpherson,patrick.mcpherson79@hotmail.com,(094) 101-7590,2004-04-08,76298 James Overpass Suite 433,South Lisa,AS,US,25705,Bronze,New,True,False,2024-02-23,2024-03-20
+CUST-00371,Andrew,Moyer,andrew.moyer8@icloud.com,(020) 569-8152,1991-01-01,39785 Montgomery Points Apt. 176,Sawyershire,CO,US,17172,Bronze,Regular,True,False,2020-06-06,2024-01-02
+CUST-00372,Kenneth,Wilson,kenneth.wilson91@outlook.com,(985) 034-4651,2001-06-16,1893 Ross Centers,New Thomasview,SD,US,04430,Bronze,Regular,True,True,2021-01-13,2021-02-28
+CUST-00373,Robert,Gonzalez,robert.gonzalez87@gmail.com,(023) 850-3719,2003-03-18,1699 Paige Neck,West Jennifer,CT,US,05167,Bronze,At Risk,True,False,2023-12-29,2024-06-28
+CUST-00374,Jeffrey,Bell,jeffrey.bell36@yahoo.com,(300) 038-9608,1979-12-29,2668 Darrell Crest Suite 535,Hullbury,IN,US,12558,Silver,New,False,False,2022-02-23,2023-10-29
+CUST-00375,Jeremy,Burgess,jeremy.burgess32@hotmail.com,(890) 030-1027,1963-05-28,5934 Catherine Neck,Lake Chaseview,ND,US,27483,Bronze,High Value,True,False,2023-12-29,2024-06-28
+CUST-00376,Jill,Kelly,jill.kelly58@gmail.com,(374) 584-3845,1991-11-07,56974 James Dam,West Judy,IL,US,16589,Silver,At Risk,False,True,2024-02-11,2024-06-10
+CUST-00377,Lisa,Thomas,lisa.thomas36@outlook.com,(771) 070-4496,1969-12-29,49670 Cruz Cape,East Nicolas,TN,US,57004,Bronze,Regular,True,True,2024-05-24,2024-09-18
+CUST-00378,Donna,Johnson,donna.johnson94@gmail.com,(095) 493-0596,2001-02-01,86487 Armstrong Port,Franciscofurt,NH,US,98232,Silver,Regular,True,False,2023-06-06,2024-12-26
+CUST-00379,John,Velez,john.velez9@icloud.com,(413) 845-9609,1968-07-22,490 Kurt Shore Suite 427,Smithtown,NH,US,05351,Bronze,Churned,True,True,2021-04-05,2024-11-14
+CUST-00380,Timothy,Richard,timothy.richard42@outlook.com,(091) 498-5172,1967-08-31,7232 Monica Shoal Apt. 310,Lake William,NV,US,76508,Bronze,High Value,True,True,2020-12-23,2022-04-03
+CUST-00381,Angela,Perez,angela.perez44@gmail.com,(440) 580-9351,1957-09-25,81335 Calderon Springs Suite 164,North Mark,WY,US,47724,Bronze,High Value,True,False,2024-04-11,2024-07-08
+CUST-00382,Ricky,Pearson,ricky.pearson21@hotmail.com,(490) 250-4290,1959-04-26,8895 Nicholas Prairie,Lake Jessicafurt,WV,US,85594,Bronze,Churned,True,True,2022-02-11,2022-05-04
+CUST-00383,Chris,Walls,chris.walls17@outlook.com,(898) 681-8097,1989-09-23,4394 Mark Union Suite 375,Lake Johnchester,MN,US,10946,Bronze,Churned,True,True,2021-01-03,2022-05-31
+CUST-00384,William,Melendez,william.melendez33@gmail.com,(937) 639-2836,1990-07-20,445 Wilson Lodge,Wagnerberg,OK,US,65276,Bronze,Churned,False,False,2022-12-08,2024-03-29
+CUST-00385,Kendra,Yoder,kendra.yoder40@yahoo.com,(021) 648-7120,1999-05-03,212 Strong Knoll,South Heidi,IA,US,93822,Bronze,New,False,False,2023-12-10,2024-04-01
+CUST-00386,Matthew,Summers,matthew.summers10@yahoo.com,(991) 015-7676,1969-05-20,229 Edwin Avenue Suite 765,Thompsonshire,KY,US,13201,Silver,Regular,True,False,2021-07-06,2022-04-27
+CUST-00387,Trevor,Williams,trevor.williams44@gmail.com,(898) 645-6522,1955-10-12,8499 Garcia Haven,North Keith,NM,US,58030,Platinum,Regular,False,False,2022-04-30,2022-12-04
+CUST-00388,Gary,Crosby,gary.crosby50@gmail.com,(913) 421-3882,1954-12-23,830 Wall Burg,Jamesshire,NE,US,96457,Silver,New,True,True,2021-03-01,2022-11-14
+CUST-00389,David,Chavez,david.chavez18@hotmail.com,(176) 741-2415,1997-09-03,152 Hill Roads,Lake Haileyton,NE,US,13665,Silver,At Risk,False,True,2024-02-16,2024-12-09
+CUST-00390,Laura,Stewart,laura.stewart19@gmail.com,(003) 296-3347,1961-10-20,742 Cynthia Corners,North Ryan,NM,US,73604,Silver,New,True,True,2023-10-13,2024-07-10
+CUST-00391,Jennifer,Williams,jennifer.williams93@yahoo.com,(969) 357-8243,2001-08-07,6958 Phillips Forges Apt. 467,Johnchester,DE,US,23595,Silver,Regular,True,True,2023-02-03,2023-12-23
+CUST-00392,Luis,Wilson,luis.wilson28@gmail.com,(277) 963-0448,1965-04-21,85456 Lamb Manors Suite 404,Chandlermouth,SC,US,06481,Gold,New,False,True,2023-02-18,2023-09-16
+CUST-00393,Robert,Armstrong,robert.armstrong45@hotmail.com,(319) 952-9800,1997-08-09,558 Diana Path,West Amanda,GA,US,70716,Bronze,New,True,False,2020-09-30,2022-06-06
+CUST-00394,Jennifer,Roberts,jennifer.roberts71@icloud.com,(556) 383-0008,1959-02-10,0244 Jerry Trail Apt. 041,Riosberg,GU,US,97563,Silver,High Value,True,True,2020-09-22,2024-06-21
+CUST-00395,Michelle,Jones,michelle.jones85@outlook.com,(600) 892-1963,1999-03-16,6804 Stevens Courts Suite 976,Russellbury,MT,US,74031,Bronze,High Value,True,False,2022-04-08,2023-01-11
+CUST-00396,Justin,Warner,justin.warner83@gmail.com,(607) 658-1739,2007-02-09,75791 Cook Valleys Apt. 182,Port Sheri,OR,US,33264,Silver,At Risk,True,False,2022-04-11,2022-07-03
+CUST-00397,Richard,Massey,richard.massey31@hotmail.com,(930) 746-4520,1971-02-25,43878 Edwards Run Apt. 577,North Ronaldland,MS,US,17184,Silver,New,True,False,2022-05-09,2024-05-09
+CUST-00398,Fernando,Goodman,fernando.goodman47@outlook.com,(710) 672-8728,1976-06-21,1644 Gilbert Landing,East Kelly,TX,US,27300,Bronze,At Risk,True,False,2020-09-29,2024-02-28
+CUST-00399,Stephanie,Watson,stephanie.watson88@yahoo.com,(773) 522-8705,1976-05-15,1043 Heather Plain,Riveraton,RI,US,61933,Silver,Churned,True,False,2022-09-19,2024-01-27
+CUST-00400,Carl,Fields,carl.fields9@gmail.com,(503) 446-9459,1995-08-29,831 Dakota Forge Suite 249,East Laurashire,SD,US,50694,Bronze,New,False,True,2023-12-21,2024-04-23
+CUST-00401,Kelsey,Vargas,kelsey.vargas65@outlook.com,(973) 203-3192,1961-05-10,51028 Coleman Mountains Suite 481,New Phillip,WI,US,51033,Silver,Regular,True,True,2021-03-31,2023-11-24
+CUST-00402,Michael,Roberson,michael.roberson11@icloud.com,(193) 242-6877,1991-09-14,186 Thompson Way Suite 756,New Anita,PW,US,25533,Silver,Regular,False,False,2021-06-04,2022-10-16
+CUST-00403,Harold,Adkins,harold.adkins27@yahoo.com,(758) 309-4515,2003-11-04,404 Sanders Square,Joshuaton,OK,US,04489,Silver,Regular,True,True,2020-01-18,2024-04-27
+CUST-00404,Sara,Osborn,sara.osborn88@gmail.com,(727) 810-5092,1992-04-13,16107 Leon Walks,Tonyaborough,SD,US,80979,Bronze,Regular,True,False,2022-11-04,2024-06-07
+CUST-00405,Marvin,Powers,marvin.powers32@gmail.com,(295) 806-6013,1998-11-07,412 Williams Rest,Lake William,HI,US,83771,Gold,New,True,False,2024-01-17,2024-10-03
+CUST-00406,Mary,Smith,mary.smith86@yahoo.com,(515) 791-9711,2003-12-18,125 Katie Turnpike,East Danamouth,CO,US,95433,Bronze,High Value,True,False,2021-03-25,2024-10-13
+CUST-00407,Kyle,Becker,kyle.becker45@icloud.com,(324) 064-2429,1970-10-29,43244 Baker Overpass,Bethstad,WI,US,84626,Silver,At Risk,True,False,2024-03-27,2024-08-19
+CUST-00408,Maria,Mcdaniel,maria.mcdaniel96@outlook.com,(962) 893-6543,1972-04-17,83437 Johnson Crescent Apt. 727,Nathanfurt,TN,US,77622,Silver,New,True,False,2020-10-06,2024-07-31
+CUST-00409,Marcus,Garcia,marcus.garcia55@outlook.com,(026) 755-1254,1962-06-04,79799 Simon Mountains,West Jennifer,PA,US,44787,Silver,Regular,True,True,2021-08-12,2023-03-31
+CUST-00410,Richard,Williams,richard.williams64@hotmail.com,(381) 664-9690,1962-06-30,9839 David Isle,North Kyleberg,AS,US,45865,Silver,New,True,False,2024-03-05,2024-07-21
+CUST-00411,Frederick,Smith,frederick.smith21@outlook.com,(244) 123-3613,1961-12-13,72517 Hale Mountains Suite 731,Andersonberg,MO,US,43376,Silver,At Risk,True,False,2020-08-30,2024-07-22
+CUST-00412,Lori,Cross,lori.cross95@icloud.com,(681) 579-0392,1995-09-15,5809 Melendez Rue Apt. 273,East Kevinland,MA,US,50841,Bronze,At Risk,False,False,2021-11-28,2023-12-06
+CUST-00413,Ronald,Mitchell,ronald.mitchell47@hotmail.com,(704) 622-6817,1997-10-25,160 Luis Ports Suite 707,Hendersonton,ME,US,56204,Gold,Regular,True,False,2021-09-27,2022-08-01
+CUST-00414,Cynthia,Munoz,cynthia.munoz92@hotmail.com,(785) 758-5126,1982-09-19,120 Vaughan Station Suite 389,Grahammouth,LA,US,05723,Bronze,Regular,True,False,2023-08-10,2023-10-10
+CUST-00415,Tracy,Richardson,tracy.richardson10@icloud.com,(546) 540-8424,1973-02-06,5409 Michael Camp,Wrightland,ND,US,12896,Bronze,Regular,True,False,2023-12-31,2024-02-15
+CUST-00416,Duane,Snyder,duane.snyder67@gmail.com,(579) 389-7015,1973-12-23,168 Matthew Route,Robertotown,HI,US,98381,Platinum,New,True,False,2024-01-05,2024-04-06
+CUST-00417,Denise,Andrade,denise.andrade40@outlook.com,(613) 944-9883,1991-08-28,9736 Burgess Tunnel,West Walter,AZ,US,79750,Bronze,Regular,True,False,2023-10-06,2024-04-03
+CUST-00418,Howard,Mitchell,howard.mitchell39@icloud.com,(306) 244-7951,1965-08-24,531 Chandler Rest,Matthewsmouth,ND,US,51493,Bronze,Regular,True,True,2020-01-09,2022-05-22
+CUST-00419,Angela,Cooper,angela.cooper26@icloud.com,(727) 738-2646,1955-04-01,785 Jared Pines,Kevinmouth,NV,US,88909,Silver,Regular,False,False,2021-06-08,2023-02-06
+CUST-00420,Eric,Richards,eric.richards30@icloud.com,(966) 048-7368,1960-09-18,63319 White Estate,Piercestad,WV,US,29042,Bronze,At Risk,True,True,2022-10-22,2023-09-21
+CUST-00421,Carol,Flores,carol.flores1@hotmail.com,(158) 886-3677,1969-03-21,26408 Hines Shoal Apt. 169,Mccannchester,ID,US,83917,Gold,High Value,False,True,2021-08-19,2021-09-23
+CUST-00422,Jeffrey,Lynch,jeffrey.lynch31@hotmail.com,(199) 605-9329,1987-11-16,0968 Melissa Estates,Woodbury,HI,US,62389,Bronze,New,True,True,2022-04-06,2024-10-29
+CUST-00423,Sandra,Morris,sandra.morris12@gmail.com,(039) 773-9732,2006-12-23,523 Bowen Cliff,Lake Antoniochester,VI,US,68627,Gold,At Risk,True,True,2021-04-26,2024-12-24
+CUST-00424,Michelle,Jones,michelle.jones48@hotmail.com,(481) 980-7704,1998-02-11,6876 Dale Vista,Katherineshire,WV,US,15152,Platinum,New,False,False,2021-11-15,2024-02-17
+CUST-00425,Michael,Douglas,michael.douglas51@gmail.com,(373) 415-1773,1995-02-08,7574 Wheeler Trace Apt. 284,East Nicoleshire,MN,US,94060,Silver,New,True,False,2020-08-21,2021-11-27
+CUST-00426,Shirley,Moore,shirley.moore38@outlook.com,(774) 222-9464,1988-06-29,94290 Diaz Pass,Woodsburgh,MI,US,84891,Gold,Churned,True,True,2022-11-06,2023-03-08
+CUST-00427,Melissa,Edwards,melissa.edwards42@outlook.com,(728) 727-6015,1965-11-02,24913 Porter Port,Port Juliehaven,MH,US,30434,Bronze,Regular,True,False,2021-09-06,2024-02-21
+CUST-00428,Michael,Johnson,michael.johnson99@icloud.com,(581) 488-8107,1984-08-22,42337 Billy Rest,Andrealand,WA,US,25406,Bronze,New,True,False,2022-10-25,2024-06-01
+CUST-00429,Samantha,Escobar,samantha.escobar16@icloud.com,(403) 339-9771,1983-01-02,1371 Miller Flat,New Bridgetfort,ME,US,75124,Bronze,At Risk,True,True,2020-08-05,2020-08-20
+CUST-00430,Russell,Stein,russell.stein16@gmail.com,(739) 970-4694,1980-07-25,8784 Baker Place,West Joshua,OH,US,66438,Bronze,High Value,True,True,2023-03-28,2023-10-12
+CUST-00431,Scott,Rowland,scott.rowland6@yahoo.com,(705) 877-2216,1990-06-27,5823 Kathryn Forest,Warrenmouth,WI,US,70021,Gold,Regular,False,False,2024-04-01,2024-08-08
+CUST-00432,Gail,Pennington,gail.pennington46@hotmail.com,(252) 362-2925,2006-02-03,964 Sarah Mountains Suite 524,Jessicamouth,NV,US,40873,Silver,High Value,True,True,2020-12-11,2022-09-01
+CUST-00433,Phillip,Butler,phillip.butler4@hotmail.com,(606) 527-4033,1989-11-20,5056 Nguyen Points Apt. 398,Gatesville,CA,US,32369,Gold,High Value,True,False,2023-06-05,2023-09-05
+CUST-00434,Jennifer,David,jennifer.david14@yahoo.com,(067) 349-9601,1956-07-23,8574 Thomas Summit Apt. 562,New Kent,ID,US,74142,Bronze,New,True,False,2022-08-31,2022-11-14
+CUST-00435,John,Armstrong,john.armstrong26@hotmail.com,(488) 402-1557,1994-07-28,57375 Gonzalez Squares,Jonathantown,DC,US,16123,Bronze,High Value,True,True,2023-06-06,2024-06-08
+CUST-00436,Ronald,Shaffer,ronald.shaffer34@gmail.com,(808) 509-6085,1996-12-06,9511 Terri Tunnel Apt. 828,New Sandraborough,WV,US,10080,Bronze,New,True,True,2023-08-03,2024-09-01
+CUST-00437,Ryan,Hill,ryan.hill17@gmail.com,(251) 295-7860,1975-07-22,96003 Simmons Green Apt. 958,Valdezborough,WI,US,75793,Gold,At Risk,True,False,2022-01-11,2024-10-11
+CUST-00438,Patricia,Espinoza,patricia.espinoza60@gmail.com,(323) 421-0890,1996-05-05,55333 Martin Groves Apt. 350,South David,MS,US,03833,Bronze,High Value,True,False,2022-08-05,2023-08-30
+CUST-00439,Julie,Singh,julie.singh4@hotmail.com,(776) 336-9112,1981-05-05,31795 Perry Fords,Port Williamfort,KS,US,67181,Silver,Regular,True,False,2021-09-16,2022-01-28
+CUST-00440,Stephen,Smith,stephen.smith36@hotmail.com,(615) 541-6431,1989-03-31,0450 Melanie Fall Apt. 282,Lake Terry,AZ,US,08520,Gold,New,True,False,2023-08-12,2024-06-09
+CUST-00441,Jason,Singh,jason.singh38@hotmail.com,(962) 622-8225,2001-10-27,07346 Stout Greens,Anthonytown,MA,US,04236,Bronze,High Value,False,False,2021-04-26,2024-08-03
+CUST-00442,Austin,Wiggins,austin.wiggins18@hotmail.com,(086) 982-2105,2002-10-26,1177 Chase Plain,Taylortown,ME,US,62923,Bronze,At Risk,True,True,2024-02-09,2024-07-11
+CUST-00443,Rebecca,Anderson,rebecca.anderson70@gmail.com,(591) 779-3238,1960-08-11,11649 John Glen,Lake Donna,MA,US,93622,Platinum,At Risk,True,True,2022-12-13,2024-12-11
+CUST-00444,Elizabeth,Meyer,elizabeth.meyer63@outlook.com,(425) 652-9060,1997-02-25,20326 Smith Orchard,Mathewsborough,SC,US,76155,Gold,Regular,True,False,2022-08-05,2023-07-27
+CUST-00445,Victoria,Chavez,victoria.chavez41@icloud.com,(714) 855-2457,1995-12-07,158 Brown Lakes Suite 082,East Theresaville,DE,US,72651,Bronze,At Risk,True,False,2021-03-07,2023-11-26
+CUST-00446,David,Bailey,david.bailey61@icloud.com,(818) 268-3230,1964-05-26,929 Lauren Lake Apt. 825,North Erin,SC,US,83641,Bronze,High Value,True,False,2022-01-13,2024-07-31
+CUST-00447,Jeremy,Arias,jeremy.arias32@yahoo.com,(896) 340-6468,2006-12-07,5240 John Point Suite 399,North Karinaberg,FL,US,63537,Bronze,At Risk,True,False,2023-03-21,2024-09-06
+CUST-00448,Kathy,Roman,kathy.roman29@icloud.com,(362) 669-3351,1965-12-02,61923 Thomas Harbor Suite 018,Alexandriafort,IN,US,87063,Gold,At Risk,True,True,2024-04-10,2024-08-04
+CUST-00449,Lynn,Weaver,lynn.weaver23@yahoo.com,(215) 406-4176,1985-08-24,3811 Allen Vista Suite 660,Port Kaylaview,MH,US,33487,Bronze,Regular,True,False,2022-09-28,2024-03-09
+CUST-00450,Mark,Estrada,mark.estrada76@gmail.com,(510) 173-9739,1977-04-30,78996 Williams Coves Apt. 911,West Betty,VT,US,79643,Silver,Regular,True,False,2021-02-16,2022-10-05
+CUST-00451,Phillip,Garner,phillip.garner25@hotmail.com,(779) 806-6039,1963-05-31,46074 Cardenas Key Suite 347,West Stephenview,WI,US,21550,Silver,Regular,False,False,2021-07-24,2022-04-12
+CUST-00452,Kelli,Kelley,kelli.kelley78@yahoo.com,(652) 715-5983,1970-11-18,16597 Katherine Flats Suite 755,Huangburgh,GA,US,42805,Bronze,Regular,True,True,2021-06-12,2021-07-02
+CUST-00453,James,Collins,james.collins17@outlook.com,(848) 826-9131,1958-06-14,2585 Anderson Lights Apt. 499,West Yvonnemouth,GU,US,05845,Silver,Churned,True,False,2022-04-11,2022-12-11
+CUST-00454,Eric,Haney,eric.haney3@yahoo.com,(333) 373-2043,2006-07-11,6889 Robert Vista Suite 964,Lindaview,NE,US,49027,Silver,Churned,True,True,2020-02-13,2021-11-23
+CUST-00455,Sara,Young,sara.young47@gmail.com,(125) 389-2187,1982-12-01,358 Steven Ports,South Christinefort,OR,US,57672,Bronze,Churned,True,False,2022-06-06,2022-08-05
+CUST-00456,Wendy,Johnson,wendy.johnson39@outlook.com,(057) 215-1494,2005-07-30,976 Valerie Forge,Collinsport,MA,US,30983,Bronze,Regular,True,True,2022-01-06,2023-09-19
+CUST-00457,Nancy,Shah,nancy.shah63@outlook.com,(895) 090-5911,1987-03-27,233 Mary Burgs Suite 151,South Audreyfurt,AS,US,53922,Bronze,Churned,True,True,2020-08-24,2022-04-22
+CUST-00458,Thomas,Boone,thomas.boone46@yahoo.com,(452) 647-1246,1964-07-03,157 Alexandria Brooks Apt. 805,East Aaronhaven,AL,US,01111,Silver,At Risk,True,True,2020-10-27,2022-03-09
+CUST-00459,Kevin,Marsh,kevin.marsh38@yahoo.com,(512) 397-2835,1958-10-21,592 Mccarthy Trail,New Eduardo,GU,US,58841,Bronze,New,True,True,2022-07-21,2022-08-17
+CUST-00460,Benjamin,Medina,benjamin.medina99@icloud.com,(144) 152-9821,1980-11-04,578 Bowers Crescent,West Johnberg,IA,US,64826,Bronze,High Value,True,True,2024-04-22,2024-06-08
+CUST-00461,Richard,Howard,richard.howard29@icloud.com,(791) 815-8998,1982-03-01,5273 Raymond Meadow,Grahamland,NM,US,03624,Bronze,Regular,True,False,2024-02-14,2024-07-20
+CUST-00462,Marc,Webb,marc.webb45@outlook.com,(740) 803-1499,1983-04-30,080 Tammy Lights Apt. 580,Rodgershaven,PR,US,23869,Bronze,At Risk,False,True,2021-09-30,2023-05-27
+CUST-00463,Erin,Williams,erin.williams82@outlook.com,(723) 513-7399,1954-05-01,14035 Valerie Views Apt. 560,East Carol,RI,US,88126,Bronze,Regular,True,False,2020-12-18,2022-01-02
+CUST-00464,Sandra,Becker,sandra.becker33@gmail.com,(434) 606-6643,1998-05-24,9060 Anderson Spurs Apt. 111,Port Tracy,HI,US,70878,Silver,New,True,False,2023-03-12,2023-10-14
+CUST-00465,Sherry,Scott,sherry.scott22@hotmail.com,(648) 449-4116,1998-09-24,87328 Taylor Coves,East Benjaminfurt,HI,US,11459,Bronze,Regular,True,False,2023-01-23,2024-07-15
+CUST-00466,Lindsay,Allen,lindsay.allen62@icloud.com,(727) 908-3350,1984-10-03,4257 Rachel Centers,Jamesport,NY,US,08843,Silver,High Value,False,False,2022-10-07,2023-04-08
+CUST-00467,Courtney,Rogers,courtney.rogers5@outlook.com,(071) 398-4822,1983-07-26,11688 Christine Extension Suite 502,Lake Jesusfurt,AL,US,74256,Bronze,Regular,False,False,2023-03-30,2023-05-06
+CUST-00468,Paul,Bradley,paul.bradley49@yahoo.com,(098) 107-9649,1974-09-29,794 Baird Roads,Mendozaberg,NH,US,70815,Silver,Regular,True,False,2023-11-08,2024-11-10
+CUST-00469,Jeffrey,Mitchell,jeffrey.mitchell77@icloud.com,(642) 506-4207,1976-01-16,2536 Stephenson Mount,Wallacefurt,NH,US,48153,Gold,High Value,True,True,2023-04-15,2023-11-12
+CUST-00470,Elizabeth,Anderson,elizabeth.anderson78@hotmail.com,(333) 939-5786,1974-02-01,62718 Evans Village Suite 033,Andreaburgh,TN,US,50870,Bronze,New,True,False,2022-05-20,2024-10-31
+CUST-00471,Ryan,Hahn,ryan.hahn90@icloud.com,(369) 249-2693,1961-10-05,3275 Erica Turnpike Apt. 100,West Melissamouth,MH,US,47253,Silver,High Value,True,False,2020-02-09,2021-02-05
+CUST-00472,Edward,Lewis,edward.lewis31@gmail.com,(595) 977-5244,1959-01-21,26189 Moore Plaza,Gravesview,UT,US,33189,Bronze,High Value,True,False,2023-10-12,2024-12-20
+CUST-00473,Elizabeth,Thomas,elizabeth.thomas47@gmail.com,(026) 767-2095,2004-09-03,0795 Huerta Land,East Dennisport,TX,US,52093,Bronze,Regular,True,True,2021-12-31,2024-09-30
+CUST-00474,Daniel,Donovan,daniel.donovan26@gmail.com,(354) 159-7099,1976-06-12,4384 Tracy Expressway,Lake Johnport,KS,US,59343,Bronze,Regular,True,False,2024-04-26,2024-12-30
+CUST-00475,Matthew,Nelson,matthew.nelson15@outlook.com,(715) 802-9090,1970-02-14,6604 Rogers Unions,Russellmouth,DC,US,45883,Silver,Regular,True,False,2024-06-21,2024-11-06
+CUST-00476,Andrea,Burns,andrea.burns83@icloud.com,(715) 810-2131,1963-03-19,93110 Jill Junctions,East Brandimouth,SC,US,43872,Bronze,Regular,True,False,2021-03-13,2024-03-08
+CUST-00477,Daniel,Martinez,daniel.martinez6@outlook.com,(312) 110-6330,1992-11-27,8373 Jacobs Ferry Suite 490,Lopeztown,CO,US,23550,Bronze,Regular,True,True,2023-03-02,2024-12-13
+CUST-00478,Jose,Humphrey,jose.humphrey20@gmail.com,(311) 325-3269,1969-10-16,436 Summers Street Apt. 804,Karenland,AR,US,08730,Bronze,Regular,True,True,2022-08-02,2023-10-11
+CUST-00479,Raven,Brown,raven.brown76@yahoo.com,(617) 015-9591,1984-10-11,5757 Hines Island Apt. 392,Lake Michaelmouth,FM,US,61009,Silver,At Risk,True,False,2023-05-25,2023-12-01
+CUST-00480,Laura,Landry,laura.landry69@hotmail.com,(772) 266-0256,2007-11-29,5062 Brittany Ferry,North Allen,NJ,US,20148,Silver,Regular,True,False,2021-10-24,2022-09-04
+CUST-00481,James,Crawford,james.crawford92@gmail.com,(843) 379-7662,1980-04-11,1157 Thomas Path,Larachester,NM,US,02200,Silver,Churned,True,True,2020-09-16,2024-10-24
+CUST-00482,Crystal,Morgan,crystal.morgan80@yahoo.com,(969) 192-8455,1997-11-12,9710 Wood Gateway,West Haley,PW,US,41465,Bronze,At Risk,False,True,2021-05-25,2023-09-06
+CUST-00483,Rachel,Alvarez,rachel.alvarez28@yahoo.com,(595) 325-9399,1966-07-05,9705 Patrick Drive,Christopherfort,NH,US,79484,Bronze,Regular,True,True,2021-04-05,2024-08-16
+CUST-00484,Stacey,Luna,stacey.luna81@yahoo.com,(634) 250-7330,1971-06-21,245 Galloway Rapids Apt. 399,West Jessicaborough,NC,US,66578,Gold,Regular,True,True,2020-04-19,2021-08-16
+CUST-00485,Krystal,Henderson,krystal.henderson9@gmail.com,(044) 324-0061,1973-09-30,6829 Blake Coves,Stephenborough,VT,US,80001,Bronze,Regular,True,False,2023-09-06,2024-04-11
+CUST-00486,Frank,Anderson,frank.anderson59@gmail.com,(105) 875-2568,1954-11-15,562 Austin Trace Apt. 459,New Brianberg,NM,US,08873,Silver,High Value,True,False,2024-04-18,2024-12-12
+CUST-00487,Donald,Garcia,donald.garcia54@yahoo.com,(315) 551-6517,1975-07-03,662 Lisa Mission,North Kathryn,VI,US,34678,Bronze,High Value,True,True,2020-09-25,2021-09-14
+CUST-00488,Brian,Vega,brian.vega14@icloud.com,(370) 033-2285,1971-03-27,84706 Billy Radial Apt. 339,Smithland,OR,US,48750,Silver,At Risk,True,True,2020-02-09,2022-08-06
+CUST-00489,Maria,Sanders,maria.sanders53@outlook.com,(094) 485-8623,1994-12-14,3546 Debra Mission Apt. 798,Harrisville,AZ,US,51285,Bronze,Regular,True,False,2020-09-07,2024-02-27
+CUST-00490,Julia,Sawyer,julia.sawyer36@hotmail.com,(943) 945-7039,2002-06-08,80403 Michelle Ford Suite 657,Guzmanburgh,PW,US,64946,Bronze,High Value,True,False,2020-11-24,2022-11-13
+CUST-00491,Candice,Norton,candice.norton43@yahoo.com,(319) 100-9004,2004-08-18,6921 Micheal Rue Apt. 651,Roberttown,ME,US,05087,Bronze,Regular,True,False,2022-12-31,2024-10-17
+CUST-00492,Kevin,Baker,kevin.baker44@outlook.com,(310) 720-1137,2001-04-24,0971 Jason Locks Suite 007,Rivaschester,HI,US,02240,Bronze,At Risk,True,True,2024-03-07,2024-08-26
+CUST-00493,Bradley,Brown,bradley.brown30@yahoo.com,(447) 340-4337,1998-01-16,687 Jennifer Summit,West Michaelstad,NH,US,62429,Bronze,High Value,True,False,2023-06-17,2024-04-18
+CUST-00494,Nathaniel,Winters,nathaniel.winters94@hotmail.com,(825) 562-9657,2007-07-26,78656 Carrie Dam Suite 577,North Matthew,PW,US,82429,Silver,New,True,True,2023-04-07,2023-07-07
+CUST-00495,Matthew,Chen,matthew.chen53@hotmail.com,(923) 616-1880,1982-01-18,8235 Wilson Street,Amyfurt,NC,US,86601,Silver,At Risk,True,True,2023-05-07,2024-09-12
+CUST-00496,Jeffery,Bell,jeffery.bell21@gmail.com,(137) 230-8172,2003-11-05,64381 Andrew Burgs Suite 132,North Jonville,NE,US,47361,Bronze,Regular,False,True,2021-10-31,2023-12-05
+CUST-00497,Alex,Harper,alex.harper73@gmail.com,(534) 699-7990,1990-10-28,5504 Callahan Lights,South Haleystad,TX,US,64766,Bronze,At Risk,True,False,2021-07-17,2024-12-24
+CUST-00498,Norman,Estes,norman.estes5@hotmail.com,(174) 811-3176,1994-09-02,705 Tran Squares,Robinsonchester,CT,US,01850,Bronze,Regular,True,False,2023-05-31,2024-06-30
+CUST-00499,Brittney,Leonard,brittney.leonard60@icloud.com,(871) 827-4968,1989-06-05,9187 Rachel Hill,North Kelly,MA,US,56433,Bronze,Churned,True,False,2020-02-16,2020-08-29
+CUST-00500,Eric,Monroe,eric.monroe63@icloud.com,(730) 626-0423,1972-03-05,71122 Joy Rapids Apt. 775,Smithhaven,MH,US,91440,Bronze,Churned,True,True,2020-11-22,2022-05-28

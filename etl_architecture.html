@@ -1,0 +1,1295 @@
+<title>ETL Pipeline Architecture — Retail Analytics Warehouse</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ground: #EDF0ED;
+  --text:   #1C2526;
+  --accent: #1B6358;
+  --warm:   #C25A2A;
+  --surface:#FFFFFF;
+  --muted:  #6D7F81;
+  --border: #C8D4D1;
+  --faint:  #E2EAE8;
+  --adim:   rgba(27,99,88,0.10);
+  --wdim:   rgba(194,90,42,0.10);
+  --code-bg:#151D1E;
+  --code-fg:#A8C5BF;
+
+  --f-display: Georgia, 'Palatino Linotype', 'Times New Roman', serif;
+  --f-body:    'Trebuchet MS', 'Gill Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --f-mono:    'Courier New', 'Lucida Console', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ─────────────────────────────────────── */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--text);
+  padding: 0 2rem;
+  height: 46px;
+  display: flex; align-items: center; gap: 2rem;
+  border-bottom: 1px solid rgba(27,99,88,0.3);
+}
+.logo {
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); white-space: nowrap; flex-shrink: 0;
+}
+.stage-nav {
+  display: flex; gap: 2px; align-items: center;
+  overflow-x: auto; flex: 1;
+  scrollbar-width: none;
+}
+.stage-nav::-webkit-scrollbar { display: none; }
+.stage-nav a {
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(163,185,183,0.6);
+  text-decoration: none;
+  padding: 5px 10px; border-radius: 2px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.stage-nav a:hover { color: var(--accent); background: rgba(27,99,88,0.18); }
+.stage-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ── HERO ────────────────────────────────────────── */
+.hero {
+  max-width: 1100px; margin: 0 auto;
+  padding: 4rem 2rem 0;
+}
+.hero-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: var(--f-display);
+  font-size: clamp(28px, 4.5vw, 50px);
+  font-weight: bold; line-height: 1.08; letter-spacing: -0.02em;
+  color: var(--text); margin-bottom: 1.25rem;
+}
+.hero-title em { color: var(--accent); font-style: normal; }
+.hero-desc {
+  max-width: 560px; color: var(--muted);
+  font-size: 15.5px; line-height: 1.75; margin-bottom: 2.5rem;
+}
+#pipeline-canvas {
+  display: block; width: 100%; height: 148px;
+  border-radius: 3px;
+  background: var(--code-bg);
+  margin-bottom: 0.5rem;
+}
+.canvas-caption {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); text-align: right;
+  margin-bottom: 0;
+}
+
+/* ── MAIN LAYOUT ─────────────────────────────────── */
+.content-body {
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 2rem 7rem;
+}
+
+/* ── SPEC SECTION ─────────────────────────────────── */
+.spec-section {
+  padding: 4rem 0 0;
+  border-top: 1px solid var(--border);
+  margin-top: 3.5rem;
+}
+.section-grid {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+.stage-badge {
+  font-family: var(--f-mono);
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); background: var(--adim);
+  padding: 7px 8px; text-align: center; border-radius: 2px;
+  line-height: 1.6; margin-top: 5px;
+}
+.stage-badge strong {
+  display: block; font-size: 20px;
+  font-family: var(--f-display); letter-spacing: 0; line-height: 1;
+  margin-bottom: 3px;
+}
+.section-title {
+  font-family: var(--f-display);
+  font-size: 26px; font-weight: bold;
+  letter-spacing: -0.01em; line-height: 1.15;
+  color: var(--text);
+}
+.section-sub {
+  font-family: var(--f-body); font-size: 13.5px;
+  font-weight: normal; color: var(--muted);
+  margin-top: 5px; line-height: 1.5;
+}
+
+/* ── EXECUTION TABLE ─────────────────────────────── */
+.exec-table {
+  width: 100%; border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.exec-table thead th {
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); text-align: left;
+  padding: 10px 16px;
+  background: var(--text); color: rgba(163,185,183,0.6);
+  border-bottom: 2px solid var(--accent);
+}
+.exec-table tbody td {
+  padding: 12px 16px; vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.exec-table tbody tr:nth-child(odd) td { background: var(--surface); }
+.exec-table tbody tr:nth-child(even) td { background: var(--faint); }
+.exec-num {
+  font-family: var(--f-display);
+  font-size: 22px; font-weight: bold;
+  color: var(--accent); line-height: 1;
+}
+.exec-name {
+  font-size: 14.5px; font-weight: 600;
+  color: var(--text); margin-bottom: 3px;
+}
+.exec-target {
+  font-family: var(--f-mono); font-size: 11px;
+  color: var(--muted); margin-bottom: 3px;
+}
+.exec-note { font-size: 13px; color: var(--muted); line-height: 1.55; }
+.exec-parallel {
+  font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent);
+  background: var(--adim); padding: 2px 7px; border-radius: 2px;
+  white-space: nowrap;
+}
+
+/* ── CARDS ───────────────────────────────────────── */
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem; margin-bottom: 2rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border); border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+}
+.card-label {
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.75rem;
+}
+.card-body { font-size: 13.5px; line-height: 1.7; color: var(--text); }
+.card-body ul { padding-left: 1.1em; }
+.card-body li { margin-bottom: 4px; }
+.card-body code {
+  font-family: var(--f-mono); font-size: 12px;
+  background: var(--faint); padding: 1px 5px; border-radius: 2px;
+}
+
+/* ── RULES TABLE ─────────────────────────────────── */
+.rules-wrap { overflow-x: auto; margin-bottom: 1.75rem; }
+.rules-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+.rules-table thead th {
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); text-align: left;
+  padding: 8px 14px; background: var(--faint);
+  border-bottom: 2px solid var(--border);
+}
+.rules-table tbody td {
+  padding: 10px 14px; border-bottom: 1px solid var(--faint);
+  vertical-align: top; font-size: 13.5px; line-height: 1.5;
+}
+.rules-table tbody tr:last-child td { border-bottom: none; }
+.rules-table code {
+  font-family: var(--f-mono); font-size: 12px;
+  background: var(--faint); padding: 1px 5px; border-radius: 2px;
+}
+
+/* ── ACTION TAGS ─────────────────────────────────── */
+.tag {
+  display: inline-block; font-family: var(--f-mono);
+  font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 2px; white-space: nowrap;
+}
+.tag-reject { background: var(--wdim); color: var(--warm); }
+.tag-default { background: var(--adim); color: var(--accent); }
+.tag-skip { background: var(--faint); color: var(--muted); }
+
+/* ── DECISION TREE (dark monospace block) ────────── */
+.decision-tree {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 1.75rem 2rem;
+  border-radius: 3px;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+.decision-tree pre {
+  font-family: var(--f-mono);
+  font-size: 12.5px; line-height: 1.75;
+  white-space: pre; margin: 0;
+}
+.decision-tree .c-acc { color: #5BBFA7; }
+.decision-tree .c-warn { color: #E8895A; }
+.decision-tree .c-dim { color: #4E7D77; }
+.decision-tree .c-head { color: #D4E8E4; font-weight: bold; }
+
+/* ── FIELD MAPPING GRID ──────────────────────────── */
+.field-map { margin-bottom: 1.75rem; }
+.field-map-header {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  font-family: var(--f-mono);
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); padding: 8px 12px;
+  background: var(--text); border-radius: 3px 3px 0 0;
+  border: 1px solid var(--text);
+}
+.field-map-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid var(--border); border-top: none;
+  font-family: var(--f-mono); font-size: 12.5px;
+}
+.field-map-row:last-child { border-radius: 0 0 3px 3px; }
+.fmcell {
+  padding: 7px 12px; border-right: 1px solid var(--border);
+  line-height: 1.5;
+}
+.fmcell:last-child { border-right: none; }
+.fmcell.tracked { color: var(--accent); background: var(--surface); }
+.fmcell.untracked { color: var(--muted); background: var(--faint); }
+.fmcell.derived { color: var(--warm); background: var(--surface); }
+.fmcell.even { background: var(--faint); }
+.fmcell.even.tracked { color: var(--accent); }
+.fmcell.even.untracked { color: var(--muted); }
+.fmcell.even.derived { color: var(--warm); }
+
+/* ── FLOW STEPS ──────────────────────────────────── */
+.flow-steps { display: flex; flex-direction: column; gap: 0; margin: 1.5rem 0; }
+.flow-step {
+  display: grid; grid-template-columns: 44px 1fr;
+  position: relative;
+}
+.flow-step::after {
+  content: ''; position: absolute;
+  left: 21px; top: 38px; bottom: 0;
+  width: 2px; background: var(--faint);
+}
+.flow-step:last-child::after { display: none; }
+.step-num {
+  width: 34px; height: 34px;
+  background: var(--accent); color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-mono); font-size: 11px; font-weight: bold;
+  flex-shrink: 0; margin-top: 3px;
+  position: relative; z-index: 1;
+}
+.step-num.warm-step { background: var(--warm); }
+.step-body { padding: 0 0 2rem 1.25rem; }
+.step-body strong {
+  display: block; font-size: 14px; font-weight: 600;
+  color: var(--text); margin-bottom: 4px;
+}
+.step-body p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+.step-body code {
+  font-family: var(--f-mono); font-size: 12px;
+  background: var(--faint); padding: 1px 5px; border-radius: 2px;
+  color: var(--text);
+}
+
+/* ── STRATEGY CARDS ──────────────────────────────── */
+.strategy-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.strategy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 3px 3px 0;
+  padding: 1.25rem 1.5rem;
+}
+.strategy-card.warm { border-left-color: var(--warm); }
+.strategy-card-label {
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 6px;
+}
+.strategy-card-title {
+  font-size: 15px; font-weight: 600;
+  color: var(--text); margin-bottom: 8px;
+}
+.strategy-card p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+.strategy-card code {
+  font-family: var(--f-mono); font-size: 12px;
+  background: var(--faint); padding: 1px 5px; border-radius: 2px;
+  color: var(--text);
+}
+
+/* ── INLINE CODE BLOCK ───────────────────────────── */
+.code-block {
+  background: var(--code-bg); color: var(--code-fg);
+  font-family: var(--f-mono); font-size: 12.5px; line-height: 1.7;
+  padding: 1.25rem 1.5rem; border-radius: 3px;
+  overflow-x: auto; margin: 1rem 0;
+}
+.code-block .kw { color: #5BBFA7; }
+.code-block .cm { color: #4E7D77; }
+.code-block .st { color: #C8A97E; }
+
+/* ── CALLOUT ─────────────────────────────────────── */
+.callout {
+  display: flex; gap: 1rem; align-items: flex-start;
+  border-left: 3px solid var(--accent);
+  background: var(--adim); padding: 1rem 1.25rem;
+  border-radius: 0 3px 3px 0; margin: 1.25rem 0;
+  font-size: 13.5px; line-height: 1.65; color: var(--text);
+}
+.callout.warm { border-left-color: var(--warm); background: var(--wdim); }
+.callout-icon { flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+
+/* ── DIVIDER ─────────────────────────────────────── */
+.divider {
+  border: none; border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ── FOOTER ──────────────────────────────────────── */
+.site-footer {
+  background: var(--text); color: rgba(163,185,183,0.5);
+  padding: 2rem; text-align: center;
+  font-family: var(--f-mono); font-size: 10px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 640px) {
+  .section-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .stage-badge { display: inline-block; width: auto; text-align: left; }
+  .exec-table thead th:nth-child(3),
+  .exec-table tbody td:nth-child(3) { display: none; }
+  .field-map-header,
+  .field-map-row { grid-template-columns: 1fr 1fr; }
+  .fmcell:nth-child(3) { display: none; }
+}
+
+/* ── REDUCED MOTION ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #pipeline-canvas { opacity: 0.7; }
+}
+</style>
+
+<!-- ─────────────────────────────────────────────── HEADER -->
+<header class="site-header" role="banner">
+  <span class="logo">Retail Analytics / ETL Spec v2</span>
+  <nav class="stage-nav" aria-label="Pipeline stages">
+    <a href="#exec-order">Execution Order</a>
+    <a href="#extract">Extract</a>
+    <a href="#validate">Validate</a>
+    <a href="#dim-customer">dim_customer</a>
+    <a href="#dim-product">dim_product</a>
+    <a href="#fact-sales">fact_sales</a>
+    <a href="#incremental">Incremental</a>
+    <a href="#audit">Audit</a>
+  </nav>
+</header>
+
+<!-- ─────────────────────────────────────────────── HERO -->
+<section class="hero" aria-label="Overview">
+  <p class="hero-eyebrow">Architecture Design — Python + SQLAlchemy + Pandas</p>
+  <h1 class="hero-title">
+    From raw extract<br>to <em>trusted warehouse</em>
+  </h1>
+  <p class="hero-desc">
+    Seven ordered pipeline stages move data from source system staging tables into a
+    dimension-and-fact warehouse. This document defines every mapping rule, quality gate,
+    and surrogate-key resolution decision needed to build it.
+  </p>
+  <canvas id="pipeline-canvas" aria-label="Animated pipeline stages: Extract → Validate → Dimensions → Facts → Date → Audit" role="img"></canvas>
+  <p class="canvas-caption">Live pipeline — copper packets represent routed rejections</p>
+</section>
+
+<!-- ─────────────────────────────────────────────── MAIN CONTENT -->
+<main class="content-body">
+
+  <!-- ── EXECUTION ORDER ───────────────────────────── -->
+  <section class="spec-section" id="exec-order" aria-labelledby="exec-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>00</strong>Sequence</div>
+      <div>
+        <h2 class="section-title" id="exec-title">Pipeline Execution Order</h2>
+        <p class="section-sub">Stages 3 and 4 have no shared dependency — they can run in parallel. Every other stage is strictly sequential.</p>
+      </div>
+    </div>
+
+    <div class="rules-wrap">
+      <table class="exec-table" aria-label="Pipeline execution sequence">
+        <thead>
+          <tr>
+            <th style="width:52px">#</th>
+            <th>Stage</th>
+            <th>Target table(s)</th>
+            <th>Depends on</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="exec-num">1</span></td>
+            <td>
+              <div class="exec-name">Extract &amp; Stage</div>
+              <div class="exec-target">staging.stg_sales / stg_customers / stg_products</div>
+            </td>
+            <td class="exec-target">staging.*</td>
+            <td class="exec-note">Source system</td>
+            <td class="exec-note">Raw load — no transformations, all fields as VARCHAR</td>
+          </tr>
+          <tr>
+            <td><span class="exec-num">2</span></td>
+            <td>
+              <div class="exec-name">Validate &amp; Gate</div>
+              <div class="exec-target">staging.stg_rejections</div>
+            </td>
+            <td class="exec-target">staging.stg_rejections</td>
+            <td class="exec-note">Stage 1</td>
+            <td class="exec-note">DQ checks, route failures; pass-through rows continue</td>
+          </tr>
+          <tr>
+            <td><span class="exec-num">3</span></td>
+            <td>
+              <div class="exec-name">Load dim_customer</div>
+              <div class="exec-target">warehouse.dim_customer</div>
+            </td>
+            <td class="exec-target">warehouse.dim_customer</td>
+            <td class="exec-note">Stage 2 <span class="exec-parallel">∥ parallel</span></td>
+            <td class="exec-note">SCD Type 2 hash comparison; expire old, insert new versions</td>
+          </tr>
+          <tr>
+            <td><span class="exec-num">4</span></td>
+            <td>
+              <div class="exec-name">Load dim_product</div>
+              <div class="exec-target">warehouse.dim_product</div>
+            </td>
+            <td class="exec-target">warehouse.dim_product</td>
+            <td class="exec-note">Stage 2 <span class="exec-parallel">∥ parallel</span></td>
+            <td class="exec-note">SCD Type 2 hash comparison; unit_cost captured for margin history</td>
+          </tr>
+          <tr>
+            <td><span class="exec-num">5</span></td>
+            <td>
+              <div class="exec-name">Load fact_sales</div>
+              <div class="exec-target">warehouse.fact_sales</div>
+            </td>
+            <td class="exec-target">warehouse.fact_sales</td>
+            <td class="exec-note">Stages 3 &amp; 4</td>
+            <td class="exec-note">FK resolution, calculated fields, deduplication via unique constraints</td>
+          </tr>
+          <tr>
+            <td><span class="exec-num">6</span></td>
+            <td>
+              <div class="exec-name">Extend dim_date</div>
+              <div class="exec-target">warehouse.dim_date</div>
+            </td>
+            <td class="exec-target">warehouse.dim_date</td>
+            <td class="exec-note">Stage 5</td>
+            <td class="exec-note">Only runs if a transaction_date falls outside pre-populated range</td>
+          </tr>
+          <tr>
+            <td><span class="exec-num">7</span></td>
+            <td>
+              <div class="exec-name">Post-load Audit</div>
+              <div class="exec-target">warehouse.etl_audit_log</div>
+            </td>
+            <td class="exec-target">warehouse.etl_audit_log</td>
+            <td class="exec-note">Stage 5</td>
+            <td class="exec-note">Log row counts, evaluate DQ thresholds, trigger alerts if needed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── STAGE 1: EXTRACT ──────────────────────────── -->
+  <section class="spec-section" id="extract" aria-labelledby="extract-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>01</strong>Extract</div>
+      <div>
+        <h2 class="section-title" id="extract-title">Extract &amp; Stage</h2>
+        <p class="section-sub">Pull raw data from source systems into staging. No business logic, no type coercion — this stage only moves rows.</p>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="card">
+        <p class="card-label">Approach</p>
+        <div class="card-body">
+          <p>All source fields land as <code>VARCHAR</code> or <code>TEXT</code>. This prevents silent data loss from premature type casting and surfaces errors explicitly in the Validate stage where they can be tracked.</p>
+        </div>
+      </div>
+      <div class="card">
+        <p class="card-label">Metadata to append</p>
+        <div class="card-body">
+          <ul>
+            <li><code>loaded_at = NOW()</code></li>
+            <li><code>source_file</code> — filename or feed identifier</li>
+            <li><code>batch_date</code> — business date being processed</li>
+            <li><code>row_num</code> — ordinal for debugging</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <p class="card-label">Load strategy</p>
+        <div class="card-body">
+          <p>For small sources (&lt; 500k rows/day): truncate staging then full reload. For large sources: watermark-based append using <code>updated_at &gt;= last_run_ts</code>. Staging tables are transient; they are never the source of truth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STAGE 2: VALIDATE ─────────────────────────── -->
+  <section class="spec-section" id="validate" aria-labelledby="validate-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>02</strong>Validate</div>
+      <div>
+        <h2 class="section-title" id="validate-title">Validate &amp; Gate</h2>
+        <p class="section-sub">Two outcomes only: hard reject (row goes to stg_rejections and stops) or pass (row continues). FK misses are not rejections — they are defaults.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">—</span>
+      <span><strong>Design principle:</strong> Reject when the record itself is invalid (the transaction cannot be trusted). Default to <code>-1</code> when a lookup simply finds no match (the transaction is real but the master data is incomplete). Never silently drop a row.</span>
+    </div>
+
+    <div class="rules-wrap">
+      <table class="rules-table" aria-label="Data quality rules">
+        <thead>
+          <tr>
+            <th style="width:22%">Check</th>
+            <th style="width:16%">Category</th>
+            <th style="width:34%">Condition</th>
+            <th style="width:14%">Action</th>
+            <th>Destination</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Required transaction fields</td>
+            <td><span class="tag tag-reject">NULL_VIOLATION</span></td>
+            <td><code>transaction_id</code>, <code>product_id</code>, <code>quantity</code>, <code>unit_price</code>, or <code>transaction_date</code> is NULL</td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Type coercion failure</td>
+            <td><span class="tag tag-reject">TYPE_ERROR</span></td>
+            <td><code>quantity</code> cannot cast to INT; <code>unit_price</code> / <code>discount_amount</code> cannot cast to NUMERIC</td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Negative or zero quantity</td>
+            <td><span class="tag tag-reject">RANGE_CHECK</span></td>
+            <td><code>quantity &lt;= 0</code></td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Negative unit price</td>
+            <td><span class="tag tag-reject">RANGE_CHECK</span></td>
+            <td><code>unit_price &lt; 0</code></td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Over-discount</td>
+            <td><span class="tag tag-reject">RANGE_CHECK</span></td>
+            <td><code>discount_amount &gt; (quantity × unit_price)</code></td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Future transaction date</td>
+            <td><span class="tag tag-reject">BUSINESS_RULE</span></td>
+            <td><code>transaction_date &gt; today</code></td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Implausibly old date</td>
+            <td><span class="tag tag-reject">BUSINESS_RULE</span></td>
+            <td><code>transaction_date &lt; '2010-01-01'</code></td>
+            <td><span class="tag tag-reject">Reject</span></td>
+            <td><code>stg_rejections</code></td>
+          </tr>
+          <tr>
+            <td>Exact duplicate</td>
+            <td><span class="tag tag-reject">DUPLICATE</span></td>
+            <td><code>_stg_sale_id</code> already exists in <code>fact_sales</code> (index scan on <code>uix_fact_sales_stg_id</code>)</td>
+            <td><span class="tag tag-skip">Skip</span></td>
+            <td><code>stg_rejections</code> with <code>resolution_notes='Already loaded'</code></td>
+          </tr>
+          <tr>
+            <td>Unknown customer</td>
+            <td>REF_INTEGRITY</td>
+            <td><code>customer_id</code> not found in <code>dim_customer</code> WHERE <code>is_current = TRUE</code></td>
+            <td><span class="tag tag-default">Default −1</span></td>
+            <td>Continues to <code>fact_sales</code> with <code>customer_sk = -1</code></td>
+          </tr>
+          <tr>
+            <td>Unknown product</td>
+            <td>REF_INTEGRITY</td>
+            <td><code>product_id</code> not found in <code>dim_product</code> WHERE <code>is_current = TRUE</code></td>
+            <td><span class="tag tag-default">Default −1</span></td>
+            <td>Continues to <code>fact_sales</code> with <code>product_sk = -1</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);margin-bottom:1.5rem;">
+      Every rejection writes the full source row as JSONB into <code>stg_rejections.raw_record</code>. Operations teams can query, fix, and reprocess without touching the warehouse.
+    </p>
+  </section>
+
+  <!-- ── STAGE 3: DIM_CUSTOMER ─────────────────────── -->
+  <section class="spec-section" id="dim-customer" aria-labelledby="dimcust-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>03</strong>SCD&nbsp;Type&nbsp;2</div>
+      <div>
+        <h2 class="section-title" id="dimcust-title">dim_customer</h2>
+        <p class="section-sub">Natural key: <code>customer_id</code> (source system PK). Surrogate key: <code>customer_sk</code> (warehouse BIGSERIAL).</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--f-display);font-size:17px;margin-bottom:1rem;color:var(--text);">Attribute tracking classification</h3>
+
+    <div class="field-map" role="table" aria-label="dim_customer field tracking">
+      <div class="field-map-header" role="row">
+        <span role="columnheader">Tracked — Type 2</span>
+        <span role="columnheader">Type 1 overwrite</span>
+        <span role="columnheader">Derived / system</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">email</span>
+        <span class="fmcell untracked" role="cell">email_opt_in</span>
+        <span class="fmcell derived" role="cell">customer_sk</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell even tracked" role="cell">phone_number</span>
+        <span class="fmcell even untracked" role="cell">sms_opt_in</span>
+        <span class="fmcell even derived" role="cell">effective_from</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">first_name, last_name</span>
+        <span class="fmcell untracked" role="cell">last_activity_date</span>
+        <span class="fmcell derived" role="cell">effective_to</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell even tracked" role="cell">address_line1, city</span>
+        <span class="fmcell even untracked" role="cell">total_orders</span>
+        <span class="fmcell even derived" role="cell">is_current</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">state, country, postal_code</span>
+        <span class="fmcell untracked" role="cell">total_spent</span>
+        <span class="fmcell derived" role="cell">created_at, updated_at</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell even tracked" role="cell">loyalty_tier</span>
+        <span class="fmcell even untracked" role="cell">notes</span>
+        <span class="fmcell even derived" role="cell">—</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">customer_segment</span>
+        <span class="fmcell untracked" role="cell">—</span>
+        <span class="fmcell derived" role="cell">—</span>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--f-display);font-size:17px;margin-bottom:0.5rem;color:var(--text);">SCD Type 2 decision logic</h3>
+    <p style="font-size:13.5px;color:var(--muted);margin-bottom:0.5rem;">Python computes a hash of all Type 2 fields per incoming row and compares against the stored current record.</p>
+
+    <div class="decision-tree" role="figure" aria-label="SCD Type 2 decision flow for dim_customer">
+      <pre><span class="c-head">INCOMING CUSTOMER RECORD
+</span><span class="c-dim">      │
+      ▼
+┌─────────────────────────────────────────────────────────┐
+│  SELECT customer_sk, hash(tracked_fields)               │
+│  FROM warehouse.dim_customer                            │
+│  WHERE customer_id = :incoming_id AND is_current = TRUE │
+└──────────────────────────┬──────────────────────────────┘
+                           │
+                   ┌───────▼────────┐
+                   │  Row found?    │
+                   └───┬────────┬───┘
+                      NO      YES
+                       │        │
+                       ▼        ▼
+</span><span class="c-acc">                   INSERT     </span><span class="c-dim">Hash incoming tracked fields
+</span><span class="c-acc">                   new row    </span><span class="c-dim">Compare with stored hash
+                              │
+                      ┌───────▼────────┐
+                      │  Hash match?   │
+                      └───┬────────┬───┘
+                         YES      NO
+                          │         │
+                          ▼         ▼
+</span><span class="c-dim">                     Apply Type 1  </span><span class="c-acc">① UPDATE current row:
+</span><span class="c-dim">                     overwrites       is_current = FALSE
+</span><span class="c-dim">                     only             effective_to = batch_date − 1
+
+                               </span><span class="c-acc">② INSERT new version:
+                                  is_current = TRUE
+                                  effective_from = batch_date
+                                  effective_to = '9999-12-31'
+</span><span class="c-dim">                          ▼
+                     rows_skipped++</span></pre>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">—</span>
+      <span><strong>FK lookup for fact_sales:</strong> <code>SELECT customer_sk FROM dim_customer WHERE customer_id = :id AND is_current = TRUE LIMIT 1</code>. Batch this as a single <code>IN (...)</code> query over the full staging batch, then resolve via dict in Pandas. Never row-by-row.</span>
+    </div>
+  </section>
+
+  <!-- ── STAGE 4: DIM_PRODUCT ──────────────────────── -->
+  <section class="spec-section" id="dim-product" aria-labelledby="dimprod-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>04</strong>SCD&nbsp;Type&nbsp;2</div>
+      <div>
+        <h2 class="section-title" id="dimprod-title">dim_product</h2>
+        <p class="section-sub">Natural key: <code>product_id</code>. Cost and price changes create new versions — this preserves accurate margin history without retroactively altering loaded facts.</p>
+      </div>
+    </div>
+
+    <div class="field-map" role="table" aria-label="dim_product field tracking">
+      <div class="field-map-header" role="row">
+        <span role="columnheader">Tracked — Type 2</span>
+        <span role="columnheader">Type 1 overwrite</span>
+        <span role="columnheader">Derived / system</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">product_name</span>
+        <span class="fmcell untracked" role="cell">is_active</span>
+        <span class="fmcell derived" role="cell">product_sk</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell even tracked" role="cell">category, subcategory</span>
+        <span class="fmcell even untracked" role="cell">weight_kg</span>
+        <span class="fmcell even derived" role="cell">effective_from / to</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">brand, supplier_name</span>
+        <span class="fmcell untracked" role="cell">dimensions_cm</span>
+        <span class="fmcell derived" role="cell">is_current</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell even tracked" role="cell">current_price</span>
+        <span class="fmcell even untracked" role="cell">reorder_point</span>
+        <span class="fmcell even derived" role="cell">created_at, updated_at</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell tracked" role="cell">unit_cost</span>
+        <span class="fmcell untracked" role="cell">image_url, tags</span>
+        <span class="fmcell derived" role="cell">—</span>
+      </div>
+      <div class="field-map-row" role="row">
+        <span class="fmcell even tracked" role="cell">description</span>
+        <span class="fmcell even untracked" role="cell">—</span>
+        <span class="fmcell even derived" role="cell">—</span>
+      </div>
+    </div>
+
+    <div class="decision-tree" role="figure" aria-label="SCD Type 2 decision flow for dim_product">
+      <pre><span class="c-head">INCOMING PRODUCT RECORD
+</span><span class="c-dim">      │
+      ▼
+┌─────────────────────────────────────────────────────────┐
+│  SELECT product_sk, unit_cost, current_price, ...       │
+│  FROM warehouse.dim_product                             │
+│  WHERE product_id = :incoming_id AND is_current = TRUE  │
+└──────────────────────────┬──────────────────────────────┘
+                           │
+                   ┌───────▼────────┐
+                   │  Row found?    │
+                   └───┬────────┬───┘
+                      NO      YES
+                       │        │
+                       ▼        ▼
+</span><span class="c-acc">                  INSERT     </span><span class="c-dim">Hash: product_name + category + brand +
+</span><span class="c-acc">                  new row       supplier + current_price + unit_cost
+</span><span class="c-dim">                              + description
+                              │
+                      ┌───────▼────────┐
+                      │  Hash match?   │
+                      └───┬────────┬───┘
+                         YES      NO
+                          │         │
+                          ▼         ▼
+</span><span class="c-dim">                    Type 1 only   </span><span class="c-acc">Expire old → Insert new version
+</span><span class="c-dim">                    (is_active,   </span><span class="c-warn">  NOTE: fact_sales loaded after this stage
+</span><span class="c-dim">                    weight, etc)     picks up the NEW product_sk.
+                                     Historical facts already loaded are
+                                     unaffected — their product_sk still
+                                     points to the version current at load time.</span></pre>
+    </div>
+  </section>
+
+  <!-- ── STAGE 5: FACT_SALES ───────────────────────── -->
+  <section class="spec-section" id="fact-sales" aria-labelledby="fact-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>05</strong>Facts</div>
+      <div>
+        <h2 class="section-title" id="fact-title">fact_sales</h2>
+        <p class="section-sub">Grain: one row per <code>(transaction_id, line_number)</code>. FK resolution and all derived metrics happen at load time.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--f-display);font-size:17px;margin-bottom:1rem;color:var(--text);">FK resolution — batch lookup pattern</h3>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <strong>customer_sk</strong>
+          <p>Extract all distinct <code>customer_id</code> values from the staging batch. Issue one <code>SELECT customer_id, customer_sk FROM dim_customer WHERE customer_id IN (...) AND is_current = TRUE</code>. Build a Python dict. Map each row; any miss becomes <code>customer_sk = -1</code>. Log miss count to <code>etl_audit_log</code>.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <strong>product_sk</strong>
+          <p>Same batch-lookup pattern as customer_sk. Build a dict from <code>dim_product WHERE is_current = TRUE</code>. Any miss → <code>product_sk = -1</code>.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <strong>transaction_date_key</strong>
+          <p>Compute as <code>int(date.strftime('%Y%m%d'))</code>. Query <code>dim_date</code> for all distinct date_keys in the batch. Any key missing from dim_date → call <code>fn_populate_dim_date</code> for a ±60 day window around that date. If still missing after population → use sentinel <code>19000101</code>.</p>
+        </div>
+      </div>
+      <div class="flow-step warm-step" style="display:grid;grid-template-columns:44px 1fr;">
+        <span class="step-num warm-step">4</span>
+        <div class="step-body">
+          <strong>Deduplication</strong>
+          <p>Pre-check: filter out any <code>_stg_sale_id</code> already in the unique index <code>uix_fact_sales_stg_id</code>. Then insert remaining rows with <code>INSERT ... ON CONFLICT (transaction_id, line_number) DO NOTHING</code>. After insert, compare <code>rowcount</code> vs input length — the difference is duplicates caught by the grain constraint. Log both counts.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--f-display);font-size:17px;margin-bottom:1rem;color:var(--text);">Calculated field mapping</h3>
+
+    <div class="rules-wrap">
+      <table class="rules-table" aria-label="fact_sales calculated fields">
+        <thead>
+          <tr>
+            <th style="width:22%">Warehouse field</th>
+            <th>Formula</th>
+            <th style="width:32%">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>gross_revenue</code></td>
+            <td><code>quantity × unit_price</code></td>
+            <td>Pre-discount revenue</td>
+          </tr>
+          <tr>
+            <td><code>discount_amount</code></td>
+            <td>Source field (validated: ≤ gross_revenue)</td>
+            <td>Rejected if over-discount detected in Stage 2</td>
+          </tr>
+          <tr>
+            <td><code>net_revenue</code></td>
+            <td><code>gross_revenue − discount_amount</code></td>
+            <td>Post-discount, pre-tax</td>
+          </tr>
+          <tr>
+            <td><code>cogs</code></td>
+            <td><code>quantity × unit_cost</code></td>
+            <td><code>unit_cost</code> taken from the current dim_product version at load time — point-in-time accurate for this batch</td>
+          </tr>
+          <tr>
+            <td><code>gross_profit</code></td>
+            <td><code>net_revenue − cogs</code></td>
+            <td>Can be negative for clearance / bundled items</td>
+          </tr>
+          <tr>
+            <td><code>tax_amount</code></td>
+            <td>Source field</td>
+            <td>NULL-coalesced to 0.00 if absent</td>
+          </tr>
+          <tr>
+            <td><code>total_amount</code></td>
+            <td><code>net_revenue + tax_amount</code></td>
+            <td>What the customer actually paid</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── INCREMENTAL STRATEGY ──────────────────────── -->
+  <section class="spec-section" id="incremental" aria-labelledby="incr-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>06</strong>Strategy</div>
+      <div>
+        <h2 class="section-title" id="incr-title">Incremental Loading</h2>
+        <p class="section-sub">High-water mark pattern. State lives in <code>etl_audit_log</code> — no external state store required.</p>
+      </div>
+    </div>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <p class="strategy-card-label">fact_sales — watermark extract</p>
+        <p class="strategy-card-title">Append-only by date</p>
+        <p>Read the most recent <code>batch_date</code> from <code>etl_audit_log</code> where <code>pipeline_name = 'stg_to_fact_sales'</code> and <code>status = 'SUCCESS'</code>. Extract source records where <code>transaction_date &gt;= last_batch_date</code>. A secondary predicate on <code>source.updated_at &gt;= last_run_ts</code> catches late-arriving corrections.</p>
+      </div>
+      <div class="strategy-card">
+        <p class="strategy-card-label">dim_customer / dim_product — full scan</p>
+        <p class="strategy-card-title">Compare all, every run</p>
+        <p>Dimensions are small relative to facts. Running a full hash comparison on every record every day is safer than watermarking — it catches backdated corrections, re-activated records, and out-of-order feeds without special handling. The SCD logic is idempotent for unchanged rows (<code>rows_skipped++</code>).</p>
+      </div>
+      <div class="strategy-card">
+        <p class="strategy-card-label">Idempotency — safe reruns</p>
+        <p class="strategy-card-title">Every stage can re-run safely</p>
+        <p>Facts: <code>ON CONFLICT (transaction_id, line_number) DO NOTHING</code> + <code>uix_fact_sales_stg_id</code>. Dimensions: hash comparison skips unchanged rows; <code>UPDATE ... WHERE is_current = TRUE AND hash != :new_hash</code> is a no-op on second run. dim_date: <code>ON CONFLICT (date_key) DO NOTHING</code>.</p>
+      </div>
+      <div class="strategy-card warm">
+        <p class="strategy-card-label">Failure recovery</p>
+        <p class="strategy-card-title">Reprocess from last success</p>
+        <p>On a FAILED or PARTIAL run: read the last <code>status = 'SUCCESS'</code> entry for this pipeline from <code>etl_audit_log</code>. Re-extract from that <code>batch_date</code> forward. Idempotency guarantees already-loaded rows are skipped cleanly — no manual cleanup needed before a rerun.</p>
+      </div>
+    </div>
+
+    <div class="code-block" role="figure" aria-label="High-water mark query pattern">
+      <span class="cm">-- Python: resolve last successful batch date</span><br>
+      <span class="kw">SELECT</span> batch_date, finished_at<br>
+      <span class="kw">FROM</span> warehouse.etl_audit_log<br>
+      <span class="kw">WHERE</span> pipeline_name = <span class="st">'stg_to_fact_sales'</span><br>
+      &nbsp;&nbsp;<span class="kw">AND</span> status = <span class="st">'SUCCESS'</span><br>
+      <span class="kw">ORDER BY</span> started_at <span class="kw">DESC</span><br>
+      <span class="kw">LIMIT</span> 1;<br><br>
+      <span class="cm">-- Extract from source using that watermark</span><br>
+      <span class="kw">SELECT</span> * <span class="kw">FROM</span> source.orders<br>
+      <span class="kw">WHERE</span> transaction_date &gt;= :last_batch_date<br>
+      &nbsp;&nbsp;<span class="kw">OR</span> updated_at &gt;= :last_finished_at;
+    </div>
+  </section>
+
+  <!-- ── POST-LOAD AUDIT ───────────────────────────── -->
+  <section class="spec-section" id="audit" aria-labelledby="audit-title">
+    <div class="section-grid">
+      <div class="stage-badge"><strong>07</strong>Audit</div>
+      <div>
+        <h2 class="section-title" id="audit-title">Post-load Audit</h2>
+        <p class="section-sub">Runs after fact_sales is loaded. Writes final counts to <code>etl_audit_log</code> and evaluates alert thresholds via <code>vw_dq_daily_load_summary</code>.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--f-display);font-size:17px;margin-bottom:1rem;color:var(--text);">Audit log write sequence</h3>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <strong>Open audit record (at pipeline start)</strong>
+          <p>Write a row to <code>etl_audit_log</code> with <code>status = 'RUNNING'</code>, <code>started_at = NOW()</code>, <code>pipeline_name</code>, <code>batch_date</code>, and <code>git_commit_sha</code>. Capture the <code>audit_id</code>.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <strong>Accumulate counts throughout pipeline</strong>
+          <p>Track <code>rows_extracted</code>, <code>rows_inserted</code>, <code>rows_updated</code> (SCD Type 2 expires), <code>rows_rejected</code>, <code>rows_skipped</code> in Python. Increment these per stage.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <strong>Evaluate DQ thresholds via monitoring view</strong>
+          <p>Query <code>vw_dq_daily_load_summary</code> for today. Raise alerts if: <code>pct_unknown_customers &gt; 5%</code> · <code>pct_negative_margin &gt; 2%</code> · <code>total_rows_loaded &lt; yesterday × 0.5</code> (volume drop). Also query <code>vw_rejection_summary</code> for open rejection count.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="step-num" style="background:var(--accent)">4</span>
+        <div class="step-body">
+          <strong>Close audit record</strong>
+          <p>Update the <code>etl_audit_log</code> row: set <code>status = 'SUCCESS'</code> (or <code>'PARTIAL'</code> / <code>'FAILED'</code>), <code>finished_at = NOW()</code>, final row counts, and <code>error_message</code> if applicable. The <code>duration_seconds</code> column is computed automatically by the generated column definition.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout warm">
+      <span class="callout-icon">—</span>
+      <span><strong>On unhandled exception:</strong> the Python pipeline must catch all exceptions, set <code>status = 'FAILED'</code> and write <code>error_message = str(e)</code> to the audit log before re-raising. A run that crashes without closing its audit record leaves <code>status = 'RUNNING'</code> indefinitely — monitor for stale RUNNING rows older than the expected pipeline duration as a secondary alerting signal.</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Retail Analytics Warehouse — ETL Architecture v2 &nbsp;·&nbsp; Python / Pandas / SQLAlchemy &nbsp;·&nbsp; PostgreSQL</p>
+</footer>
+
+<script>
+(function () {
+  // ── Pipeline canvas animation ──────────────────────
+  const canvas = document.getElementById('pipeline-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const STAGES = [
+    { label: 'EXTRACT',    sub: 'Source → Stg' },
+    { label: 'VALIDATE',   sub: 'DQ Gate' },
+    { label: 'DIM LOAD',   sub: 'SCD Type 2' },
+    { label: 'FACT LOAD',  sub: 'FK Resolve' },
+    { label: 'DIM DATE',   sub: 'Calendar' },
+    { label: 'AUDIT LOG',  sub: 'Monitor' }
+  ];
+
+  const C_GROUND = '#151D1E';
+  const C_ACC    = '#1B6358';
+  const C_BRIGHT = '#5BBFA7';
+  const C_WARM   = '#C25A2A';
+  const C_TEXT   = '#D4E8E4';
+  const C_DIM    = '#3A5F58';
+
+  let W, H, boxes = [], packets = [], rafId;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setup() {
+    const dpr = window.devicePixelRatio || 1;
+    const parent = canvas.parentElement;
+    W = parent.clientWidth - (parent.tagName === 'SECTION' ? 0 : 0);
+    H = 148;
+    canvas.width  = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    canvas.style.width  = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const n  = STAGES.length;
+    const bw = Math.min(118, Math.floor((W - 40) / n - 12));
+    const bh = 60;
+    const totalW = n * bw + (n - 1) * 12;
+    const sx = Math.max(16, (W - totalW) / 2);
+    const cy = H / 2;
+
+    boxes = STAGES.map((s, i) => ({
+      label: s.label, sub: s.sub,
+      x: sx + i * (bw + 12),
+      y: cy - bh / 2,
+      w: bw, h: bh,
+      cx: sx + i * (bw + 12) + bw / 2,
+      cy: cy,
+      pulse: 0
+    }));
+  }
+
+  function spawnPacket() {
+    if (packets.length >= 10) return;
+    const fi = Math.floor(Math.random() * (boxes.length - 1));
+    const from = boxes[fi], to = boxes[fi + 1];
+    const sx = from.x + from.w + 2;
+    const ex = to.x - 2;
+    const isRejection = Math.random() < 0.14;
+    packets.push({
+      x: sx, startX: sx, endX: ex,
+      y: from.cy, startY: from.cy, endY: to.cy,
+      p: 0,
+      speed: 0.007 + Math.random() * 0.011,
+      color: isRejection ? C_WARM : C_BRIGHT,
+      toIdx: fi + 1,
+      reject: isRejection
+    });
+  }
+
+  function rrect(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.arcTo(x + w, y, x + w, y + r, r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.arcTo(x + w, y + h, x + w - r, y + h, r);
+    ctx.lineTo(x + r, y + h);
+    ctx.arcTo(x, y + h, x, y + h - r, r);
+    ctx.lineTo(x, y + r);
+    ctx.arcTo(x, y, x + r, y, r);
+    ctx.closePath();
+  }
+
+  function draw() {
+    ctx.fillStyle = C_GROUND;
+    ctx.fillRect(0, 0, W, H);
+
+    // Connectors
+    for (let i = 0; i < boxes.length - 1; i++) {
+      const a = boxes[i], b = boxes[i + 1];
+      ctx.beginPath();
+      ctx.moveTo(a.x + a.w + 2, a.cy);
+      ctx.lineTo(b.x - 2, b.cy);
+      ctx.strokeStyle = C_DIM;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Arrowhead
+      const ax = b.x - 2, ay = b.cy;
+      ctx.beginPath();
+      ctx.moveTo(ax - 7, ay - 4);
+      ctx.lineTo(ax, ay);
+      ctx.lineTo(ax - 7, ay + 4);
+      ctx.strokeStyle = C_DIM;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Packets
+    packets.forEach(pk => {
+      ctx.save();
+      ctx.globalAlpha = 0.85;
+      ctx.beginPath();
+      ctx.arc(pk.x, pk.y, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = pk.color;
+      ctx.fill();
+
+      // Glow
+      ctx.globalAlpha = 0.25;
+      ctx.beginPath();
+      ctx.arc(pk.x, pk.y, 9, 0, Math.PI * 2);
+      ctx.fillStyle = pk.color;
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // Boxes (drawn after packets so they sit on top at endpoints)
+    boxes.forEach(b => {
+      const p = Math.max(0, Math.min(1, b.pulse));
+
+      // Shadow / glow for arriving packets
+      if (p > 0.05) {
+        ctx.save();
+        ctx.shadowColor  = C_BRIGHT;
+        ctx.shadowBlur   = 16 * p;
+        rrect(b.x, b.y, b.w, b.h, 3);
+        ctx.fillStyle = C_GROUND;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Fill
+      rrect(b.x, b.y, b.w, b.h, 3);
+      ctx.fillStyle = `rgba(27,99,88,${0.14 + p * 0.18})`;
+      ctx.fill();
+
+      // Border
+      rrect(b.x, b.y, b.w, b.h, 3);
+      const borderA = p > 0.05 ? 0.9 : 0.45;
+      ctx.strokeStyle = `rgba(91,191,167,${borderA})`;
+      ctx.lineWidth = p > 0.05 ? 1.5 : 1;
+      ctx.stroke();
+
+      // Stage label
+      const fsize = Math.max(9, Math.min(11, b.w * 0.098));
+      ctx.fillStyle = C_TEXT;
+      ctx.font = `bold ${fsize}px 'Courier New', monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(b.label, b.cx, b.cy - 9);
+
+      // Sub-label
+      const sfsize = Math.max(8, Math.min(10, b.w * 0.084));
+      ctx.fillStyle = 'rgba(91,191,167,0.65)';
+      ctx.font = `${sfsize}px 'Trebuchet MS', sans-serif`;
+      ctx.fillText(b.sub, b.cx, b.cy + 10);
+
+      b.pulse *= 0.88;
+    });
+
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
+  }
+
+  function tick() {
+    // Advance packets
+    for (let i = packets.length - 1; i >= 0; i--) {
+      const pk = packets[i];
+      pk.p = Math.min(1, pk.p + pk.speed);
+      pk.x = pk.startX + (pk.endX - pk.startX) * pk.p;
+      pk.y = pk.startY + (pk.endY - pk.startY) * pk.p;
+
+      if (pk.p >= 1) {
+        boxes[pk.toIdx].pulse = 1;
+        packets.splice(i, 1);
+      }
+    }
+
+    if (Math.random() < 0.025) spawnPacket();
+
+    draw();
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function start() {
+    setup();
+    if (prefersReduced) {
+      draw();
+    } else {
+      tick();
+    }
+  }
+
+  // Resize handling
+  let resizeTimer;
+  const ro = new ResizeObserver(() => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      cancelAnimationFrame(rafId);
+      packets = [];
+      start();
+    }, 120);
+  });
+  ro.observe(canvas.parentElement);
+
+  start();
+
+  // ── Nav scroll highlighting ────────────────────────
+  const navLinks = document.querySelectorAll('.stage-nav a');
+  const sections = Array.from(document.querySelectorAll('.spec-section[id], section[id]'));
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => io.observe(s));
+})();
+</script>
