@@ -7,6 +7,7 @@ __pycache__/
 dist/
 build/
 .eggs/
+.pytest_cache/
 
 # Virtual environments
 .venv/
@@ -24,6 +25,12 @@ logs/
 
 # Rejected data (runtime output, not source)
 data/rejected/
+
+# Generated business reports (runtime output, not source)
+reports/output/
+
+# Internal design/dev notes — not for the public repo
+context.md
 
 # IDE
 .vscode/

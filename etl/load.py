@@ -18,7 +18,7 @@ from datetime import date, timedelta
 from typing import Any
 
 import pandas as pd
-from sqlalchemy import text
+from sqlalchemy import inspect, text
 
 log = logging.getLogger(__name__)
 
@@ -100,6 +100,46 @@ def close_audit_record(
             },
         )
     log.info("[audit] Closed audit_id=%d status=%s", audit_id, status)
+
+
+# ── Staging landing zone ──────────────────────────────────────────────────────
+
+STAGING_TABLES = {
+    "customers": "stg_customers",
+    "products":  "stg_products",
+    "sales":     "stg_sales",
+}
+
+
+def load_staging(engine, raw: dict[str, pd.DataFrame]) -> None:
+    """
+    Land the raw extracted DataFrames into staging.stg_* tables, unmodified.
+
+    This is a snapshot of what the current batch looked like on the wire,
+    before any validation or transformation — kept separate from the
+    in-memory DataFrames that transform.py actually operates on. Staging is a
+    transient landing zone (see stg_sales' UNIQUE(sale_id)), so each table is
+    truncated before landing the new batch — reruns of the same batch must
+    not collide with rows staged by a previous attempt.
+    """
+    inspector = inspect(engine)
+    for entity, table in STAGING_TABLES.items():
+        df = raw.get(entity)
+        if df is None or df.empty:
+            continue
+        with engine.begin() as conn:
+            conn.execute(text(f"TRUNCATE TABLE staging.{table}"))
+        table_cols = {c["name"] for c in inspector.get_columns(table, schema="staging")}
+        insert_df = df[[c for c in df.columns if c in table_cols]].copy()
+        # extract.py reads everything as str with blanks as "" (not NaN); the
+        # staging columns are typed (DATE, NUMERIC, ...), which reject "" — an
+        # absent value must reach Postgres as NULL instead.
+        insert_df = insert_df.replace("", None)
+        insert_df.to_sql(
+            table, engine, schema="staging",
+            if_exists="append", index=False, method="multi",
+        )
+        log.info("[load] %-20s staged=%d rows", table, len(insert_df))
 
 
 # ── Dimension loaders (SCD Type 2) ────────────────────────────────────────────
@@ -191,6 +231,11 @@ def _scd2_upsert(
         # Drop surrogate key — the DB BIGSERIAL assigns it
         if surrogate_key in insert_df.columns:
             insert_df = insert_df.drop(columns=[surrogate_key])
+        # Keep only columns that exist on the destination table — upstream
+        # DataFrames carry transform/extract-only columns (e.g. _source_file)
+        # that have no matching column in warehouse.{table}.
+        table_cols = {c["name"] for c in inspect(engine).get_columns(table, schema=schema)}
+        insert_df = insert_df[[c for c in insert_df.columns if c in table_cols]]
         insert_df.to_sql(
             table, engine, schema=schema,
             if_exists="append", index=False, method="multi",
@@ -259,7 +304,7 @@ def ensure_dim_dates(engine, date_keys: pd.Series) -> None:
             {"start": start, "end": end},
         ).scalar()
 
-    log.info("[load] dim_date extended: %d new rows for range %s → %s", inserted, start, end)
+    log.info("[load] dim_date extended: %d new rows for range %s -> %s", inserted, start, end)
 
 
 # ── fact_sales loader ─────────────────────────────────────────────────────────
@@ -357,6 +402,23 @@ def write_rejections(engine, rejections_df: pd.DataFrame, batch_date: date) -> N
     log.info("[load] stg_rejections  wrote=%d rows", len(out))
 
 
+# ── Reporting views ────────────────────────────────────────────────────────────
+
+def refresh_reporting_views(engine) -> None:
+    """
+    Refresh the materialized views that back business reporting:
+    mv_product_performance, mv_customer_ltv, mv_channel_payment_analysis.
+
+    Runs CONCURRENTLY (via warehouse.sp_refresh_materialized_views) so reads
+    against the views aren't blocked while the refresh is in progress. Each
+    view requires a unique index for this to work — see
+    retail_analytics_schema_v2_improvements.sql.
+    """
+    with engine.begin() as conn:
+        conn.execute(text("CALL warehouse.sp_refresh_materialized_views()"))
+    log.info("[load] Refreshed reporting materialized views")
+
+
 # ── DQ threshold check ────────────────────────────────────────────────────────
 
 def check_dq_thresholds(engine, batch_date: date, thresholds: dict) -> list[str]:
@@ -398,7 +460,7 @@ def run_pipeline(
     raw: dict,
     clean_customers: pd.DataFrame,
     clean_products: pd.DataFrame,
-    clean_sales: pd.DataFrame,
+    transform_sales,
     rejections: pd.DataFrame,
     batch_date: date,
     dq_thresholds: dict,
@@ -406,17 +468,33 @@ def run_pipeline(
     git_sha: str = None,
 ) -> None:
     """
-    Full load pipeline. Called after extract + transform have completed.
+    Full load pipeline. Called after transform_customers/transform_products
+    have completed; sales are transformed internally, after the dimensions
+    are loaded (see `transform_sales` below).
 
     Execution order:
       1. Open audit record (RUNNING)
-      2. Load dim_customer  (SCD2)
-      3. Load dim_product   (SCD2)
-      4. Ensure dim_date covers all transaction dates
-      5. Load fact_sales    (bulk insert with pre-filter dedup)
-      6. Write rejections   → staging.stg_rejections
-      7. Evaluate DQ thresholds
-      8. Close audit record (SUCCESS or FAILED)
+      2. Land raw extracts  → staging.stg_customers/products/sales
+      3. Load dim_customer  (SCD2)
+      4. Load dim_product   (SCD2)
+      5. Transform sales    — customer_sk/product_sk FK lookups now see the
+                               rows just loaded in steps 3-4, so a customer's
+                               first-ever purchase in the same batch as their
+                               first-ever registration still resolves.
+      6. Ensure dim_date covers all transaction dates
+      7. Load fact_sales    (bulk insert with pre-filter dedup)
+      8. Write rejections   → staging.stg_rejections
+      9. Refresh reporting materialized views (mv_product_performance,
+         mv_customer_ltv, mv_channel_payment_analysis)
+      10. Evaluate DQ thresholds
+      11. Close audit record (SUCCESS or FAILED)
+
+    Args:
+        transform_sales: callable(raw_sales_df, engine, batch_date) -> (clean_df, rejections_df),
+            i.e. etl.transform.transform_sales. Injected rather than called by
+            the caller so it can run after the dimension loads above.
+        rejections: customer + product rejections only — sales rejections are
+            produced internally and appended before writing to stg_rejections.
     """
     total_extracted = sum(len(df) for df in raw.values())
     audit_id = open_audit_record(
@@ -433,14 +511,21 @@ def run_pipeline(
     error_message = None
 
     try:
+        load_staging(engine, raw)
+
         cust_stats = load_dim_customer(engine, clean_customers, batch_date)
         prod_stats = load_dim_product(engine, clean_products, batch_date)
+
+        clean_sales, rej_sales = transform_sales(raw["sales"], engine, batch_date)
+        rejections = pd.concat([rejections, rej_sales], ignore_index=True)
 
         ensure_dim_dates(engine, clean_sales["transaction_date_key"])
 
         fact_stats = load_fact_sales(engine, clean_sales)
 
         write_rejections(engine, rejections, batch_date)
+
+        refresh_reporting_views(engine)
 
         rows_inserted = (
             cust_stats["inserted"] + prod_stats["inserted"] + fact_stats["inserted"]

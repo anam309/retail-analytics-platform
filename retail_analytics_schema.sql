@@ -152,6 +152,15 @@ CREATE TABLE IF NOT EXISTS warehouse.dim_customer (
 CREATE INDEX IF NOT EXISTS idx_dim_customer_nk ON warehouse.dim_customer(customer_id, is_current);
 CREATE INDEX IF NOT EXISTS idx_dim_customer_sk ON warehouse.dim_customer(customer_sk);
 
+-- Sentinel "Unknown" member — fact_sales.customer_sk defaults to -1 when a
+-- sale's customer_id has no match in this dimension; the FK constraint
+-- requires that -1 actually exist as a row here.
+INSERT INTO warehouse.dim_customer
+    (customer_sk, customer_id, first_name, last_name, effective_from, effective_to, is_current, scd_hash)
+VALUES
+    (-1, 'UNKNOWN', 'Unknown', 'Customer', '2020-01-01', '9999-12-31', TRUE, 'unknown')
+ON CONFLICT (customer_sk) DO NOTHING;
+
 -- Dimension: Products (SCD Type 2)
 CREATE TABLE IF NOT EXISTS warehouse.dim_product (
     product_sk       BIGSERIAL PRIMARY KEY,
@@ -177,6 +186,15 @@ CREATE TABLE IF NOT EXISTS warehouse.dim_product (
 
 CREATE INDEX IF NOT EXISTS idx_dim_product_nk ON warehouse.dim_product(product_id, is_current);
 CREATE INDEX IF NOT EXISTS idx_dim_product_sk ON warehouse.dim_product(product_sk);
+
+-- Sentinel "Unknown" member — fact_sales.product_sk defaults to -1 when a
+-- sale's product_id has no match in this dimension; the FK constraint
+-- requires that -1 actually exist as a row here.
+INSERT INTO warehouse.dim_product
+    (product_sk, product_id, product_name, effective_from, effective_to, is_current, scd_hash)
+VALUES
+    (-1, 'UNKNOWN', 'Unknown Product', '2020-01-01', '9999-12-31', TRUE, 'unknown')
+ON CONFLICT (product_sk) DO NOTHING;
 
 -- Dimension: Date (static, pre-populated)
 CREATE TABLE IF NOT EXISTS warehouse.dim_date (

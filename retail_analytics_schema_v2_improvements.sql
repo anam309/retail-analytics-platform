@@ -124,6 +124,12 @@ GROUP BY fs.channel, fs.payment_method, DATE_TRUNC('month', fs.transaction_date)
 CREATE INDEX IF NOT EXISTS idx_mv_channel_payment_month
     ON warehouse.mv_channel_payment_analysis(month DESC);
 
+-- REFRESH MATERIALIZED VIEW CONCURRENTLY requires a unique index; without one,
+-- sp_refresh_materialized_views() fails on this view with
+-- "cannot refresh materialized view concurrently".
+CREATE UNIQUE INDEX IF NOT EXISTS idx_mv_channel_payment_grain
+    ON warehouse.mv_channel_payment_analysis(channel, payment_method, month);
+
 -- ────────────────────────────────────────────────────────────────────────────
 -- ENHANCED DATA QUALITY VIEW: Unknown Keys Detailed Report
 -- ────────────────────────────────────────────────────────────────────────────

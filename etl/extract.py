@@ -94,5 +94,5 @@ def extract(source_files: dict[str, Path]) -> dict[str, pd.DataFrame]:
         raw[entity] = extract_file(path, entity)
 
     total_rows = sum(len(df) for df in raw.values())
-    log.info("[extract] Complete — %d total rows across %d files", total_rows, len(raw))
+    log.info("[extract] Complete - %d total rows across %d files", total_rows, len(raw))
     return raw

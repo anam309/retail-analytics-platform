@@ -239,17 +239,17 @@ def generate_sales(
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main(n_customers: int = 500, n_products: int = 100, n_sales: int = 10_000):
-    print(f"Seed: {SEED} — all outputs are reproducible.\n")
+    print(f"Seed: {SEED} - all outputs are reproducible.\n")
 
     print(f"  Generating {n_products} products ...", end=" ", flush=True)
     products_df = generate_products(n_products)
     products_df.to_csv(OUT_DIR / "products.csv", index=False)
-    print(f"done → {OUT_DIR / 'products.csv'}")
+    print(f"done -> {OUT_DIR / 'products.csv'}")
 
     print(f"  Generating {n_customers} customers ...", end=" ", flush=True)
     customers_df = generate_customers(n_customers)
     customers_df.to_csv(OUT_DIR / "customers.csv", index=False)
-    print(f"done → {OUT_DIR / 'customers.csv'}")
+    print(f"done -> {OUT_DIR / 'customers.csv'}")
 
     print(f"  Generating {n_sales:,} sales records ...", end=" ", flush=True)
     sales_df = generate_sales(
@@ -258,14 +258,14 @@ def main(n_customers: int = 500, n_products: int = 100, n_sales: int = 10_000):
         products_df=products_df,
     )
     sales_df.to_csv(OUT_DIR / "sales.csv", index=False)
-    print(f"done → {OUT_DIR / 'sales.csv'}")
+    print(f"done -> {OUT_DIR / 'sales.csv'}")
 
-    print("\n── Summary ─────────────────────────────────────────")
+    print("\n-- Summary --------------------------------------------")
     for name, df in [("customers", customers_df), ("products", products_df), ("sales", sales_df)]:
         print(f"  {name+'.csv':<15} {len(df):>7,} rows  |  {df.shape[1]} columns")
 
     print(f"\n  Unique transactions in sales: {sales_df['transaction_id'].nunique():,}")
-    print(f"  Date range:                   {sales_df['transaction_date'].min()} → {sales_df['transaction_date'].max()}")
+    print(f"  Date range:                   {sales_df['transaction_date'].min()} -> {sales_df['transaction_date'].max()}")
     print(f"  Total gross revenue:          ${(sales_df['quantity'] * sales_df['unit_price']).sum():>12,.2f}")
     print(f"\n  Output directory: {OUT_DIR.resolve()}")
 

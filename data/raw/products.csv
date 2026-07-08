@@ -1,101 +1,101 @@
 product_id,product_name,description,category,subcategory,brand,supplier_name,current_price,unit_cost,weight_kg,is_active,reorder_point,created_at,updated_at
-PROD-0001,TechCore Pro X1,High-quality pro x1 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,875.47,423.29,4.2,True,11,2020-04-11,2021-02-01
-PROD-0002,TechCore Ultra 12,High-quality ultra 12 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,909.02,549.87,1.4,True,6,2019-07-20,2021-10-12
-PROD-0003,TechCore Vision Max,High-quality vision max by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,384.32,196.99,9.07,True,50,2020-06-21,2023-05-14
-PROD-0004,TechCore Lite 5,High-quality lite 5 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,884.89,492.26,3.38,True,5,2020-10-13,2021-04-21
-PROD-0005,TechCore Pro X1,High-quality pro x1 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,982.92,493.77,6.4,True,18,2019-11-05,2021-02-08
-PROD-0006,NovaPixel Galaxy S,High-quality galaxy s by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,972.18,486.57,1.48,True,27,2019-06-09,2022-10-07
-PROD-0007,NovaPixel Edge Pro,High-quality edge pro by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,742.41,423.97,10.97,True,29,2019-01-20,2021-09-11
-PROD-0008,NovaPixel Nano Fold,High-quality nano fold by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,401.21,198.19,9.47,True,28,2020-04-19,2022-11-27
-PROD-0009,NovaPixel Galaxy S,High-quality galaxy s by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,725.27,403.02,0.78,True,23,2019-06-10,2023-01-22
-PROD-0010,NovaPixel Edge Pro,High-quality edge pro by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,990.38,572.73,13.01,True,34,2020-08-13,2021-01-09
-PROD-0011,ProBook Elite 15,High-quality elite 15 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1326.38,735.78,5.62,True,22,2020-08-11,2023-06-10
-PROD-0012,ProBook Air 13,High-quality air 13 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1412.36,850.99,1.16,True,39,2019-09-06,2021-07-18
-PROD-0013,ProBook Studio Pro,High-quality studio pro by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1447.85,759.41,5.75,True,45,2020-11-29,2022-03-06
-PROD-0014,ProBook Flex 360,High-quality flex 360 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1394.6,743.24,4.93,True,8,2019-03-09,2021-05-04
-PROD-0015,ProBook Elite 15,High-quality elite 15 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,797.75,402.72,4.8,True,18,2020-09-10,2023-02-10
-PROD-0016,CloudSlate X1 Carbon,High-quality x1 carbon by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,1417.47,813.25,10.8,True,36,2020-08-12,2023-07-21
-PROD-0017,CloudSlate Slim 14,High-quality slim 14 by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,925.84,572.99,6.94,True,20,2020-01-27,2024-05-26
-PROD-0018,CloudSlate WorkStation Pro,High-quality workstation pro by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,1257.73,716.99,11.23,True,42,2019-10-04,2022-12-06
-PROD-0019,CloudSlate X1 Carbon,High-quality x1 carbon by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,929.42,491.21,14.96,True,10,2020-08-28,2023-03-01
-PROD-0020,CloudSlate Slim 14,High-quality slim 14 by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,1267.98,775.93,2.38,True,48,2020-09-21,2023-01-07
-PROD-0021,SoundWave ANC 700,High-quality anc 700 by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,165.08,59.88,5.79,True,38,2020-05-29,2021-02-28
-PROD-0022,SoundWave Pro 3,High-quality pro 3 by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,110.44,50.87,14.14,True,12,2019-06-16,2022-01-05
-PROD-0023,SoundWave Bass Plus,High-quality bass plus by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,248.14,113.5,4.08,True,12,2019-02-28,2021-10-25
-PROD-0024,SoundWave Studio Plus,High-quality studio plus by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,123.91,47.29,0.15,True,21,2019-03-15,2021-12-21
-PROD-0025,SoundWave ANC 700,High-quality anc 700 by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,340.99,171.31,7.66,True,45,2020-04-09,2022-04-11
-PROD-0026,SmartHub Hub Connect,High-quality hub connect by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,92.14,47.45,9.17,True,15,2019-09-28,2021-09-25
-PROD-0027,SmartHub Mini Dot,High-quality mini dot by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,146.35,79.05,8.0,False,25,2019-07-14,2024-04-10
-PROD-0028,SmartHub Thermostat Plus,High-quality thermostat plus by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,134.93,56.69,5.51,True,24,2020-04-18,2023-02-17
-PROD-0029,SmartHub Hub Connect,High-quality hub connect by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,78.87,34.97,8.55,True,36,2019-05-05,2023-07-20
-PROD-0030,SmartHub Mini Dot,High-quality mini dot by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,208.6,120.16,8.04,True,47,2019-04-30,2022-04-30
-PROD-0031,UrbanThread Slim Fit Shirt,High-quality slim fit shirt by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,53.26,21.25,4.05,True,32,2020-12-23,2023-03-28
-PROD-0032,UrbanThread Cotton Polo,High-quality cotton polo by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,87.5,40.88,11.35,True,50,2020-02-11,2023-05-24
-PROD-0033,UrbanThread Casual Tee,High-quality casual tee by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,41.81,20.03,9.78,True,38,2020-09-07,2023-09-18
-PROD-0034,UrbanThread Slim Fit Shirt,High-quality slim fit shirt by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,51.59,17.78,1.05,False,40,2019-06-17,2021-02-10
-PROD-0035,UrbanThread Cotton Polo,High-quality cotton polo by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,36.1,12.26,1.16,True,19,2019-08-19,2021-12-08
-PROD-0036,ChicLine Wrap Blouse,High-quality wrap blouse by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,30.05,9.18,5.02,True,22,2019-06-04,2024-04-18
-PROD-0037,ChicLine Linen Shirt,High-quality linen shirt by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,75.16,25.45,2.07,True,41,2020-10-01,2022-02-06
-PROD-0038,ChicLine Silk Top,High-quality silk top by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,68.21,23.45,7.15,True,11,2020-04-23,2022-05-20
-PROD-0039,ChicLine Casual Tee,High-quality casual tee by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,32.26,12.18,6.41,True,8,2020-10-29,2022-08-09
-PROD-0040,ChicLine Wrap Blouse,High-quality wrap blouse by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,75.49,36.02,1.57,True,26,2019-07-13,2021-11-11
-PROD-0041,StepSmart Running Shoe,High-quality running shoe by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,160.08,63.8,2.95,True,13,2020-02-14,2021-12-02
-PROD-0042,StepSmart Casual Sneaker,High-quality casual sneaker by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,103.27,44.13,3.82,True,33,2020-03-02,2024-02-20
-PROD-0043,StepSmart Leather Boot,High-quality leather boot by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,161.19,84.71,1.56,True,39,2019-10-19,2021-10-07
-PROD-0044,StepSmart Running Shoe,High-quality running shoe by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,165.39,90.09,13.9,True,15,2020-12-29,2022-10-13
-PROD-0045,StepSmart Casual Sneaker,High-quality casual sneaker by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,100.95,46.62,12.98,True,15,2019-03-08,2021-03-02
-PROD-0046,WeatherShield Winter Jacket,High-quality winter jacket by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,144.73,79.28,4.05,True,34,2019-03-22,2023-03-12
-PROD-0047,WeatherShield Rain Coat,High-quality rain coat by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,121.3,61.19,10.98,True,47,2020-08-01,2022-06-23
-PROD-0048,WeatherShield Fleece Hoodie,High-quality fleece hoodie by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,229.59,97.17,4.52,True,42,2019-02-16,2022-05-02
-PROD-0049,WeatherShield Winter Jacket,High-quality winter jacket by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,233.92,95.71,4.77,True,35,2020-12-28,2022-11-07
-PROD-0050,WeatherShield Rain Coat,High-quality rain coat by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,175.7,92.75,2.45,True,10,2020-12-09,2024-01-04
-PROD-0051,ChefsPro Non-Stick Pan,High-quality non-stick pan by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,172.49,71.12,1.11,True,30,2019-01-09,2023-07-09
-PROD-0052,ChefsPro Chef Knife Set,High-quality chef knife set by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,37.17,20.82,3.77,True,44,2020-05-12,2022-11-17
-PROD-0053,ChefsPro Coffee Maker,High-quality coffee maker by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,30.16,15.63,8.52,True,21,2019-07-14,2023-03-29
-PROD-0054,ChefsPro Non-Stick Pan,High-quality non-stick pan by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,52.78,27.92,3.66,True,47,2019-03-23,2022-07-09
-PROD-0055,ChefsPro Chef Knife Set,High-quality chef knife set by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,134.41,64.83,13.94,True,5,2019-11-28,2024-05-02
-PROD-0056,GreenThumb Pruning Shears,High-quality pruning shears by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,46.65,25.65,14.94,True,18,2020-10-01,2021-12-03
-PROD-0057,GreenThumb Garden Hose 50ft,High-quality garden hose 50ft by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,50.46,21.19,5.3,True,20,2020-01-01,2021-08-16
-PROD-0058,GreenThumb Trowel Set,High-quality trowel set by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,39.55,16.76,12.52,True,44,2020-10-28,2024-01-16
-PROD-0059,GreenThumb Pruning Shears,High-quality pruning shears by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,88.7,46.22,7.98,True,40,2019-08-06,2023-03-27
-PROD-0060,GreenThumb Garden Hose 50ft,High-quality garden hose 50ft by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,33.94,16.95,14.09,True,12,2020-03-20,2021-07-15
-PROD-0061,OrderPro Storage Bin 3-Pack,High-quality storage bin 3-pack by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,134.88,68.97,2.42,True,18,2020-07-10,2022-11-20
-PROD-0062,OrderPro Drawer Organiser,High-quality drawer organiser by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,111.3,47.92,9.55,True,36,2020-07-22,2022-11-08
-PROD-0063,OrderPro Shelf Unit,High-quality shelf unit by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,47.39,25.41,0.86,True,22,2019-01-01,2022-02-18
-PROD-0064,OrderPro Storage Bin 3-Pack,High-quality storage bin 3-pack by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,19.03,8.56,2.05,True,15,2019-01-15,2024-03-31
-PROD-0065,OrderPro Drawer Organiser,High-quality drawer organiser by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,114.54,55.29,6.47,False,9,2020-10-03,2023-11-28
-PROD-0066,FitForce Resistance Band Set,High-quality resistance band set by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,473.34,248.21,2.32,False,28,2019-08-13,2021-03-15
-PROD-0067,FitForce Yoga Mat,High-quality yoga mat by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,297.51,126.93,2.0,True,7,2020-10-02,2024-04-23
-PROD-0068,FitForce Dumbbell 20lb,High-quality dumbbell 20lb by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,450.97,197.44,3.82,True,40,2019-03-04,2022-09-13
-PROD-0069,FitForce Resistance Band Set,High-quality resistance band set by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,443.8,209.98,9.35,True,20,2019-02-20,2023-08-29
-PROD-0070,FitForce Yoga Mat,High-quality yoga mat by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,434.32,250.05,12.18,True,6,2020-07-13,2021-06-13
-PROD-0071,TrailBlazer Hiking Backpack,High-quality hiking backpack by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,87.39,49.63,11.76,True,47,2019-12-13,2022-12-03
-PROD-0072,TrailBlazer Camping Tent 2P,High-quality camping tent 2p by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,306.49,168.48,4.08,True,11,2019-07-13,2024-01-19
-PROD-0073,TrailBlazer Sleeping Bag,High-quality sleeping bag by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,152.4,64.95,7.11,True,34,2019-11-05,2021-09-28
-PROD-0074,TrailBlazer Hiking Backpack,High-quality hiking backpack by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,141.88,78.22,13.08,True,47,2020-01-29,2023-07-21
-PROD-0075,TrailBlazer Camping Tent 2P,High-quality camping tent 2p by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,91.79,43.37,12.98,True,22,2019-05-27,2022-02-02
-PROD-0076,PureGlow Daily Moisturiser,High-quality daily moisturiser by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,40.03,16.09,10.22,True,26,2020-12-27,2023-04-10
-PROD-0077,PureGlow SPF 50 Sunscreen,High-quality spf 50 sunscreen by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,85.31,27.56,14.56,True,21,2019-11-16,2022-10-23
-PROD-0078,PureGlow Retinol Serum,High-quality retinol serum by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,15.94,6.68,5.25,True,32,2019-03-30,2021-10-14
-PROD-0079,PureGlow Daily Moisturiser,High-quality daily moisturiser by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,59.67,24.0,5.84,True,21,2019-09-04,2023-01-21
-PROD-0080,PureGlow SPF 50 Sunscreen,High-quality spf 50 sunscreen by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,16.41,6.35,7.85,True,48,2019-06-17,2021-10-08
-PROD-0081,LuxHair Repair Shampoo,High-quality repair shampoo by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,38.77,17.38,10.09,True,9,2019-02-21,2023-03-17
-PROD-0082,LuxHair Deep Conditioner,High-quality deep conditioner by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,47.94,23.21,9.39,True,12,2019-06-17,2024-03-01
-PROD-0083,LuxHair Hair Serum,High-quality hair serum by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,38.78,13.96,4.71,True,30,2020-09-19,2021-04-01
-PROD-0084,LuxHair Repair Shampoo,High-quality repair shampoo by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,37.88,15.56,2.96,True,29,2019-06-23,2023-05-04
-PROD-0085,LuxHair Deep Conditioner,High-quality deep conditioner by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,37.08,17.82,9.27,True,40,2019-06-06,2021-06-18
-PROD-0086,Horizon Press The Last Signal,High-quality the last signal by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,22.16,6.68,3.23,True,43,2020-11-13,2022-12-30
-PROD-0087,Horizon Press Beyond the Reef,High-quality beyond the reef by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,19.12,6.29,6.69,True,35,2019-12-12,2023-09-29
-PROD-0088,Horizon Press Ember Rising,High-quality ember rising by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,21.48,8.87,11.07,True,23,2020-08-12,2021-08-31
-PROD-0089,Horizon Press The Last Signal,High-quality the last signal by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,16.75,5.99,5.09,True,20,2019-03-12,2022-07-05
-PROD-0090,Horizon Press Beyond the Reef,High-quality beyond the reef by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,19.43,5.6,3.07,False,20,2019-11-06,2022-08-19
-PROD-0091,KnowledgeCo Systems Thinking,High-quality systems thinking by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,34.59,12.24,11.55,True,45,2020-06-16,2023-05-10
-PROD-0092,KnowledgeCo Data at Scale,High-quality data at scale by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,24.38,9.07,5.82,True,14,2020-12-19,2021-05-06
-PROD-0093,KnowledgeCo Deep Work,High-quality deep work by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,26.39,6.62,11.29,True,11,2019-10-21,2022-03-09
-PROD-0094,KnowledgeCo Systems Thinking,High-quality systems thinking by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,29.45,8.46,12.08,True,34,2020-09-21,2021-11-14
-PROD-0095,KnowledgeCo Data at Scale,High-quality data at scale by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,11.25,3.29,12.74,True,34,2019-05-19,2022-07-27
-PROD-0096,VitaCore Whey Protein 2lb,High-quality whey protein 2lb by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,66.72,34.56,8.97,True,33,2019-11-04,2021-12-22
-PROD-0097,VitaCore BCAA Powder,High-quality bcaa powder by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,62.88,29.7,7.62,True,40,2019-07-02,2024-03-24
-PROD-0098,VitaCore Omega-3 Capsules,High-quality omega-3 capsules by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,51.2,19.31,12.94,True,20,2019-11-20,2024-01-05
-PROD-0099,VitaCore Whey Protein 2lb,High-quality whey protein 2lb by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,78.78,31.29,11.69,True,20,2020-02-06,2021-03-06
-PROD-0100,VitaCore BCAA Powder,High-quality bcaa powder by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,39.21,14.24,4.36,True,25,2020-12-30,2023-12-03
+PROD-0001,TechCore Pro X1,High-quality pro x1 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,875.47,423.29,4.2,True,11,2020-05-11,2021-06-22
+PROD-0002,TechCore Ultra 12,High-quality ultra 12 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,909.02,549.87,1.4,True,6,2019-01-20,2024-02-26
+PROD-0003,TechCore Vision Max,High-quality vision max by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,384.32,196.99,9.07,True,50,2019-08-02,2022-01-16
+PROD-0004,TechCore Lite 5,High-quality lite 5 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,884.89,492.26,3.38,True,5,2019-06-23,2021-08-05
+PROD-0005,TechCore Pro X1,High-quality pro x1 by TechCore.,Electronics,Smartphones,TechCore,TechCore Distribution Ltd,982.92,493.77,6.4,True,18,2020-07-26,2021-06-09
+PROD-0006,NovaPixel Galaxy S,High-quality galaxy s by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,972.18,486.57,1.48,True,27,2020-06-09,2024-02-25
+PROD-0007,NovaPixel Edge Pro,High-quality edge pro by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,742.41,423.97,10.97,True,29,2020-11-23,2023-04-28
+PROD-0008,NovaPixel Nano Fold,High-quality nano fold by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,401.21,198.19,9.47,True,28,2019-03-09,2023-07-07
+PROD-0009,NovaPixel Galaxy S,High-quality galaxy s by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,725.27,403.02,0.78,True,23,2019-11-24,2021-02-19
+PROD-0010,NovaPixel Edge Pro,High-quality edge pro by NovaPixel.,Electronics,Smartphones,NovaPixel,NovaPixel Direct,990.38,572.73,13.01,True,34,2019-01-24,2021-05-26
+PROD-0011,ProBook Elite 15,High-quality elite 15 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1326.38,735.78,5.62,True,22,2019-06-19,2021-12-28
+PROD-0012,ProBook Air 13,High-quality air 13 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1412.36,850.99,1.16,True,39,2020-01-28,2023-07-25
+PROD-0013,ProBook Studio Pro,High-quality studio pro by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1447.85,759.41,5.75,True,45,2019-01-21,2023-05-22
+PROD-0014,ProBook Flex 360,High-quality flex 360 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,1394.6,743.24,4.93,True,8,2019-06-04,2024-01-18
+PROD-0015,ProBook Elite 15,High-quality elite 15 by ProBook.,Electronics,Laptops,ProBook,ProBook Components Inc,797.75,402.72,4.8,True,18,2020-05-19,2023-12-26
+PROD-0016,CloudSlate X1 Carbon,High-quality x1 carbon by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,1417.47,813.25,10.8,True,36,2020-02-28,2022-10-14
+PROD-0017,CloudSlate Slim 14,High-quality slim 14 by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,925.84,572.99,6.94,True,20,2019-06-21,2022-11-29
+PROD-0018,CloudSlate WorkStation Pro,High-quality workstation pro by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,1257.73,716.99,11.23,True,42,2020-04-02,2022-03-09
+PROD-0019,CloudSlate X1 Carbon,High-quality x1 carbon by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,929.42,491.21,14.96,True,10,2020-09-20,2021-01-11
+PROD-0020,CloudSlate Slim 14,High-quality slim 14 by CloudSlate.,Electronics,Laptops,CloudSlate,CloudSlate Supply Co,1267.98,775.93,2.38,True,48,2020-08-12,2024-06-05
+PROD-0021,SoundWave ANC 700,High-quality anc 700 by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,165.08,59.88,5.79,True,38,2019-05-05,2023-12-21
+PROD-0022,SoundWave Pro 3,High-quality pro 3 by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,110.44,50.87,14.14,True,12,2019-11-25,2022-06-13
+PROD-0023,SoundWave Bass Plus,High-quality bass plus by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,248.14,113.5,4.08,True,12,2019-08-04,2021-08-30
+PROD-0024,SoundWave Studio Plus,High-quality studio plus by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,123.91,47.29,0.15,True,21,2019-06-17,2024-04-01
+PROD-0025,SoundWave ANC 700,High-quality anc 700 by SoundWave.,Electronics,Headphones,SoundWave,SoundWave Audio Ltd,340.99,171.31,7.66,True,45,2019-09-19,2021-06-08
+PROD-0026,SmartHub Hub Connect,High-quality hub connect by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,92.14,47.45,9.17,True,15,2019-03-14,2022-08-14
+PROD-0027,SmartHub Mini Dot,High-quality mini dot by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,146.35,79.05,8.0,False,25,2019-03-17,2022-07-12
+PROD-0028,SmartHub Thermostat Plus,High-quality thermostat plus by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,134.93,56.69,5.51,True,24,2020-10-20,2022-06-19
+PROD-0029,SmartHub Hub Connect,High-quality hub connect by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,78.87,34.97,8.55,True,36,2020-04-13,2022-02-15
+PROD-0030,SmartHub Mini Dot,High-quality mini dot by SmartHub.,Electronics,Smart Home,SmartHub,SmartHub Networks,208.6,120.16,8.04,True,47,2020-09-18,2021-03-09
+PROD-0031,UrbanThread Slim Fit Shirt,High-quality slim fit shirt by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,53.26,21.25,4.05,True,32,2020-07-20,2022-12-15
+PROD-0032,UrbanThread Cotton Polo,High-quality cotton polo by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,87.5,40.88,11.35,True,50,2020-02-21,2021-07-13
+PROD-0033,UrbanThread Casual Tee,High-quality casual tee by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,41.81,20.03,9.78,True,38,2020-12-17,2022-08-12
+PROD-0034,UrbanThread Slim Fit Shirt,High-quality slim fit shirt by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,51.59,17.78,1.05,False,40,2019-03-03,2023-05-08
+PROD-0035,UrbanThread Cotton Polo,High-quality cotton polo by UrbanThread.,Clothing,Men's Tops,UrbanThread,Urban Textile Suppliers,36.1,12.26,1.16,True,19,2019-08-16,2023-09-04
+PROD-0036,ChicLine Wrap Blouse,High-quality wrap blouse by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,30.05,9.18,5.02,True,22,2020-04-25,2022-07-16
+PROD-0037,ChicLine Linen Shirt,High-quality linen shirt by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,75.16,25.45,2.07,True,41,2020-03-24,2021-10-26
+PROD-0038,ChicLine Silk Top,High-quality silk top by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,68.21,23.45,7.15,True,11,2020-07-01,2021-04-19
+PROD-0039,ChicLine Casual Tee,High-quality casual tee by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,32.26,12.18,6.41,True,8,2019-02-05,2023-10-25
+PROD-0040,ChicLine Wrap Blouse,High-quality wrap blouse by ChicLine.,Clothing,Women's Tops,ChicLine,ChicLine Fashion Import,75.49,36.02,1.57,True,26,2019-06-27,2024-04-15
+PROD-0041,StepSmart Running Shoe,High-quality running shoe by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,160.08,63.8,2.95,True,13,2019-08-13,2021-05-04
+PROD-0042,StepSmart Casual Sneaker,High-quality casual sneaker by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,103.27,44.13,3.82,True,33,2020-10-26,2021-12-28
+PROD-0043,StepSmart Leather Boot,High-quality leather boot by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,161.19,84.71,1.56,True,39,2020-11-04,2021-06-06
+PROD-0044,StepSmart Running Shoe,High-quality running shoe by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,165.39,90.09,13.9,True,15,2019-10-23,2022-03-08
+PROD-0045,StepSmart Casual Sneaker,High-quality casual sneaker by StepSmart.,Clothing,Footwear,StepSmart,StepSmart Footwear Ltd,100.95,46.62,12.98,True,15,2019-12-19,2023-09-15
+PROD-0046,WeatherShield Winter Jacket,High-quality winter jacket by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,144.73,79.28,4.05,True,34,2020-10-09,2022-07-21
+PROD-0047,WeatherShield Rain Coat,High-quality rain coat by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,121.3,61.19,10.98,True,47,2019-05-07,2022-07-30
+PROD-0048,WeatherShield Fleece Hoodie,High-quality fleece hoodie by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,229.59,97.17,4.52,True,42,2019-10-03,2021-11-22
+PROD-0049,WeatherShield Winter Jacket,High-quality winter jacket by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,233.92,95.71,4.77,True,35,2020-06-04,2022-02-19
+PROD-0050,WeatherShield Rain Coat,High-quality rain coat by WeatherShield.,Clothing,Outerwear,WeatherShield,WeatherShield Apparel,175.7,92.75,2.45,True,10,2020-06-29,2023-11-28
+PROD-0051,ChefsPro Non-Stick Pan,High-quality non-stick pan by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,172.49,71.12,1.11,True,30,2020-05-18,2021-04-21
+PROD-0052,ChefsPro Chef Knife Set,High-quality chef knife set by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,37.17,20.82,3.77,True,44,2020-04-18,2023-09-14
+PROD-0053,ChefsPro Coffee Maker,High-quality coffee maker by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,30.16,15.63,8.52,True,21,2019-05-13,2023-04-10
+PROD-0054,ChefsPro Non-Stick Pan,High-quality non-stick pan by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,52.78,27.92,3.66,True,47,2020-07-20,2022-01-16
+PROD-0055,ChefsPro Chef Knife Set,High-quality chef knife set by ChefsPro.,Home & Garden,Kitchen,ChefsPro,ChefsPro Kitchenware,134.41,64.83,13.94,True,5,2019-05-07,2022-12-20
+PROD-0056,GreenThumb Pruning Shears,High-quality pruning shears by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,46.65,25.65,14.94,True,18,2019-10-22,2022-02-24
+PROD-0057,GreenThumb Garden Hose 50ft,High-quality garden hose 50ft by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,50.46,21.19,5.3,True,20,2020-12-19,2023-09-22
+PROD-0058,GreenThumb Trowel Set,High-quality trowel set by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,39.55,16.76,12.52,True,44,2020-06-18,2023-05-16
+PROD-0059,GreenThumb Pruning Shears,High-quality pruning shears by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,88.7,46.22,7.98,True,40,2019-06-20,2023-11-30
+PROD-0060,GreenThumb Garden Hose 50ft,High-quality garden hose 50ft by GreenThumb.,Home & Garden,Garden Tools,GreenThumb,GreenThumb Garden Co,33.94,16.95,14.09,True,12,2019-09-09,2024-04-08
+PROD-0061,OrderPro Storage Bin 3-Pack,High-quality storage bin 3-pack by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,134.88,68.97,2.42,True,18,2020-08-25,2021-03-28
+PROD-0062,OrderPro Drawer Organiser,High-quality drawer organiser by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,111.3,47.92,9.55,True,36,2019-06-27,2021-02-19
+PROD-0063,OrderPro Shelf Unit,High-quality shelf unit by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,47.39,25.41,0.86,True,22,2020-09-17,2022-05-06
+PROD-0064,OrderPro Storage Bin 3-Pack,High-quality storage bin 3-pack by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,19.03,8.56,2.05,True,15,2019-11-08,2022-02-20
+PROD-0065,OrderPro Drawer Organiser,High-quality drawer organiser by OrderPro.,Home & Garden,Storage,OrderPro,OrderPro Storage Solutions,114.54,55.29,6.47,False,9,2019-02-21,2021-11-24
+PROD-0066,FitForce Resistance Band Set,High-quality resistance band set by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,473.34,248.21,2.32,False,28,2020-12-10,2023-06-01
+PROD-0067,FitForce Yoga Mat,High-quality yoga mat by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,297.51,126.93,2.0,True,7,2020-11-11,2024-01-21
+PROD-0068,FitForce Dumbbell 20lb,High-quality dumbbell 20lb by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,450.97,197.44,3.82,True,40,2019-09-02,2021-11-27
+PROD-0069,FitForce Resistance Band Set,High-quality resistance band set by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,443.8,209.98,9.35,True,20,2020-05-24,2023-02-15
+PROD-0070,FitForce Yoga Mat,High-quality yoga mat by FitForce.,Sports & Outdoors,Exercise,FitForce,FitForce Sports Goods,434.32,250.05,12.18,True,6,2019-11-04,2023-09-26
+PROD-0071,TrailBlazer Hiking Backpack,High-quality hiking backpack by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,87.39,49.63,11.76,True,47,2019-12-23,2021-08-10
+PROD-0072,TrailBlazer Camping Tent 2P,High-quality camping tent 2p by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,306.49,168.48,4.08,True,11,2019-07-25,2021-08-05
+PROD-0073,TrailBlazer Sleeping Bag,High-quality sleeping bag by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,152.4,64.95,7.11,True,34,2019-07-11,2024-03-03
+PROD-0074,TrailBlazer Hiking Backpack,High-quality hiking backpack by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,141.88,78.22,13.08,True,47,2020-03-12,2023-04-18
+PROD-0075,TrailBlazer Camping Tent 2P,High-quality camping tent 2p by TrailBlazer.,Sports & Outdoors,Outdoor Recreation,TrailBlazer,TrailBlazer Outdoor Supply,91.79,43.37,12.98,True,22,2019-07-24,2024-03-06
+PROD-0076,PureGlow Daily Moisturiser,High-quality daily moisturiser by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,40.03,16.09,10.22,True,26,2020-03-30,2022-10-28
+PROD-0077,PureGlow SPF 50 Sunscreen,High-quality spf 50 sunscreen by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,85.31,27.56,14.56,True,21,2020-11-28,2023-06-26
+PROD-0078,PureGlow Retinol Serum,High-quality retinol serum by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,15.94,6.68,5.25,True,32,2019-11-07,2022-07-17
+PROD-0079,PureGlow Daily Moisturiser,High-quality daily moisturiser by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,59.67,24.0,5.84,True,21,2019-06-20,2021-08-03
+PROD-0080,PureGlow SPF 50 Sunscreen,High-quality spf 50 sunscreen by PureGlow.,Beauty,Skincare,PureGlow,PureGlow Beauty Imports,16.41,6.35,7.85,True,48,2020-01-31,2023-02-06
+PROD-0081,LuxHair Repair Shampoo,High-quality repair shampoo by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,38.77,17.38,10.09,True,9,2019-03-12,2024-03-20
+PROD-0082,LuxHair Deep Conditioner,High-quality deep conditioner by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,47.94,23.21,9.39,True,12,2019-02-06,2021-06-20
+PROD-0083,LuxHair Hair Serum,High-quality hair serum by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,38.78,13.96,4.71,True,30,2019-04-29,2023-09-02
+PROD-0084,LuxHair Repair Shampoo,High-quality repair shampoo by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,37.88,15.56,2.96,True,29,2019-05-05,2024-05-15
+PROD-0085,LuxHair Deep Conditioner,High-quality deep conditioner by LuxHair.,Beauty,Haircare,LuxHair,LuxHair Professional,37.08,17.82,9.27,True,40,2020-06-12,2022-10-18
+PROD-0086,Horizon Press The Last Signal,High-quality the last signal by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,22.16,6.68,3.23,True,43,2020-04-08,2021-04-09
+PROD-0087,Horizon Press Beyond the Reef,High-quality beyond the reef by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,19.12,6.29,6.69,True,35,2019-10-26,2022-08-16
+PROD-0088,Horizon Press Ember Rising,High-quality ember rising by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,21.48,8.87,11.07,True,23,2020-04-07,2022-12-29
+PROD-0089,Horizon Press The Last Signal,High-quality the last signal by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,16.75,5.99,5.09,True,20,2020-02-15,2022-01-26
+PROD-0090,Horizon Press Beyond the Reef,High-quality beyond the reef by Horizon Press.,Books,Fiction,Horizon Press,Horizon Press Distribution,19.43,5.6,3.07,False,20,2020-03-05,2021-01-18
+PROD-0091,KnowledgeCo Systems Thinking,High-quality systems thinking by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,34.59,12.24,11.55,True,45,2020-06-12,2024-01-25
+PROD-0092,KnowledgeCo Data at Scale,High-quality data at scale by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,24.38,9.07,5.82,True,14,2019-03-30,2023-11-26
+PROD-0093,KnowledgeCo Deep Work,High-quality deep work by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,26.39,6.62,11.29,True,11,2020-11-18,2023-04-15
+PROD-0094,KnowledgeCo Systems Thinking,High-quality systems thinking by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,29.45,8.46,12.08,True,34,2020-08-06,2022-02-19
+PROD-0095,KnowledgeCo Data at Scale,High-quality data at scale by KnowledgeCo.,Books,Non-Fiction,KnowledgeCo,KnowledgeCo Publishing,11.25,3.29,12.74,True,34,2020-08-19,2023-09-23
+PROD-0096,VitaCore Whey Protein 2lb,High-quality whey protein 2lb by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,66.72,34.56,8.97,True,33,2019-09-22,2021-06-23
+PROD-0097,VitaCore BCAA Powder,High-quality bcaa powder by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,62.88,29.7,7.62,True,40,2019-08-16,2022-11-07
+PROD-0098,VitaCore Omega-3 Capsules,High-quality omega-3 capsules by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,51.2,19.31,12.94,True,20,2019-05-03,2022-12-06
+PROD-0099,VitaCore Whey Protein 2lb,High-quality whey protein 2lb by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,78.78,31.29,11.69,True,20,2019-01-03,2024-01-27
+PROD-0100,VitaCore BCAA Powder,High-quality bcaa powder by VitaCore.,Food & Beverage,Supplements,VitaCore,VitaCore Nutrition Inc,39.21,14.24,4.36,True,25,2020-11-11,2024-01-23
