@@ -131,7 +131,10 @@ The warehouse schema already carries three materialized views built for exactly 
 [`reports/`](reports/) is a thin reporting layer on top:
 
 - **`reports/queries.py`** — five report functions (monthly revenue trend, top products by revenue, top customers by lifetime value, channel/payment performance, data-quality summary), each returning a plain pandas DataFrame. This is exactly what a BI tool like Power BI or Looker would query directly instead — the views exist independently of this script.
-- **`reports/generate.py`** — a CLI (`python -m reports.generate`) that runs all five and writes one CSV per report plus a single `business_report.html` summary to `reports/output/` (gitignored — it's generated, not source).
+- **`reports/charts.py`** — hand-rolled SVG bar/line charts (no charting library dependency), following a fixed categorical color order and validated palette, with a hover tooltip and crosshair on the trend line.
+- **`reports/generate.py`** — a CLI (`python -m reports.generate`) that runs all five reports and writes one CSV each, plus a single `business_report.html` with charts alongside the tables, to `reports/output/` (gitignored — it's generated, not source).
+
+`business_report.html` is the client-facing artifact: revenue/profit trend line, top-10 product and customer bar charts, and channel performance, each with the full data table underneath so nothing is chart-only.
 
 ```sql
 -- Point Power BI / Looker / any SQL client at these directly:
@@ -149,7 +152,7 @@ pip install -r requirements.txt
 pytest tests/ -v
 ```
 
-21 tests: pure-function unit tests for `transform_customers`/`transform_products` (no database needed), and integration tests against a real Postgres instance for FK resolution, SCD2 versioning, fact dedup, materialized-view refresh, business report queries, and full end-to-end pipeline runs — including regression tests for real bugs caught during development (see below).
+27 tests: pure-function unit tests for `transform_customers`/`transform_products`/`reports.charts` (no database needed), and integration tests against a real Postgres instance for FK resolution, SCD2 versioning, fact dedup, materialized-view refresh, business report queries, and full end-to-end pipeline runs — including regression tests for real bugs caught during development (see below).
 
 Integration tests look for `TEST_DATABASE_URL` (defaults to `postgresql+psycopg2://postgres:password@localhost:5432/retail_analytics_test`) and skip automatically if no database is reachable, so the unit-test subset always runs.
 
@@ -186,7 +189,8 @@ etl/transform.py             Stage 2 — validate, coerce, hash, resolve FKs
 etl/load.py                  Stage 3 — SCD2 upserts, bulk inserts, audit logging
 etl/run.py                   CLI entrypoint (`python -m etl.run`)
 reports/queries.py            Business report queries (revenue trend, top products/customers, ...)
-reports/generate.py           CLI entrypoint (`python -m reports.generate`) — CSVs + HTML summary
+reports/charts.py              Hand-rolled SVG bar/line chart generation, no library dependency
+reports/generate.py           CLI entrypoint (`python -m reports.generate`) — CSVs + HTML summary with charts
 generate_data.py             Reproducible sample data generator (seeded, Faker)
 retail_analytics_schema.sql              Schema part 1 — tables, seed sentinel rows
 retail_analytics_schema_v2_improvements.sql  Schema part 2 — audit log, DQ views, procedures
