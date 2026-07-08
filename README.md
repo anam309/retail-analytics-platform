@@ -19,7 +19,7 @@ data/raw/*.csv  →  extract  →  transform  →  load  →  PostgreSQL (stagin
 - **Load** — lands the raw batch in `staging` for audit, upserts `dim_customer`/`dim_product` as **SCD Type 2** (full history, no data loss on updates), extends `dim_date` automatically, bulk-loads `fact_sales` with a dedup pre-filter, and writes every rejected row to `staging.stg_rejections` with the full original record as JSON.
 - **Audits itself** — every run writes a row to `warehouse.etl_audit_log` (status, row counts, duration, triggering system, git SHA), which doubles as the high-water mark for incremental loads.
 
-Rows that are *invalid* (bad types, impossible values, future dates) are rejected and logged. Rows that are *valid but reference an unknown customer/product* are **not** rejected — they load with a `-1` sentinel key, because a real sale from an unrecorded customer is still real revenue. See [`context.md`](context.md) for the full reasoning behind that and other design decisions.
+Rows that are *invalid* (bad types, impossible values, future dates) are rejected and logged. Rows that are *valid but reference an unknown customer/product* are **not** rejected — they load with a `-1` sentinel key, because a real sale from an unrecorded customer is still real revenue.
 
 ---
 
