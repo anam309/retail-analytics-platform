@@ -107,8 +107,6 @@ Star schema: two SCD Type 2 dimensions, one static date dimension, one fact tabl
 | `fact_sales` | Fact table | One row per `(transaction_id, line_number)`. Pre-computed revenue, cost, and margin. |
 | `etl_audit_log` | Operational | Every run's status, row counts, duration, and git SHA. |
 
-Full column-level detail is in [`context.md`](context.md).
-
 ---
 
 ## Data quality
@@ -198,5 +196,3 @@ tests/                        pytest suite (unit + integration)
 docker-compose.yml            One-command local Postgres + schema bootstrap
 .github/workflows/ci.yml       CI: tests + end-to-end smoke run
 ```
-
-See [`context.md`](context.md) for exhaustive design rationale (why SHA-256 hashing for SCD2, why FK misses default to `-1` instead of rejecting, why staging is truncated per batch, etc.).
